@@ -1,5 +1,6 @@
-export { ThemeToggle } from "./ThemeToggle";
-export { Typography } from "./Typography";
-export { Button } from "./Button";
-export { Avatar } from "./Avatar";
-export { Icon, type IconName } from "./Icon";
+export { ThemeToggle, toggleTrack, toggleThumb } from "./ThemeToggle";
+export { Typography, typographyVariants } from "./Typography";
+export { Button, buttonVariants } from "./Button";
+export { Avatar, avatarVariants } from "./Avatar";
+export { Icon, iconVariants, type IconName } from "./Icon";
+export { Link, linkVariants } from "./Link";

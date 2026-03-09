@@ -1,16 +1,29 @@
 import type { ElementType, ComponentPropsWithoutRef } from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
-const variantStyles = {
-  h1: "text-4xl font-bold tracking-tight",
-  h2: "text-3xl font-semibold tracking-tight",
-  h3: "text-2xl font-semibold",
-  h4: "text-xl font-medium",
-  body: "text-base",
-  small: "text-sm text-muted",
-  caption: "text-xs text-muted-foreground",
-} as const;
+const typographyVariants = cva("", {
+  variants: {
+    variant: {
+      h1: "text-4xl font-bold tracking-tight",
+      h2: "text-3xl font-semibold tracking-tight",
+      h3: "text-2xl font-semibold",
+      h4: "text-xl font-medium",
+      body: "text-base",
+      small: "text-sm text-muted",
+      caption: "text-xs text-muted-foreground",
+    },
+  },
+  defaultVariants: {
+    variant: "body",
+  },
+});
 
-const defaultTags: Record<Variant, ElementType> = {
+type TypographyVariant = NonNullable<
+  VariantProps<typeof typographyVariants>["variant"]
+>;
+
+const defaultTags: Record<TypographyVariant, ElementType> = {
   h1: "h1",
   h2: "h2",
   h3: "h3",
@@ -20,10 +33,8 @@ const defaultTags: Record<Variant, ElementType> = {
   caption: "span",
 };
 
-type Variant = keyof typeof variantStyles;
-
 type TypographyProps<T extends ElementType = "p"> = {
-  variant?: Variant;
+  variant?: TypographyVariant;
   as?: T;
   className?: string;
 } & ComponentPropsWithoutRef<T>;
@@ -31,15 +42,17 @@ type TypographyProps<T extends ElementType = "p"> = {
 export function Typography<T extends ElementType = "p">({
   variant = "body",
   as,
-  className = "",
+  className,
   children,
   ...rest
 }: TypographyProps<T>) {
   const Tag = as ?? defaultTags[variant];
 
   return (
-    <Tag className={`${variantStyles[variant]} ${className}`} {...rest}>
+    <Tag className={cn(typographyVariants({ variant }), className)} {...rest}>
       {children}
     </Tag>
   );
 }
+
+export { typographyVariants };

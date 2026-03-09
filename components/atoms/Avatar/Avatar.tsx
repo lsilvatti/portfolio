@@ -1,17 +1,31 @@
 import Image from "next/image";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
-const sizeMap = {
-  sm: { dimension: 48, className: "h-12 w-12" },
-  md: { dimension: 80, className: "h-20 w-20" },
-  lg: { dimension: 128, className: "h-32 w-32" },
-} as const;
+const avatarVariants = cva("rounded-full object-cover", {
+  variants: {
+    size: {
+      sm: "h-12 w-12",
+      md: "h-20 w-20",
+      lg: "h-32 w-32",
+    },
+  },
+  defaultVariants: {
+    size: "md",
+  },
+});
 
-type AvatarSize = keyof typeof sizeMap;
+type AvatarSize = NonNullable<VariantProps<typeof avatarVariants>["size"]>;
 
-type AvatarProps = {
+const dimensionMap: Record<AvatarSize, number> = {
+  sm: 48,
+  md: 80,
+  lg: 128,
+};
+
+type AvatarProps = VariantProps<typeof avatarVariants> & {
   src: string;
   alt: string;
-  size?: AvatarSize;
   priority?: boolean;
   className?: string;
 };
@@ -21,18 +35,18 @@ export function Avatar({
   alt,
   size = "md",
   priority = false,
-  className = "",
+  className,
 }: AvatarProps) {
-  const { dimension, className: sizeClass } = sizeMap[size];
-
   return (
     <Image
       src={src}
       alt={alt}
-      width={dimension}
-      height={dimension}
+      width={dimensionMap[size!]}
+      height={dimensionMap[size!]}
       priority={priority}
-      className={`rounded-full object-cover ${sizeClass} ${className}`}
+      className={cn(avatarVariants({ size }), className)}
     />
   );
 }
+
+export { avatarVariants };

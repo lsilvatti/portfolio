@@ -1,4 +1,6 @@
 import type { SVGProps } from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
 const icons = {
   github: (
@@ -33,12 +35,26 @@ const icons = {
 
 export type IconName = keyof typeof icons;
 
-type IconProps = {
+const iconVariants = cva("", {
+  variants: {
+    size: {
+      xs: "h-4 w-4",
+      sm: "h-5 w-5",
+      md: "h-6 w-6",
+      lg: "h-8 w-8",
+    },
+  },
+  defaultVariants: {
+    size: "sm",
+  },
+});
+
+type IconProps = VariantProps<typeof iconVariants> & {
   name: IconName;
   className?: string;
 } & Omit<SVGProps<SVGSVGElement>, "name">;
 
-export function Icon({ name, className = "h-5 w-5", ...rest }: IconProps) {
+export function Icon({ name, size, className, ...rest }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +64,7 @@ export function Icon({ name, className = "h-5 w-5", ...rest }: IconProps) {
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
-      className={className}
+      className={cn(iconVariants({ size }), className)}
       aria-hidden
       {...rest}
     >
@@ -56,3 +72,5 @@ export function Icon({ name, className = "h-5 w-5", ...rest }: IconProps) {
     </svg>
   );
 }
+
+export { iconVariants };

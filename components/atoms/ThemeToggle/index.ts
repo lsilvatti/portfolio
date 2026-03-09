@@ -1,1 +1,1 @@
-export { ThemeToggle } from "./ThemeToggle";
+export { ThemeToggle, toggleTrack, toggleThumb } from "./ThemeToggle";

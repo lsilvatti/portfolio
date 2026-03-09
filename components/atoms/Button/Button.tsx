@@ -1,26 +1,40 @@
 import Link from "next/link";
 import type { ComponentPropsWithoutRef } from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
-const variantStyles = {
-  primary:
-    "bg-primary text-primary-foreground hover:bg-primary-hover shadow-sm",
-  outline:
-    "border border-border bg-transparent text-foreground hover:bg-surface-hover",
-  ghost: "bg-transparent text-foreground hover:bg-surface-hover",
-} as const;
+const buttonVariants = cva(
+  [
+    "inline-flex items-center justify-center rounded-lg font-medium",
+    "transition-colors duration-200 cursor-pointer",
+    "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+    "disabled:pointer-events-none disabled:opacity-50",
+  ],
+  {
+    variants: {
+      variant: {
+        primary:
+          "bg-primary text-primary-foreground hover:bg-primary-hover shadow-sm",
+        outline:
+          "border border-border bg-transparent text-foreground hover:bg-surface-hover",
+        ghost: "bg-transparent text-foreground hover:bg-surface-hover",
+      },
+      size: {
+        sm: "h-8 px-3 text-sm gap-1.5",
+        md: "h-10 px-4 text-base gap-2",
+        lg: "h-12 px-6 text-lg gap-2.5",
+      },
+    },
+    defaultVariants: {
+      variant: "primary",
+      size: "md",
+    },
+  },
+);
 
-const sizeStyles = {
-  sm: "h-8 px-3 text-sm gap-1.5",
-  md: "h-10 px-4 text-base gap-2",
-  lg: "h-12 px-6 text-lg gap-2.5",
-} as const;
+type ButtonVariantProps = VariantProps<typeof buttonVariants>;
 
-type ButtonVariant = keyof typeof variantStyles;
-type ButtonSize = keyof typeof sizeStyles;
-
-type BaseProps = {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
+type BaseProps = ButtonVariantProps & {
   className?: string;
 };
 
@@ -38,25 +52,23 @@ type ButtonAsLink = BaseProps &
 type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 export function Button({
-  variant = "primary",
-  size = "md",
-  className = "",
+  variant,
+  size,
+  className,
   children,
   ...rest
 }: ButtonProps) {
-  const base = `inline-flex items-center justify-center rounded-lg font-medium
-    transition-colors duration-200 cursor-pointer
-    focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary
-    disabled:pointer-events-none disabled:opacity-50`;
-
-  const classes = `${base} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+  const classes = cn(buttonVariants({ variant, size }), className);
 
   if ("href" in rest && rest.href != null) {
     const { disabled, href, ...linkRest } = rest as ButtonAsLink;
 
     if (disabled) {
       return (
-        <span className={`${classes} pointer-events-none opacity-50`} aria-disabled>
+        <span
+          className={cn(classes, "pointer-events-none opacity-50")}
+          aria-disabled
+        >
           {children}
         </span>
       );
@@ -75,3 +87,5 @@ export function Button({
     </button>
   );
 }
+
+export { buttonVariants };
