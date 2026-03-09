@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ── Light theme (default) ── */
+:root,
+[data-theme="light"] {
+  --background: #faf9fb;
+  --foreground: #1a1a2e;
+
+  --primary: #7c3aed;          /* purple-600 */
+  --primary-hover: #6d28d9;    /* purple-700 */
+  --primary-light: #ede9fe;    /* purple-100 */
+  --primary-foreground: #ffffff;
+
+  --secondary: #f97316;        /* orange-500 */
+  --secondary-hover: #ea580c;  /* orange-600 */
+  --secondary-light: #fff7ed;  /* orange-50 */
+  --secondary-foreground: #ffffff;
+
+  --surface: #ffffff;
+  --surface-hover: #f5f3ff;
+  --border: #e5e7eb;
+  --muted: #6b7280;
+  --muted-foreground: #9ca3af;
 }
 
+/* ── Dark theme ── */
+[data-theme="dark"] {
+  --background: #0f0d1a;
+  --foreground: #e8e6f0;
+
+  --primary: #a78bfa;          /* purple-400 */
+  --primary-hover: #c084fc;    /* purple-300 */
+  --primary-light: #1e1b3a;
+  --primary-foreground: #0f0d1a;
+
+  --secondary: #fb923c;        /* orange-400 */
+  --secondary-hover: #fdba74;  /* orange-300 */
+  --secondary-light: #1c1209;
+  --secondary-foreground: #0f0d1a;
+
+  --surface: #1a1730;
+  --surface-hover: #252240;
+  --border: #2e2b45;
+  --muted: #9ca3af;
+  --muted-foreground: #6b7280;
+}
+
+/* ── Tailwind v4 theme tokens ── */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-light: var(--secondary-light);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
