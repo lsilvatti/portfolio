@@ -5,10 +5,10 @@ import { cn } from "@/lib/utils";
 const typographyVariants = cva("", {
   variants: {
     variant: {
-      h1: "text-4xl font-bold tracking-tight",
-      h2: "text-3xl font-semibold tracking-tight",
-      h3: "text-2xl font-semibold",
-      h4: "text-xl font-medium",
+      h1: "font-[family-name:var(--font-heading)] text-4xl font-bold tracking-tight",
+      h2: "font-[family-name:var(--font-heading)] text-3xl font-semibold tracking-tight",
+      h3: "font-[family-name:var(--font-heading)] text-2xl font-semibold",
+      h4: "font-[family-name:var(--font-heading)] text-xl font-medium",
       body: "text-base",
       small: "text-sm text-muted",
       caption: "text-xs text-muted-foreground",
