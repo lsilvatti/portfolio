@@ -1,10 +1,10 @@
-# Leonardo Silvatti Silva 
+# Leonardo Silvatti Silva
 
 ### Senior Front-End Engineer & Product Team Lead
 
-São Paulo, Brazil (GMT-3) | +55 14 99678-3741 [leonardo@silvatti.com.br](mailto:leonardo@silvatti.com.br) | [linkedin.com/in/lsilvatti](https://www.google.com/url?q=http://linkedin.com/in/lsilvatti&sa=D&source=editors&ust=1773181358722649&usg=AOvVaw15dvKtAepSFGqhRRrVdMhA)
+São Paulo, Brazil (GMT-3) | +55 14 99678-3741 [leonardo@silvatti.com.br](mailto:leonardo@silvatti.com.br) | [linkedin.com/in/lsilvatti](https://www.google.com/url?q=http://linkedin.com/in/lsilvatti&sa=D&source=editors&ust=1773183338396112&usg=AOvVaw0Ayw-hsFLc6YvbZGe6H-A8)
 
-[github.com/lsilvatti](https://www.google.com/url?q=http://github.com/lsilvatti&sa=D&source=editors&ust=1773181358722813&usg=AOvVaw1Wak8uGi4Hl1VwRTO2OBFw) | [leonardo.silvatti.com.br](https://www.google.com/url?q=http://leonardo.silvatti.com.br&sa=D&source=editors&ust=1773181358722909&usg=AOvVaw3KQV6VhsLKbQKqwiq3YN2V)
+[github.com/lsilvatti](https://www.google.com/url?q=http://github.com/lsilvatti&sa=D&source=editors&ust=1773183338396330&usg=AOvVaw3A6-hDT3%5FDx%5F-rYyNOyvAl) | [leonardo.silvatti.com.br](https://www.google.com/url?q=http://leonardo.silvatti.com.br&sa=D&source=editors&ust=1773183338396470&usg=AOvVaw2SGMTNpX0QTAbQrsGlfVyV)
 
 ## PROFESSIONAL SUMMARY
 
