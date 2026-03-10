@@ -1,9 +1,10 @@
-Leonardo Silvatti Silva   
-Senior Front-End Engineer & Product Team Lead 
+Leonardo Silvatti Silva 
 
-São Paulo, Brazil (GMT-3) | +55 14 99678-3741 [leonardo@silvatti.com.br](mailto:leonardo@silvatti.com.br) | [linkedin.com/in/lsilvatti](https://www.google.com/url?q=http://linkedin.com/in/lsilvatti&sa=D&source=editors&ust=1773179708698947&usg=AOvVaw0A6Ik0G2JhkKYXlkZ1UT1l)
+Senior Front-End Engineer & Product Team Lead
 
-[github.com/lsilvatti](https://www.google.com/url?q=http://github.com/lsilvatti&sa=D&source=editors&ust=1773179708699196&usg=AOvVaw3h57NnsBVPBpXwekEd4Fh2) | [leonardo.silvatti.com.br](https://www.google.com/url?q=http://leonardo.silvatti.com.br&sa=D&source=editors&ust=1773179708699343&usg=AOvVaw3-4TCvNSQqgXDlbSKg8RPj)
+São Paulo, Brazil (GMT-3) | +55 14 99678-3741 [leonardo@silvatti.com.br](mailto:leonardo@silvatti.com.br) | [linkedin.com/in/lsilvatti](https://www.google.com/url?q=http://linkedin.com/in/lsilvatti&sa=D&source=editors&ust=1773180903713335&usg=AOvVaw0cmpzA-DwFY9b5uHSPc-JS)
+
+[github.com/lsilvatti](https://www.google.com/url?q=http://github.com/lsilvatti&sa=D&source=editors&ust=1773180903713454&usg=AOvVaw0-t-iBMfLVKtVwL8VS8N0H) | [leonardo.silvatti.com.br](https://www.google.com/url?q=http://leonardo.silvatti.com.br&sa=D&source=editors&ust=1773180903713528&usg=AOvVaw0fQJG3s5XRsy9NdZiVL-Cr)
 
 ### PROFESSIONAL SUMMARY
 
@@ -11,11 +12,11 @@ Senior Front-End Engineer with over 7 years of experience building scalable, hig
 
 ### TECHNICAL SKILLS
 
-* ### Languages & Core: JavaScript (ES6+), TypeScript, HTML5, CSS3, SASS/LESS.
-* ### Frameworks & Libraries: React.js, Next.js, Vue.js, AngularJS, React Native, Redux, Tailwind CSS.
-* ### AI-Augmented Development: Claude (Opus, Sonnet, Haiku), Cursor, GitHub Copilot, Prompt Engineering.
-* ### Testing, Tools & CI/CD: Jest, Cypress, React Testing Library, Puppeteer, Git, Webpack, Vite, AWS, GitHub Actions, GitLab Pipelines, Vercel, Docker, NPM/Yarn, Storybook.
-* ### Methodologies: Agile/Scrum, Architectural Design, Technical Mentorship.
+* Languages & Core: JavaScript (ES6+), TypeScript, HTML5, CSS3, SASS/LESS.
+* Frameworks & Libraries: React.js, Next.js, Vue.js, AngularJS, React Native, Redux, Tailwind CSS.
+* AI-Augmented Development: Claude (Opus, Sonnet, Haiku), Cursor, GitHub Copilot, Prompt Engineering.
+* Testing, Tools & CI/CD: Jest, Cypress, React Testing Library, Puppeteer, Git, Webpack, Vite, AWS, GitHub Actions, GitLab Pipelines, Vercel, Docker, NPM/Yarn, Storybook.
+* Methodologies: Agile/Scrum, Architectural Design, Technical Mentorship.
 * Languages: Portuguese (Native), English (Advanced), Spanish (Intermediate).
 
 ### PROFESSIONAL EXPERIENCE
