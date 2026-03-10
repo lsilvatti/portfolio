@@ -36,7 +36,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
 
   useEffect(() => {
-    setTheme(getInitialTheme());
+    // Sync with the value already applied by the inline <script> to avoid flicker
+    const applied = document.documentElement.getAttribute(
+      THEME_DATA_ATTRIBUTE
+    ) as Theme | null;
+    setTheme(applied === "light" || applied === "dark" ? applied : getInitialTheme());
   }, []);
 
   useEffect(() => {
