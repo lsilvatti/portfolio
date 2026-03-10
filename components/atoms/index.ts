@@ -5,3 +5,4 @@ export { Avatar, avatarVariants } from "./Avatar";
 export { Icon, iconVariants, type IconName } from "./Icon";
 export { Link, linkVariants } from "./Link";
 export { Card, cardVariants } from "./Card";
+export { LanguageToggle } from "./LanguageToggle";
