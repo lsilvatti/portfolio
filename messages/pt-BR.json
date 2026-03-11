@@ -27,6 +27,13 @@
     "copyright": "© {year} Leonardo Silvatti Silva. Feito com Next.js e (muito) café."
   },
   "heroSection": {
-    "description": "Engenheiro Frontend e Product Manager"
+    "description": "Engenheiro Frontend e Product Manager",
+    "typewriter": {
+      "prefix": "Transformando ideias em ",
+      "words": ["produtos digitais.", 
+      "interfaces modernas.", 
+      "soluções escaláveis."
+      ]
+    }
   }
 }
