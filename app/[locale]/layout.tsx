@@ -7,6 +7,8 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import { ThemeToggle, LanguageToggle } from "@/components/atoms";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
+import { Header } from "@/components/templates";
+import { Footer } from "@/components/templates/Footer/Footer";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -52,13 +54,11 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
-            <div className="fixed top-4 right-4 z-50 flex items-center gap-2">
-              <LanguageToggle />
-              <ThemeToggle />
-            </div>
+            <Header />
             <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
               {children}
             </main>
+            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
