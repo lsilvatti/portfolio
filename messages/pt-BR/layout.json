@@ -1,0 +1,15 @@
+{
+  "layout": {
+    "header": {
+      "navMenuItems": [
+        { "label": "início", "href": "/" },
+        { "label": "conectar", "href": "/connect" },
+        { "label": "projetos", "href": "/projects" },
+        { "label": "currículo", "href": "/resume" }
+      ]
+    },
+    "footer": {
+      "copyright": "© {year} Leonardo Silvatti Silva. Feito com Next.js e (muito) café."
+    }
+  }
+}

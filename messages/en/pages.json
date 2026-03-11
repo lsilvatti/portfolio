@@ -1,0 +1,43 @@
+{
+  "pages": {
+    "home": {
+      "hero": {
+        "typewriter": {
+          "prefix": "I'm a Frontend Engineer who builds ",
+          "words": [
+            "scalable products.",
+            "fluid interfaces.",
+            "user-centric solutions.",
+            "business value."
+          ]
+        },
+        "navMenuItems": [
+          { "label": "connect", "href": "/connect" },
+          { "label": "projects", "href": "/projects" },
+          { "label": "resume", "href": "/resume" }
+        ]
+      },
+      "underConstruction": {
+        "title": "Under Construction",
+        "description": "This page is currently under construction. You can still check my connections <link>here</link>.",
+        "ctaLabel": "Connect with me"
+      }
+    },
+    "connect": {
+      "title": "Let's Connect",
+      "description": "Find the best ways to reach out and connect with me."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "A showcase of my work and personal projects."
+    },
+    "resume": {
+      "title": "Resume",
+      "description": "My professional background, skills, and experience."
+    },
+    "notFound": {
+      "title": "404",
+      "description": "Page not found"
+    }
+  }
+}
