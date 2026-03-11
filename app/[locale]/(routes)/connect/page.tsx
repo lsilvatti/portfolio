@@ -1,7 +1,9 @@
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export default function ConnectPage() {
-  const t = useTranslations("pages.connect");
+export default async function ConnectPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("pages.connect");
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">

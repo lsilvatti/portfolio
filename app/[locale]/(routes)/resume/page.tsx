@@ -1,7 +1,9 @@
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export default function ResumePage() {
-  const t = useTranslations("pages.resume");
+export default async function ResumePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("pages.resume");
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
