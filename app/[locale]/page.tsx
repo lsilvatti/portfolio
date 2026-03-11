@@ -1,6 +1,10 @@
+import { HeroSection } from "@/components/organisms";
+import { CenteredLayout } from "@/components/templates";
+
 export default function Home() {
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-6">
-    </div>
-  );
-}
+    return (
+        <CenteredLayout>
+            <HeroSection />
+        </CenteredLayout>
+    );
+    }

@@ -3,7 +3,7 @@
 /* ── Light theme (default) ── */
 :root,
 [data-theme="light"] {
-  --background: #faf9fb;
+  --background: #fafafa;
   --foreground: #1a1a2e;
 
   --primary: #7c3aed;          /* purple-600 */
@@ -73,8 +73,8 @@
   --animate-fade-up: fadeSlideUp 0.4s ease-out forwards;
   --animate-fade-left: fadeSlideLeft 0.4s ease-out forwards;
   --animate-fade-right: fadeSlideRight 0.4s ease-out forwards;
+  --animate-grow-x: growX 0.8s ease-in-out both;
 
-  /* Criando as regras de movimento (keyframes) */
   @keyframes fadeSlideDown {
     0% { opacity: 0; transform: translateY(-30px); }
     100% { opacity: 1; transform: translateY(0); }
@@ -91,7 +91,14 @@
     0% { opacity: 0; transform: translateX(30px); }
     100% { opacity: 1; transform: translateX(0); }
   }
+
+  @keyframes growX {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
 }
+
+
 
 body {
   background: var(--background);
