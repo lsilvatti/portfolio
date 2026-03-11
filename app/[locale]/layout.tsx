@@ -6,13 +6,6 @@ import { notFound } from "next/navigation";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
-import { Header, Footer } from "@/components/organisms";
-
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
-
-export const dynamicParams = false;
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -29,7 +22,13 @@ export const metadata: Metadata = {
   description: "Personal portfolio",
 };
 
-export default async function RootLayout({
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export const dynamicParams = false;
+
+export default async function LocaleLayout({
   children,
   params,
 }: {
@@ -43,7 +42,6 @@ export default async function RootLayout({
   }
 
   setRequestLocale(locale);
-
   const messages = await getMessages();
 
   return (
@@ -55,16 +53,13 @@ export default async function RootLayout({
           }}
         />
       </head>
+      {/* Aqui aplicamos as variáveis das fontes e as cores globais de bg e text */}
       <body
-        className={`${spaceGrotesk.variable} ${inter.variable} antialiased min-h-screen flex flex-col`}
+        className={`${spaceGrotesk.variable} ${inter.variable} bg-background text-foreground antialiased min-h-screen flex flex-col`}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
-            <Header />
-            <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col flex-1">
-              {children}
-            </main>
-            <Footer />
+            {children}
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
