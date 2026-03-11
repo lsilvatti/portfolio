@@ -68,6 +68,29 @@
 
   --font-sans: var(--font-inter);
   --font-heading: var(--font-space-grotesk);
+
+  --animate-fade-down: fadeSlideDown 0.4s ease-out forwards;
+  --animate-fade-up: fadeSlideUp 0.4s ease-out forwards;
+  --animate-fade-left: fadeSlideLeft 0.4s ease-out forwards;
+  --animate-fade-right: fadeSlideRight 0.4s ease-out forwards;
+
+  /* Criando as regras de movimento (keyframes) */
+  @keyframes fadeSlideDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeSlideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeSlideLeft {
+    0% { opacity: 0; transform: translateX(-30px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes fadeSlideRight {
+    0% { opacity: 0; transform: translateX(30px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
 }
 
 body {

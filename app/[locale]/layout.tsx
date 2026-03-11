@@ -7,8 +7,7 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import { ThemeToggle, LanguageToggle } from "@/components/atoms";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
-import { Header } from "@/components/templates";
-import { Footer } from "@/components/templates/Footer/Footer";
+import { Header, Footer } from "@/components/organisms";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
