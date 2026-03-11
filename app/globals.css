@@ -96,9 +96,20 @@
     0% { transform: scaleX(0); }
     100% { transform: scaleX(1); }
   }
+
+  @keyframes blob-float {
+    0% { 
+      transform: translateY(120vh) scale(0.8); 
+    }
+    100% { 
+      transform: translateY(-50vh) scale(1.2); 
+    }
+  }
 }
 
-
+  .animate-blob {
+    animation: blob-float 15s infinite ease-in-out;
+  }
 
 body {
   background: var(--background);

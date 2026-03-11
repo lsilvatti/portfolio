@@ -23,7 +23,6 @@ export const NavMenu = ({
   return (
     <nav className={cn("flex items-center justify-center gap-6 md:gap-10", className)}>
       {items.map((item, index) => {
-        // A mágica acontece aqui: multiplicamos o índice pelo incremento
         const currentDelay = baseDelay + (index * incrementDelay);
 
         return (
