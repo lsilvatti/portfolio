@@ -22,5 +22,8 @@
     "label": "Idioma",
     "en": "EN",
     "pt-BR": "PT"
+  },
+  "footer": {
+    "copyright": "© {year} Leonardo Silvatti Silva. Feito com Next.js e (muito) café."
   }
 }
