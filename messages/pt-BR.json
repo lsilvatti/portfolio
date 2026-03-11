@@ -4,6 +4,14 @@
     "underConstructionDescription": "Esta página está em construção. Você ainda pode ver minhas conexões <link>aqui</link>.",
     "goBack": "Voltar"
   },
+  "header": { 
+    "navMenuItems": [
+      { "label": "home", "href": "/" },
+      { "label": "conectar", "href": "/connect"},
+      { "label": "projetos", "href": "/projects"},
+      { "label": "currículo", "href": "/resume"}
+    ]
+  },
   "notFound": {
     "title": "404",
     "description": "Página não encontrada"
@@ -27,13 +35,24 @@
     "copyright": "© {year} Leonardo Silvatti Silva. Feito com Next.js e (muito) café."
   },
   "heroSection": {
-    "description": "Engenheiro Frontend e Product Manager",
     "typewriter": {
-      "prefix": "Transformando ideias em ",
-      "words": ["produtos digitais.", 
-      "interfaces modernas.", 
-      "soluções escaláveis."
+    "prefix": "Sou um Engenheiro Front-end que entrega ",
+    "words": [ 
+        "produtos escaláveis.", 
+        "interfaces fluidas.", 
+        "soluções focadas no usuário.", 
+        "valor para o negócio." 
       ]
-    }
+    },
+
+    "navMenuItems": [
+      { "label": "conectar", "href": "/connect"},
+      { "label": "projetos", "href": "/projects"},
+      { "label": "currículo", "href": "/resume"}
+    ]
+  },
+  "resume": {
+    "title": "Página de Currículo",
+    "description": "Aqui é onde meu currículo será exibido."
   }
 }

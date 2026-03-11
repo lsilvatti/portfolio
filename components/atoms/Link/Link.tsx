@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils";
 const linkVariants = cva("underline-offset-4 transition-colors duration-200", {
   variants: {
     variant: {
-      default: "text-foreground hover:underline",
-      primary: "text-primary hover:text-primary-hover hover:underline",
-      muted: "text-muted hover:text-foreground hover:underline",
+      default: "text-foreground",
+      primary: "text-primary hover:text-primary-hover",
+      muted: "text-muted hover:text-foreground",
       unstyled: "",
     },
   },
