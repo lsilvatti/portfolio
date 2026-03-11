@@ -2,9 +2,9 @@
 
 ### Senior Front-End Engineer & Product Team Lead
 
-São Paulo, Brazil (GMT-3) | +55 14 99678-3741 [leonardo@silvatti.com.br](mailto:leonardo@silvatti.com.br) | [linkedin.com/in/lsilvatti](https://www.google.com/url?q=http://linkedin.com/in/lsilvatti&sa=D&source=editors&ust=1773241867998168&usg=AOvVaw3xY5fISYc1lXiSoREotu5q)
+São Paulo, Brazil (GMT-3) | +55 14 99678-3741 [leonardo@silvatti.com.br](mailto:leonardo@silvatti.com.br) | [linkedin.com/in/lsilvatti](http://linkedin.com/in/lsilvatti)
 
-[github.com/lsilvatti](https://www.google.com/url?q=http://github.com/lsilvatti&sa=D&source=editors&ust=1773241867998405&usg=AOvVaw0Yk2EWx5SZ%5FFcpiR0RsNrY) | [leonardo.silvatti.com.br](https://www.google.com/url?q=http://leonardo.silvatti.com.br&sa=D&source=editors&ust=1773241867998569&usg=AOvVaw0EuoORxQWOm3uNEdUul6d0)
+[github.com/lsilvatti](http://github.com/lsilvatti) | [leonardo.silvatti.com.br](http://leonardo.silvatti.com.br)
 
 ## PROFESSIONAL SUMMARY
 
