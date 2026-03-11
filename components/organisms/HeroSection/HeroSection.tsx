@@ -4,7 +4,7 @@ import { NavMenu } from "@/components/molecules/NavMenu/NavMenu";
 import { useTranslations } from "next-intl";
 
 export const HeroSection = () => {
-    const t = useTranslations("heroSection");
+    const t = useTranslations("pages.home.hero");
 
     return (
         <>

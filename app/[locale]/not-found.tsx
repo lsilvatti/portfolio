@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 
 export default function NotFound() {
-  const t = useTranslations("notFound");
+  const t = useTranslations("pages.notFound");
 
   return (
     <div className="flex h-screen w-full items-center justify-center gap-4 bg-background">

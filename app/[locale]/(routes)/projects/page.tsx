@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 
 export default function ProjectsPage() {
-  const t = useTranslations("projects");
+  const t = useTranslations("pages.projects");
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">

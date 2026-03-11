@@ -7,7 +7,7 @@ import { Button } from "@/components/atoms";
 
 export const GoBackButton = () => {
   const router = useRouter();
-  const t = useTranslations("goBackButton");
+  const t = useTranslations("components.goBackButton");
   const [isInternal, setIsInternal] = useState(false);
 
   useEffect(() => {

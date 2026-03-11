@@ -1,4 +1,4 @@
-export { ThemeToggle, toggleTrack, toggleThumb } from "./ThemeToggle";
+export { ThemeToggle } from "./ThemeToggle";
 export { Typography, typographyVariants } from "./Typography";
 export { Button, buttonVariants } from "./Button";
 export { Avatar, avatarVariants } from "./Avatar";

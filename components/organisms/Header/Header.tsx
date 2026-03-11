@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 
 export const Header = () => {
     const pathname = usePathname();
-    const t = useTranslations("header");
+    const t = useTranslations("layout.header");
 
     const isHomePage = pathname === '/' || pathname === '/en' || pathname === '/pt-BR';
 
