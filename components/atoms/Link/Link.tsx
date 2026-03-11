@@ -1,4 +1,4 @@
-import NextLink from "next/link";
+import { Link as IntlLink } from "@/i18n/navigation";
 import type { ComponentPropsWithoutRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
@@ -17,10 +17,11 @@ const linkVariants = cva("underline-offset-4 transition-colors duration-200", {
   },
 });
 
+// Atualizamos aqui para pegar os tipos do IntlLink em vez do NextLink
 type LinkProps = VariantProps<typeof linkVariants> & {
   className?: string;
   external?: boolean;
-} & ComponentPropsWithoutRef<typeof NextLink>;
+} & ComponentPropsWithoutRef<typeof IntlLink>;
 
 export function Link({
   variant,
@@ -45,9 +46,10 @@ export function Link({
   }
 
   return (
-    <NextLink className={classes} {...rest}>
+    // Renderizamos o IntlLink aqui
+    <IntlLink className={classes} {...rest}>
       {children}
-    </NextLink>
+    </IntlLink>
   );
 }
 

@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 const locales = [
   { code: "en" as Locale, label: "EN", ariaLabel: "Switch to English" },
-  { code: "pt-BR" as Locale, label: "PT", ariaLabel: "Mudar para Português" },
+  { code: "br" as Locale, label: "PT", ariaLabel: "Mudar para Português" },
 ];
 
 export function LanguageToggle({ className }: { className?: string }) {
@@ -15,8 +15,11 @@ export function LanguageToggle({ className }: { className?: string }) {
   const router = useRouter();
   const pathname = usePathname();
 
-  const switchLocale = (next: Locale) => {
+const switchLocale = (next: Locale) => {
     if (next === locale) return;
+
+    document.cookie = `NEXT_LOCALE=${next}; path=/; max-age=31536000; SameSite=Lax`;
+
     router.replace(pathname, { locale: next });
   };
 
