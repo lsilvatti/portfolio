@@ -21,7 +21,7 @@ export const NavMenu = ({
   className 
 }: NavMenuProps) => {
   return (
-    <nav className={cn("flex items-center justify-center gap-6 md:gap-10", className)}>
+    <nav className={cn("flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10", className)}>
       {items.map((item, index) => {
         const currentDelay = baseDelay + (index * incrementDelay);
 
