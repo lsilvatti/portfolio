@@ -17,7 +17,7 @@ interface TypewriterTextProps {
 
 export const TypewriterText = ({ prefix = "", words, variant = "h4", className, style }: TypewriterTextProps) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [currentText, setCurrentText] = useState('');
+  const [currentText, setCurrentText] = useState(words[0] ?? '');
   const [isDeleting, setIsDeleting] = useState(false);
 
   const longestWord = words.reduce((a, b) => (a.length > b.length ? a : b), "");
@@ -52,10 +52,10 @@ export const TypewriterText = ({ prefix = "", words, variant = "h4", className, 
   }, [currentText, isDeleting, currentWordIndex, words]);
 
   return (
-    <div className={cn("relative w-full", className)} style={style}>
+    <div className={cn("grid w-full", className)} style={style}>
       <Typography 
         variant={variant} 
-        className="invisible" 
+        className="invisible col-start-1 row-start-1 text-center" 
         aria-hidden="true"
       >
         {prefix}
@@ -65,7 +65,7 @@ export const TypewriterText = ({ prefix = "", words, variant = "h4", className, 
 
       <Typography 
         variant={variant} 
-        className="absolute top-0 left-0 w-full text-center text-muted-foreground"
+        className="col-start-1 row-start-1 text-center text-muted-foreground"
       >
         {prefix}
         <span className="text-primary font-medium">{currentText}</span>
