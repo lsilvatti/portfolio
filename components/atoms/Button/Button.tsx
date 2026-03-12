@@ -1,8 +1,8 @@
 import Link from "next/link";
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithoutRef, ElementType } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { Icon, type IconName } from "@/components/atoms/Icon";
+import { Icon } from "@/components/atoms/Icon";
 
 const buttonVariants = cva(
   [
@@ -50,8 +50,8 @@ const iconSizeMap = {
 
 type BaseProps = ButtonVariantProps & {
   className?: string;
-  iconLeft?: IconName;
-  iconRight?: IconName;
+  iconLeft?: ElementType;
+  iconRight?: ElementType;
   fullWidth?: boolean;
 };
 
@@ -74,8 +74,8 @@ export function Button({
   fullWidth,
   className,
   children,
-  iconLeft,
-  iconRight,
+  iconLeft: IconLeft,
+  iconRight: IconRight,
   ...rest
 }: ButtonProps) {
   const classes = cn(buttonVariants({ variant, size, fullWidth }), className);
@@ -83,9 +83,9 @@ export function Button({
 
   const content = (
     <>
-      {iconLeft && <Icon name={iconLeft} size={iconSize} aria-hidden />}
+      {IconLeft && <Icon icon={IconLeft} size={iconSize} aria-hidden="true" />}
       {children}
-      {iconRight && <Icon name={iconRight} size={iconSize} aria-hidden />}
+      {IconRight && <Icon icon={IconRight} size={iconSize} aria-hidden="true" />}
     </>
   );
 
