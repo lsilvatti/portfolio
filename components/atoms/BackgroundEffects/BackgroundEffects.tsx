@@ -24,7 +24,7 @@ export const BackgroundEffects = () => {
         }}
       />
 
-      <div className="opacity-[0.3]">
+      <div className="opacity-[0.5]">
           <div
             className="absolute inset-0"
             style={{

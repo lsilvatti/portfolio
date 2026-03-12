@@ -9,6 +9,11 @@ const avatarVariants = cva("rounded-full object-cover", {
       md: "h-20 w-20",
       lg: "h-32 w-32",
     },
+    border: {
+      default: "ring-2 ring-border",
+      primary: "ring-2 ring-primary/20",
+      ghost: "ring-2 ring-border/50",
+    },
   },
   defaultVariants: {
     size: "md",
@@ -28,14 +33,17 @@ type AvatarProps = VariantProps<typeof avatarVariants> & {
   alt: string;
   priority?: boolean;
   className?: string;
+  style?: React.CSSProperties;
 };
 
 export function Avatar({
   src,
   alt,
   size = "md",
+  border,
   priority = false,
   className,
+  style,
 }: AvatarProps) {
   return (
     <Image
@@ -44,7 +52,8 @@ export function Avatar({
       width={dimensionMap[size!]}
       height={dimensionMap[size!]}
       priority={priority}
-      className={cn(avatarVariants({ size }), className)}
+      className={cn(avatarVariants({ size, border }), className)}
+      style={style}
     />
   );
 }
