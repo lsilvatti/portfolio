@@ -6,7 +6,7 @@ import { ClipboardCopy, Share2 } from "lucide-react";
 
 export const ConnectCard = () => {
     return (
-        <Card className="opacity-0 flex flex-col items-center gap-4 relative max-w-xl pt-12 pb-12 animate-fade-pop-in" style={{ animationDelay: '0.1s' }}>
+        <Card className="mt-10 md:mt-0 opacity-0 flex flex-col items-center gap-4 relative max-w-xl pt-12 pb-12 animate-fade-pop-in" style={{ animationDelay: '0.1s' }}>
             <Avatar border="primary" size="lg" alt="Profile Picture" className="absolute -top-16 animate-fade-pop-in" src="/profile.jpeg" />
             
             <IconButton
