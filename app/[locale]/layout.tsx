@@ -18,8 +18,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Personal portfolio",
+  title: "Leonardo Silvatti Silva - Portfolio",
+  description: "Frontend Engineer specializing in React, Next.js, and TypeScript. Passionate about crafting performant and accessible web applications with a focus on clean code and best practices.",
 };
 
 export function generateStaticParams() {
