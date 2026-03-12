@@ -1,13 +1,13 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
-import { Button } from '@/components/atoms';
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+import { Button } from "@/components/atoms";
 
 export const GoBackButton = () => {
   const router = useRouter();
-  const t = useTranslations('goBackButton');
+  const t = useTranslations("components.goBackButton");
   const [isInternal, setIsInternal] = useState(false);
 
   useEffect(() => {
@@ -21,13 +21,13 @@ export const GoBackButton = () => {
     if (isInternal && window.history.length > 1) {
       router.back();
     } else {
-      router.push('/connect'); 
+      router.push("/"); 
     }
   };
 
   return (
     <Button onClick={handleNavigation} variant="outline" className="mt-4">
-      {t('label')}
+      {t("label")}
     </Button>
   );
 };

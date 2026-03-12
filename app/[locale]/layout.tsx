@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "@/contexts/ThemeContext";
-import { ThemeToggle, LanguageToggle } from "@/components/atoms";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -23,7 +22,13 @@ export const metadata: Metadata = {
   description: "Personal portfolio",
 };
 
-export default async function RootLayout({
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export const dynamicParams = false;
+
+export default async function LocaleLayout({
   children,
   params,
 }: {
@@ -36,6 +41,7 @@ export default async function RootLayout({
     notFound();
   }
 
+  setRequestLocale(locale);
   const messages = await getMessages();
 
   return (
@@ -47,18 +53,13 @@ export default async function RootLayout({
           }}
         />
       </head>
+      {/* Aqui aplicamos as variáveis das fontes e as cores globais de bg e text */}
       <body
-        className={`${spaceGrotesk.variable} ${inter.variable} antialiased min-h-screen`}
+        className={`${spaceGrotesk.variable} ${inter.variable} bg-background text-foreground antialiased min-h-screen flex flex-col`}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
-            <div className="fixed top-4 right-4 z-50 flex items-center gap-2">
-              <LanguageToggle />
-              <ThemeToggle />
-            </div>
-            <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-              {children}
-            </main>
+            {children}
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

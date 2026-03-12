@@ -1,0 +1,1 @@
+export { NameLogo } from "./NameLogo";

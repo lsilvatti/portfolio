@@ -4,16 +4,16 @@ import { Link } from "@/components/atoms/Link/Link";
 import { Button } from "@/components/atoms/Button/Button";
 
 export function UnderConstructionBanner() {
-  const t = useTranslations("home");
+  const t = useTranslations("pages.home.underConstruction");
 
   return (
     <div className="flex flex-col items-center gap-6 text-center max-w-lg px-4">
       <Typography variant="h1" as="h1">
-        {t("underConstruction")}
+        {t("title")}
       </Typography>
 
       <Typography variant="body" className="text-muted">
-        {t.rich("underConstructionDescription", {
+        {t.rich("description", {
           link: (chunks) => (
             <Link variant="primary" href="/connect">
               {chunks}
@@ -23,7 +23,7 @@ export function UnderConstructionBanner() {
       </Typography>
 
       <Button href="/connect" variant="outline" size="md">
-        {t("goBack")}
+        {t("ctaLabel")}
       </Button>
     </div>
   );

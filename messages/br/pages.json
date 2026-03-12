@@ -1,0 +1,43 @@
+{
+  "pages": {
+    "home": {
+      "hero": {
+        "typewriter": {
+          "prefix": "Sou um Engenheiro Front-end que entrega ",
+          "words": [
+            "produtos escaláveis.",
+            "interfaces fluidas.",
+            "soluções focadas no usuário.",
+            "valor para o negócio."
+          ]
+        },
+        "navMenuItems": [
+          { "label": "conectar", "href": "/connect" },
+          { "label": "projetos", "href": "/projects" },
+          { "label": "currículo", "href": "/resume" }
+        ]
+      },
+      "underConstruction": {
+        "title": "Em Construção",
+        "description": "Esta página está em construção. Você ainda pode ver minhas conexões <link>aqui</link>.",
+        "ctaLabel": "Conecte-se comigo"
+      }
+    },
+    "connect": {
+      "title": "Vamos nos Conectar",
+      "description": "Encontre as melhores formas de entrar em contato comigo."
+    },
+    "projects": {
+      "title": "Projetos",
+      "description": "Uma vitrine dos meus trabalhos e projetos pessoais."
+    },
+    "resume": {
+      "title": "Currículo",
+      "description": "Minha formação profissional, habilidades e experiências."
+    },
+    "notFound": {
+      "title": "404",
+      "description": "Página não encontrada"
+    }
+  }
+}

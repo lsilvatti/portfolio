@@ -5,41 +5,63 @@ import { useRouter, usePathname } from "@/i18n/navigation";
 import { type Locale } from "@/i18n/config";
 import { cn } from "@/lib/utils";
 
+const locales = [
+  { code: "en" as Locale, label: "EN", ariaLabel: "Switch to English" },
+  { code: "br" as Locale, label: "PT", ariaLabel: "Mudar para Português" },
+];
+
 export function LanguageToggle({ className }: { className?: string }) {
   const locale = useLocale() as Locale;
   const router = useRouter();
   const pathname = usePathname();
 
-  const switchLocale = (next: Locale) => {
+const switchLocale = (next: Locale) => {
     if (next === locale) return;
+
+    document.cookie = `NEXT_LOCALE=${next}; path=/; max-age=31536000; SameSite=Lax`;
+
     router.replace(pathname, { locale: next });
   };
 
+  const activeIndex = locales.findIndex((l) => l.code === locale);
+
   return (
-    <div className={cn("inline-flex items-center gap-1", className)}>
-      <button
-        type="button"
-        onClick={() => switchLocale("en")}
-        className={cn(
-          "text-xs font-medium transition-colors cursor-pointer",
-          locale === "en" ? "text-primary" : "text-muted hover:text-foreground"
-        )}
-        aria-label="Switch to English"
-      >
-        EN
-      </button>
-      <span className="text-muted text-xs select-none">/</span>
-      <button
-        type="button"
-        onClick={() => switchLocale("pt-BR")}
-        className={cn(
-          "text-xs font-medium transition-colors cursor-pointer",
-          locale === "pt-BR" ? "text-primary" : "text-muted hover:text-foreground"
-        )}
-        aria-label="Mudar para Português"
-      >
-        PT
-      </button>
+    <div
+      className={cn(
+        "relative inline-flex items-center rounded-lg bg-surface p-0.5",
+        className
+      )}
+      role="radiogroup"
+      aria-label="Language"
+    >
+      {/* Sliding pill indicator */}
+      <span
+        aria-hidden
+        className="absolute top-0.5 bottom-0.5 w-[calc(50%-2px)] rounded-md bg-primary-light transition-transform duration-250 ease-in-out"
+        style={{
+          transform: `translateX(calc(${activeIndex * 100}% + ${activeIndex * 2}px))`,
+        }}
+      />
+
+      {locales.map(({ code, label, ariaLabel }) => (
+        <button
+          key={code}
+          type="button"
+          role="radio"
+          aria-checked={locale === code}
+          onClick={() => switchLocale(code)}
+          className={cn(
+            "relative z-10 px-2.5 py-1 text-xs font-medium cursor-pointer",
+            "rounded-md transition-colors duration-200",
+            locale === code
+              ? "text-primary"
+              : "text-muted hover:text-foreground"
+          )}
+          aria-label={ariaLabel}
+        >
+          {label}
+        </button>
+      ))}
     </div>
   );
 }

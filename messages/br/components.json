@@ -1,0 +1,12 @@
+{
+  "components": {
+    "languageToggle": {
+      "label": "Idioma",
+      "en": "EN",
+      "pt-BR": "PT"
+    },
+    "goBackButton": {
+      "label": "Voltar"
+    }
+  }
+}

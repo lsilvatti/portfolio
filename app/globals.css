@@ -3,7 +3,7 @@
 /* ── Light theme (default) ── */
 :root,
 [data-theme="light"] {
-  --background: #faf9fb;
+  --background: #fafafa;
   --foreground: #1a1a2e;
 
   --primary: #7c3aed;          /* purple-600 */
@@ -68,7 +68,48 @@
 
   --font-sans: var(--font-inter);
   --font-heading: var(--font-space-grotesk);
+
+  --animate-fade-down: fadeSlideDown 0.4s ease-out forwards;
+  --animate-fade-up: fadeSlideUp 0.4s ease-out forwards;
+  --animate-fade-left: fadeSlideLeft 0.4s ease-out forwards;
+  --animate-fade-right: fadeSlideRight 0.4s ease-out forwards;
+  --animate-grow-x: growX 0.8s ease-in-out both;
+
+  @keyframes fadeSlideDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeSlideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeSlideLeft {
+    0% { opacity: 0; transform: translateX(-30px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes fadeSlideRight {
+    0% { opacity: 0; transform: translateX(30px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes growX {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
+
+  @keyframes blob-float {
+    0% { 
+      transform: translateY(120vh) scale(0.8); 
+    }
+    100% { 
+      transform: translateY(-50vh) scale(1.2); 
+    }
+  }
 }
+
+  .animate-blob {
+    animation: blob-float 15s infinite ease-in-out;
+  }
 
 body {
   background: var(--background);
