@@ -13,7 +13,7 @@ export const HeroSection = () => {
             <TypewriterText 
                 prefix={t("typewriter.prefix")}
                 words={t.raw("typewriter.words") as string[]}
-                className="font-mono text-center mt-4"
+                className="font-mono text-center"
                 variant="h4"
                 style={{ animationDelay: '0.3s' }}
             />
@@ -22,7 +22,7 @@ export const HeroSection = () => {
                 animated
                 color="primary"
                 size="thin"
-                className="w-[80%] md:w-full md:max-w-xl mt-1"
+                className="w-[80%] md:w-full md:max-w-xl mt-4"
                 style={{ animationDelay: '0.4s' }} 
             />
 
