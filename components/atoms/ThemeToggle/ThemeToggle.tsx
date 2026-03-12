@@ -3,6 +3,7 @@
 import { useTheme } from "@/contexts/ThemeContext";
 import { THEME_META } from "@/constants/theme";
 import { Icon } from "@/components/atoms/Icon";
+import { SunIcon, MoonIcon } from "@/components/atoms/Icon/icons";
 import { cn } from "@/lib/utils";
 
 export function ThemeToggle({ className }: { className?: string }) {
@@ -27,7 +28,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       )}
     >
       <Icon
-        name="sun"
+        icon={SunIcon}
         size="xs"
         className={cn(
           "absolute inset-0 m-auto transition-all duration-300",
@@ -37,7 +38,7 @@ export function ThemeToggle({ className }: { className?: string }) {
         )}
       />
       <Icon
-        name="moon"
+        icon={MoonIcon}
         size="xs"
         className={cn(
           "absolute inset-0 m-auto transition-all duration-300",
