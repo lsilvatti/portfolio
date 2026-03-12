@@ -1,16 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import type { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { Icon, type IconName } from "@/components/atoms/Icon";
+import { Icon } from "@/components/atoms/Icon";
 import {
-  PopoverRoot,
-  PopoverTrigger,
-  PopoverContent,
-  type PopoverContentProps,
-} from "@/components/atoms/Popover";
+  TooltipProvider,
+  TooltipRoot,
+  TooltipTrigger,
+  TooltipContent,
+  type TooltipContentProps,
+} from "@/components/atoms/Tooltip";
 
 const iconButtonVariants = cva(
   [
@@ -22,10 +23,8 @@ const iconButtonVariants = cva(
   {
     variants: {
       variant: {
-        primary:
-          "bg-primary text-primary-foreground hover:bg-primary-hover shadow-sm",
-        outline:
-          "border border-border bg-transparent text-foreground hover:bg-surface-hover",
+        primary: "bg-primary text-primary-foreground hover:bg-primary-hover shadow-sm",
+        outline: "border border-border bg-transparent text-foreground hover:bg-surface-hover",
         ghost: "bg-transparent text-foreground hover:bg-surface-hover",
       },
       size: {
@@ -51,13 +50,10 @@ const iconSizeMap = {
 >;
 
 type BaseProps = VariantProps<typeof iconButtonVariants> & {
-  icon: IconName;
-  /** Always used as aria-label for accessibility. */
+  icon: ElementType;
   label: string;
-  /** Content rendered inside the popover when the button is clicked. */
-  popover?: ReactNode;
-  /** Props forwarded to PopoverContent. Only used when `popover` is set. */
-  popoverProps?: Omit<PopoverContentProps, "children">;
+  tooltip?: ReactNode;
+  tooltipProps?: Omit<TooltipContentProps, "children">;
   className?: string;
 };
 
@@ -86,8 +82,8 @@ function renderButton({
   rest: IconButtonAsButton | IconButtonAsLink;
 }) {
   if ("href" in rest && rest.href != null) {
-    const { disabled, href, popover: _p, popoverProps: _pp, ...linkRest } =
-      rest as IconButtonAsLink & { popover?: ReactNode; popoverProps?: unknown };
+    const { disabled, href, tooltip: _t, tooltipProps: _tp, ...linkRest } =
+      rest as IconButtonAsLink & { tooltip?: ReactNode; tooltipProps?: unknown };
 
     if (disabled) {
       return (
@@ -108,8 +104,8 @@ function renderButton({
     );
   }
 
-  const { popover: _p, popoverProps: _pp, ...btnRest } =
-    rest as IconButtonAsButton & { popover?: ReactNode; popoverProps?: unknown };
+  const { tooltip: _t, tooltipProps: _tp, ...btnRest } =
+    rest as IconButtonAsButton & { tooltip?: ReactNode; tooltipProps?: unknown };
 
   return (
     <button className={classes} aria-label={label} {...(btnRest as object)}>
@@ -122,24 +118,26 @@ export function IconButton({
   variant,
   size,
   className,
-  icon,
+  icon: Component,
   label,
-  popover,
-  popoverProps,
+  tooltip,
+  tooltipProps,
   ...rest
 }: IconButtonProps) {
   const resolvedSize = size ?? "md";
   const classes = cn(iconButtonVariants({ variant, size }), className);
-  const iconNode = <Icon name={icon} size={iconSizeMap[resolvedSize]} aria-hidden />;
+  const iconNode = <Icon icon={Component} size={iconSizeMap[resolvedSize]} aria-hidden="true" />;
 
   const button = renderButton({ classes, label, iconNode, rest: rest as IconButtonAsButton | IconButtonAsLink });
 
-  if (popover) {
+  if (tooltip) {
     return (
-      <PopoverRoot>
-        <PopoverTrigger asChild>{button}</PopoverTrigger>
-        <PopoverContent {...popoverProps}>{popover}</PopoverContent>
-      </PopoverRoot>
+      <TooltipProvider>
+        <TooltipRoot>
+          <TooltipTrigger asChild>{button}</TooltipTrigger>
+          <TooltipContent {...tooltipProps}>{tooltip}</TooltipContent>
+        </TooltipRoot>
+      </TooltipProvider>
     );
   }
 
