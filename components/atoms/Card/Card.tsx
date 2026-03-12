@@ -5,10 +5,8 @@ import { cn } from "@/lib/utils";
 const cardVariants = cva(
   [
     "rounded-2xl transition-all duration-300",
-    /* 3-D layered shadow */
     "shadow-[0_2px_4px_rgba(0,0,0,0.04),0_8px_16px_rgba(0,0,0,0.08),0_16px_32px_rgba(0,0,0,0.06)]",
     "hover:shadow-[0_4px_8px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.1),0_24px_48px_rgba(0,0,0,0.08)]",
-    "hover:-translate-y-0.5",
   ],
   {
     variants: {

@@ -15,13 +15,10 @@ const TooltipTrigger = TooltipPrimitive.Trigger;
 
 const tooltipContentVariants = cva(
   [
-    "z-50 rounded-lg border bg-surface text-foreground shadow-md outline-none",
-    "data-[state=delayed-open]:animate-in data-[state=delayed-open]:fade-in-0 data-[state=delayed-open]:zoom-in-95",
-    "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
-    "data-[side=top]:slide-in-from-bottom-2",
-    "data-[side=bottom]:slide-in-from-top-2",
-    "data-[side=left]:slide-in-from-right-2",
-    "data-[side=right]:slide-in-from-left-2",
+    "z-50 rounded-lg border bg-background text-foreground shadow-md outline-none",
+    "data-[state=delayed-open]:animate-[fade-pop-in_0.2s_ease-out_both]",
+    "data-[state=instant-open]:animate-[fade-pop-in_0.2s_ease-out_both]",
+    "data-[state=closed]:animate-[fade-pop-out_0.15s_ease-in_both]",
   ],
   {
     variants: {
@@ -77,10 +74,10 @@ type TooltipProps = ComponentPropsWithoutRef<typeof TooltipPrimitive.Root> & {
   children: React.ReactNode;
 };
 
-function Tooltip({ content, contentProps, children, ...rootProps }: TooltipProps) {
+function Tooltip({ content, contentProps, children, delayDuration = 100, ...rootProps }: TooltipProps) {
   return (
     <TooltipProvider>
-      <TooltipRoot {...rootProps}>
+      <TooltipRoot delayDuration={delayDuration} {...rootProps}>
         <TooltipTrigger asChild>{children}</TooltipTrigger>
         <TooltipContent {...contentProps}>{content}</TooltipContent>
       </TooltipRoot>

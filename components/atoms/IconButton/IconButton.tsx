@@ -19,6 +19,7 @@ const iconButtonVariants = cva(
     "transition-all duration-300 cursor-pointer",
     "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
     "disabled:pointer-events-none disabled:opacity-50",
+    "hover:scale-[1.03] active:scale-[0.97]",
   ],
   {
     variants: {
@@ -133,7 +134,7 @@ export function IconButton({
   if (tooltip) {
     return (
       <TooltipProvider>
-        <TooltipRoot>
+        <TooltipRoot delayDuration={100}>
           <TooltipTrigger asChild>{button}</TooltipTrigger>
           <TooltipContent {...tooltipProps}>{tooltip}</TooltipContent>
         </TooltipRoot>
