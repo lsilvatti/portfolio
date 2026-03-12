@@ -1,50 +1,67 @@
-import { Avatar, Button, Card, Icon, IconButton, Typography } from "@/components/atoms"
+'use client';
+
+import { Avatar, Button, Card, IconButton, Typography } from "@/components/atoms";
+import { LinkedinIcon, GithubIcon, EmailIcon, ExternalIcon } from "@/components/atoms/Icon";
+import { ClipboardCopy } from "lucide-react";
 
 export const ConnectCard = () => {
     return (
-        <Card className="flex flex-col items-center gap-4 p-8 relative max-w-xl animate-fade-down" style={{ animationDelay: '0.1s' }}>
-            <Avatar border="primary" size="lg" alt="Profile Picture" className="absolute -top-16" src="/profile.jpeg" />
-            <Typography variant="h2" className="text-center pt-12">
+        <Card className="opacity-0 flex flex-col items-center gap-4 p-8 pt-12 relative mt-16 max-w-xl animate-fade-pop-in" style={{ animationDelay: '0.1s' }}>
+            <Avatar border="primary" size="lg" alt="Profile Picture" className="absolute -top-16 animate-fade-pop-in" src="/profile.jpeg" />
+            <Typography variant="h2" className="text-center pt-12 opacity-0 animate-fade-pop-in" style={{ animationDelay: '0.2s' }}>
                 Let's Connect!
             </Typography>
-            <Typography variant="body" className="text-center">
+            <Typography variant="body" className="text-center opacity-0 animate-fade-pop-in" style={{ animationDelay: '0.3s' }}>
                 I'm always open to new opportunities and collaborations. Feel free to reach out to me through any of the platforms below!
             </Typography>
             <div className="flex flex-col gap-6 mt-6 w-full max-w-md">
-                <div>
+                <div className="flex gap-2">
                     <Button
                         fullWidth
-                        iconLeft="linkedin"
-                        className="bg-[#0A66C2] hover:bg-[#004182] text-white"
+                        iconLeft={LinkedinIcon}
+                        className="bg-[#0A66C2] hover:bg-[#004182] text-white opacity-0 animate-fade-pop-in"
+                        style={{ animationDelay: '0.4s' }}
                     >
                         LinkedIn
                     </Button>
+
+                    <IconButton 
+                        icon={ClipboardCopy} 
+                        label="copy-to-clipboard" 
+                        variant="ghost" 
+                        className="animate-fade-pop-in shrink-0" 
+                        tooltip={<span>Copy to Clipboard</span>}
+                        style={{ animationDelay: '0.4s' }} 
+                    />
                 </div>
 
                 <Button
                     fullWidth
-                    iconLeft="github"
-                    className="bg-[#24292F] hover:bg-[#1a1e23] text-white"
+                    iconLeft={GithubIcon}
+                    className="bg-[#24292F] hover:bg-[#1a1e23] text-white opacity-0 animate-fade-pop-in"
+                    style={{ animationDelay: '0.5s' }}
                 >
                     GitHub
                 </Button>
 
                 <Button
                     fullWidth
-                    iconLeft="email"
-                    className="bg-[#EA4335] hover:bg-[#c5221f] text-white"
+                    iconLeft={EmailIcon}
+                    className="bg-[#EA4335] hover:bg-[#c5221f] text-white opacity-0 animate-fade-pop-in"
+                    style={{ animationDelay: '0.6s' }}
                 >
                     E-mail
                 </Button>
 
                 <Button
                     fullWidth
-                    iconLeft="external"
-                    className="bg-[#006BFF] hover:bg-[#0054cc] text-white"
+                    iconLeft={ExternalIcon}
+                    className="bg-[#006BFF] hover:bg-[#0054cc] text-white opacity-0 animate-fade-pop-in"
+                    style={{ animationDelay: '0.7s' }}
                 >
                     Calendly
                 </Button>
             </div>
         </Card>
-    )
-}
+    );
+};
