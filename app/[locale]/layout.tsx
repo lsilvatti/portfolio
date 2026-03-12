@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Space_Grotesk, Nunito_Sans } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -10,11 +10,15 @@ import "../globals.css";
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const nunitoSans = Nunito_Sans({
+  variable: "--font-nunito-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -42,7 +46,9 @@ export default async function LocaleLayout({
   }
 
   setRequestLocale(locale);
-  const messages = await getMessages();
+  const allMessages = await getMessages();
+  // Exclude `pages` namespace — only consumed by server components
+  const { pages: _pages, ...clientMessages } = allMessages as Record<string, unknown>;
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -55,9 +61,9 @@ export default async function LocaleLayout({
       </head>
       {/* Aqui aplicamos as variáveis das fontes e as cores globais de bg e text */}
       <body
-        className={`${spaceGrotesk.variable} ${inter.variable} bg-background text-foreground antialiased min-h-screen flex flex-col`}
+        className={`${spaceGrotesk.variable} ${nunitoSans.variable} bg-background text-foreground antialiased min-h-dvh scroll-smooth`}
       >
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={clientMessages}>
           <ThemeProvider>
             {children}
           </ThemeProvider>

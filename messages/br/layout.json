@@ -9,7 +9,7 @@
       ]
     },
     "footer": {
-      "copyright": "© {year} Leonardo Silvatti Silva. Feito com Next.js e (muito) café."
+      "copyright": "© {year} Leonardo Silvatti Silva. Feito com Next.js e café."
     }
   }
 }
