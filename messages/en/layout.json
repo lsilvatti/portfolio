@@ -1,15 +1,27 @@
 {
-  "layout": {
-    "header": {
-      "navMenuItems": [
-        { "label": "home", "href": "/" },
-        { "label": "connect", "href": "/connect" },
-        { "label": "projects", "href": "/projects" },
-        { "label": "resume", "href": "/resume" }
-      ]
-    },
-    "footer": {
-      "copyright": "© {year} Leonardo Silvatti Silva. Made with Next.js and coffee."
+    "layout": {
+        "header": {
+            "navMenuItems": [
+                {
+                    "label": "home",
+                    "href": "/"
+                },
+                {
+                    "label": "connect",
+                    "href": "/connect"
+                },
+                {
+                    "label": "projects",
+                    "href": "/projects"
+                },
+                {
+                    "label": "resume",
+                    "href": "/resume"
+                }
+            ]
+        },
+        "footer": {
+            "copyright": "© {year} Leonardo Silvatti Silva. Made with Next.js and coffee."
+        }
     }
-  }
 }

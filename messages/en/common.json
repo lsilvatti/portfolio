@@ -1,5 +1,17 @@
 {
-  "common": {
-    "goBack": "Go Back"
-  }
+    "common": {
+        "goBack": "Go Back",
+        "copyButton": {
+            "label": "Copy to Clipboard",
+            "tooltip": "Copy to Clipboard",
+            "copied": "Copied to Clipboard!",
+            "failed": "Failed to copy."
+        },
+        "shareButton": {
+            "label": "Share this page",
+            "tooltip": "Share this page",
+            "copied": "Link copied to clipboard!",
+            "failed": "Failed to share."
+        }
+    }
 }
