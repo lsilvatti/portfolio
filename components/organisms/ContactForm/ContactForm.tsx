@@ -2,10 +2,11 @@
 
 import { type ChangeEvent, type FormEvent, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { ArrowLeft, Send } from 'lucide-react';
+import { ArrowLeft, Loader2, Send } from 'lucide-react';
 import { Button, Card, Input, PhoneInput, Textarea, Typography } from '@/components/atoms';
 import { validateName, validateEmail, validateText } from '@/components/atoms/Input/formValidations';
 import type { PhoneValue } from '@/components/atoms/Input/PhoneInput';
+import { sendEmailAction } from '@/app/actions/send-email';
 
 export interface ContactFormData {
     firstName: string;
@@ -20,8 +21,7 @@ type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
 interface ContactFormProps {
     onShowLinks?: () => void;
-    /** Called with validated data on submit. Implement sending logic here. */
-    onSubmit?: (data: ContactFormData) => void | Promise<void>;
+    onSuccess?: () => void;
 }
 
 interface FieldErrors {
@@ -32,7 +32,7 @@ interface FieldErrors {
     message?: string;
 }
 
-export function ContactForm({ onShowLinks, onSubmit }: ContactFormProps) {
+export function ContactForm({ onShowLinks, onSuccess }: ContactFormProps) {
     const t = useTranslations('connect.form');
 
     const [firstName, setFirstName] = useState('');
@@ -42,6 +42,7 @@ export function ContactForm({ onShowLinks, onSubmit }: ContactFormProps) {
     const [message, setMessage] = useState('');
     const [errors, setErrors] = useState<FieldErrors>({});
     const [status, setStatus] = useState<FormStatus>('idle');
+    const [serverError, setServerError] = useState<string | null>(null);
 
     const clearError = (field: keyof FieldErrors) =>
         setErrors(prev => ({ ...prev, [field]: undefined }));
@@ -49,18 +50,36 @@ export function ContactForm({ onShowLinks, onSubmit }: ContactFormProps) {
     const validateAll = (): FieldErrors => {
         const errs: FieldErrors = {};
 
-        const fnResult = validateName(firstName, t('firstName'));
+        const fnLabel = t('firstName');
+        const fnResult = validateName(firstName, fnLabel, {
+            required: t('validation.nameRequired', { label: fnLabel }),
+            tooShort: t('validation.nameTooShort', { label: fnLabel }),
+            invalidChars: t('validation.nameInvalidChars', { label: fnLabel }),
+        });
         if (!fnResult.valid) errs.firstName = fnResult.message;
 
         if (lastName.trim()) {
-            const lnResult = validateName(lastName, t('lastName'));
+            const lnLabel = t('lastName');
+            const lnResult = validateName(lastName, lnLabel, {
+                required: t('validation.nameRequired', { label: lnLabel }),
+                tooShort: t('validation.nameTooShort', { label: lnLabel }),
+                invalidChars: t('validation.nameInvalidChars', { label: lnLabel }),
+            });
             if (!lnResult.valid) errs.lastName = lnResult.message;
         }
 
-        const emailResult = validateEmail(email);
+        const emailResult = validateEmail(email, {
+            required: t('validation.emailRequired'),
+            invalid: t('validation.emailInvalid'),
+        });
         if (!emailResult.valid) errs.email = emailResult.message;
 
-        const msgResult = validateText(message, { required: true, minLength: 10, maxLength: 500, label: t('message') });
+        const msgLabel = t('message');
+        const msgResult = validateText(message, { required: true, minLength: 10, maxLength: 500, label: msgLabel }, {
+            required: t('validation.textRequired', { label: msgLabel }),
+            tooShort: t('validation.textTooShort', { label: msgLabel, min: 10 }),
+            tooLong: t('validation.textTooLong', { label: msgLabel, max: 500 }),
+        });
         if (!msgResult.valid) errs.message = msgResult.message;
 
         return errs;
@@ -68,6 +87,7 @@ export function ContactForm({ onShowLinks, onSubmit }: ContactFormProps) {
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setServerError(null);
 
         const errs = validateAll();
         if (Object.keys(errs).length > 0) {
@@ -76,8 +96,10 @@ export function ContactForm({ onShowLinks, onSubmit }: ContactFormProps) {
         }
 
         setStatus('submitting');
+        
         try {
-            await onSubmit?.({
+            // Chamamos a action direto aqui!
+            const result = await sendEmailAction({
                 firstName: firstName.trim(),
                 lastName: lastName.trim(),
                 email: email.trim(),
@@ -85,8 +107,24 @@ export function ContactForm({ onShowLinks, onSubmit }: ContactFormProps) {
                 phone: phone.number,
                 message: message.trim(),
             });
-            setStatus('success');
+
+            if (result.error) {
+                setServerError(result.error);
+                setStatus('error');
+                return;
+            }
+
+            setFirstName('');
+            setLastName('');
+            setEmail('');
+            setPhone({ countryCode: '+1', number: '' });
+            setMessage('');
+            setErrors({});
+            setStatus('idle');
+            setServerError(null);
+            onSuccess?.();
         } catch {
+            setServerError(t('sendError'));
             setStatus('error');
         }
     };
@@ -94,7 +132,7 @@ export function ContactForm({ onShowLinks, onSubmit }: ContactFormProps) {
     const submitLabel = {
         idle: t('send'),
         submitting: t('sending'),
-        success: t('sent'),
+        success: t('send'),
         error: t('tryAgain'),
     }[status];
 
@@ -109,7 +147,7 @@ export function ContactForm({ onShowLinks, onSubmit }: ContactFormProps) {
                     type="button"
                     onClick={onShowLinks}
                     aria-label={t('backToLinks')}
-                    className="flex items-center gap-1.5 self-end sm:self-auto shrink-0 text-sm text-muted hover:text-primary transition-colors duration-200"
+                    className="flex items-center gap-1.5 self-end sm:self-auto shrink-0 text-sm text-muted hover:text-primary transition-colors duration-200 animate-fade-pop-in"
                 >
                     <ArrowLeft size={14} />
                     {t('backToLinks')}
@@ -182,12 +220,7 @@ export function ContactForm({ onShowLinks, onSubmit }: ContactFormProps) {
                 <div aria-live="polite" aria-atomic="true">
                     {status === 'error' && (
                         <p role="alert" className="text-sm text-red-500 text-center">
-                            {t('sendError')}
-                        </p>
-                    )}
-                    {status === 'success' && (
-                        <p role="status" className="text-sm text-green-500 text-center">
-                            {t('sent')}
+                            {serverError || t('sendError')}
                         </p>
                     )}
                 </div>
@@ -195,8 +228,9 @@ export function ContactForm({ onShowLinks, onSubmit }: ContactFormProps) {
                 <Button
                     type="submit"
                     fullWidth
-                    disabled={status === 'submitting' || status === 'success'}
-                    iconRight={status === 'idle' || status === 'error' ? Send : undefined}
+                    disabled={status === 'submitting'}
+                    iconRight={status === 'submitting' ? Loader2 : Send}
+                    className={status === 'submitting' ? '[&_svg]:animate-spin' : undefined}
                 >
                     {submitLabel}
                 </Button>

@@ -6,7 +6,7 @@ interface CenteredLayoutProps {
 
 export const CenteredLayout = ({ children }: CenteredLayoutProps) => {
   return (
-    <div className="flex min-h-0 sm:min-h-[calc(100dvh-8rem)] flex-col items-center justify-center gap-6">
+    <div className="flex min-h-[calc(100dvh-8rem)] flex-col items-center justify-center gap-6">
       {children}
     </div>
   );
