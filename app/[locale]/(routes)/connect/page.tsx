@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Card } from "@/components/atoms/Card/Card";
-import { ConnectCard } from "@/components/organisms/ConnectCard/ConnectCard";
+import { ConnectView } from "@/components/organisms/ConnectView";
 import { CenteredLayout } from "@/components/templates";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
@@ -26,7 +25,7 @@ export default async function ConnectPage({ params }: { params: Promise<{ locale
 
     return (
         <CenteredLayout>
-            <ConnectCard />
+            <ConnectView />
         </CenteredLayout>
     );
 }
