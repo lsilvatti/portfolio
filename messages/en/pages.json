@@ -71,7 +71,22 @@
             "sending": "Sending…",
             "sent": "Sent!",
             "tryAgain": "Retry",
-            "sendError": "Something went wrong. Please try again."
+            "sendError": "Something went wrong. Please try again.",
+            "success": {
+                "title": "Message Sent!",
+                "description": "Thank you for reaching out. I'll get back to you as soon as possible.",
+                "nextSteps": "In the mean time you can <goBack>go back</goBack> or <sendAnother>send another message</sendAnother>."
+            },
+            "validation": {
+                "nameRequired": "{label} is required.",
+                "nameTooShort": "{label} must be at least 2 characters.",
+                "nameInvalidChars": "{label} may only contain letters, spaces, hyphens, and apostrophes.",
+                "emailRequired": "Email is required.",
+                "emailInvalid": "Please enter a valid email address.",
+                "textRequired": "{label} is required.",
+                "textTooShort": "{label} must be at least {min} characters.",
+                "textTooLong": "{label} must not exceed {max} characters."
+            }
         }
     }
 }

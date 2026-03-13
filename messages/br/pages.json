@@ -71,7 +71,22 @@
             "sending": "Enviando…",
             "sent": "Enviado!",
             "tryAgain": "Tentar novamente",
-            "sendError": "Algo deu errado. Por favor, tente novamente."
+            "sendError": "Algo deu errado. Por favor, tente novamente.",
+            "success": {
+                "title": "Mensagem Enviada!",
+                "description": "Obrigado pelo contato. Responderei o mais breve possível.",
+                "nextSteps": "Enquanto isso, você pode <goBack>voltar</goBack> ou <sendAnother>enviar outra mensagem</sendAnother>."
+            },
+            "validation": {
+                "nameRequired": "{label} é obrigatório.",
+                "nameTooShort": "{label} deve ter pelo menos 2 caracteres.",
+                "nameInvalidChars": "{label} pode conter apenas letras, espaços, hífens e apóstrofos.",
+                "emailRequired": "E-mail é obrigatório.",
+                "emailInvalid": "Insira um endereço de e-mail válido.",
+                "textRequired": "{label} é obrigatório.",
+                "textTooShort": "{label} deve ter pelo menos {min} caracteres.",
+                "textTooLong": "{label} não pode exceder {max} caracteres."
+            }
         }
     }
 }
