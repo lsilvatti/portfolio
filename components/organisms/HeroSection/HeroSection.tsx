@@ -8,14 +8,14 @@ export const HeroSection = () => {
 
     return (
         <>
-            <NameLogo className={"h-7.5 md:h-14 animate-fade-down"} style={{ animationDelay: '0.1s' }} />
+            <NameLogo className={"h-7 md:h-14 animate-fade-down"} style={{ animationDelay: '0.1s' }} />
 
             <TypewriterText 
                 prefix={t("typewriter.prefix")}
                 words={t.raw("typewriter.words") as string[]}
                 className="font-mono text-center"
-                variant="body"
                 style={{ animationDelay: '0.3s' }}
+                variant="body"
             />
  
             <Divider 
