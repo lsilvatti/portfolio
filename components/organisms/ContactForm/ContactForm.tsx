@@ -40,6 +40,7 @@ export function ContactForm({ onShowLinks, onSuccess }: ContactFormProps) {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState<PhoneValue>({ countryCode: '+1', number: '' });
     const [message, setMessage] = useState('');
+    const [honeypot, setHoneypot] = useState('');
     const [errors, setErrors] = useState<FieldErrors>({});
     const [status, setStatus] = useState<FormStatus>('idle');
     const [serverError, setServerError] = useState<string | null>(null);
@@ -106,6 +107,7 @@ export function ContactForm({ onShowLinks, onSuccess }: ContactFormProps) {
                 phoneCountryCode: phone.countryCode,
                 phone: phone.number,
                 message: message.trim(),
+                _honeypot: honeypot,
             });
 
             if (result.error) {
@@ -119,6 +121,7 @@ export function ContactForm({ onShowLinks, onSuccess }: ContactFormProps) {
             setEmail('');
             setPhone({ countryCode: '+1', number: '' });
             setMessage('');
+            setHoneypot('');
             setErrors({});
             setStatus('idle');
             setServerError(null);
@@ -155,6 +158,17 @@ export function ContactForm({ onShowLinks, onSuccess }: ContactFormProps) {
             </div>
 
             <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-3 sm:gap-4">
+                {/* Honeypot — hidden from real users; bots fill it and get silently rejected */}
+                <input
+                    type="text"
+                    name="website"
+                    value={honeypot}
+                    onChange={(e) => setHoneypot(e.target.value)}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="sr-only"
+                />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <Input
                         label={t('firstName')}
