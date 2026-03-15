@@ -14,7 +14,6 @@ export const HeroSection = () => {
                 prefix={t("typewriter.prefix")}
                 words={t.raw("typewriter.words") as string[]}
                 className="font-mono text-center"
-                style={{ animationDelay: '0.3s' }}
                 variant="body"
             />
  

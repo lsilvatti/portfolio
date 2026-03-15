@@ -5,6 +5,9 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { routing } from "@/i18n/routing";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 import "../globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -98,13 +101,6 @@ export async function generateMetadata({
         : "Engenheiro Frontend especializado em React, Next.js e TypeScript. Apaixonado por criar aplicações web performáticas e acessíveis.",
       images: ["/og-image.png"],
     },
-    alternates: {
-      canonical: `/${locale}`,
-      languages: {
-        en: "/en",
-        "pt-BR": "/br",
-      },
-    },
     icons: {
       icon: [
         { url: "/favicon.ico", sizes: "any" },
@@ -148,8 +144,8 @@ export default async function LocaleLayout({
   // Exclude `pages` namespace — only consumed by server components
   const { pages: _pages, ...clientMessages } = allMessages as Record<string, unknown>;
 
-  return (
-    <html lang={localeLangMap[locale] ?? locale} suppressHydrationWarning>
+return (
+    <html lang={localeLangMap[locale] ?? locale} className="bg-background" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -157,13 +153,14 @@ export default async function LocaleLayout({
           }}
         />
       </head>
-      {/* Aqui aplicamos as variáveis das fontes e as cores globais de bg e text */}
       <body
         className={`${spaceGrotesk.variable} ${nunitoSans.variable} bg-background text-foreground antialiased min-h-dvh scroll-smooth`}
       >
         <NextIntlClientProvider locale={locale} messages={clientMessages}>
           <ThemeProvider>
             {children}
+            <Analytics />
+            <SpeedInsights />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

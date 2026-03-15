@@ -9,6 +9,8 @@ export const NameLogo = ({ className, ...rest }: NameLogoProps) => {
       {...rest}
       className={cn("w-auto h-16 md:h-20", className)} 
       viewBox="0 0 119 10"
+      width="119"
+      height="10"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
     >
