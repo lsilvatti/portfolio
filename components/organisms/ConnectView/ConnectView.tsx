@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { MailCheck, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button, Card, Link, Typography } from '@/components/atoms';
+import { Card, Link, Typography } from '@/components/atoms';
 import { ConnectCard } from '../ConnectCard/ConnectCard';
 import { ContactForm } from '../ContactForm/ContactForm';
 

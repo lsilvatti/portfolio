@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, startTransition } from 'react';
-import { Typography, typographyVariants } from '@/components/atoms/Typography/Typography';
+import { Typography, typographyVariants } from '@/components/atoms';
 import { type VariantProps } from 'class-variance-authority';
 
 type TypographyVariant = NonNullable<VariantProps<typeof typographyVariants>['variant']>;

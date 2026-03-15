@@ -1,11 +1,10 @@
 'use client';
 
-import { type ChangeEvent, type FormEvent, useState } from 'react';
+import { type ChangeEvent, type SubmitEvent, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { ArrowLeft, Loader2, Send } from 'lucide-react';
-import { Button, Card, Input, PhoneInput, Textarea, Typography } from '@/components/atoms';
-import { validateName, validateEmail, validateText } from '@/components/atoms/Input/formValidations';
-import type { PhoneValue } from '@/components/atoms/Input/PhoneInput';
+import { Button, Card, Input, PhoneInput, Textarea, Typography, validateName, validateEmail, validateText  } from '@/components/atoms';
+import type { PhoneValue } from '@/components/atoms';
 import { sendEmailAction } from '@/app/actions/send-email';
 
 export interface ContactFormData {
@@ -86,7 +85,7 @@ export function ContactForm({ onShowLinks, onSuccess }: ContactFormProps) {
         return errs;
     };
 
-    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
         setServerError(null);
 

@@ -1,4 +1,4 @@
-import { Typography, typographyVariants } from '@/components/atoms/Typography/Typography';
+import { Typography, typographyVariants } from '@/components/atoms';
 import { type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 import { TypewriterAnimation } from './TypewriterAnimation';

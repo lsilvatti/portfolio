@@ -1,9 +1,7 @@
 'use client';
 
 import { Share2 } from 'lucide-react';
-import { IconButton } from '@/components/atoms/IconButton';
-import { Toast } from '@/components/atoms/Toast/Toast';
-import { useToast } from '@/components/atoms/Toast/useToast';
+import { IconButton, Toast, useToast } from '@/components/atoms';
 import { useTranslations } from 'next-intl';
 
 export interface ShareButtonProps {
