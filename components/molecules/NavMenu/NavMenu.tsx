@@ -30,8 +30,8 @@ export const NavMenu = ({
             key={item.label}
             href={item.href}
             className={cn(
-              "text-lg md:text-xl font-medium text-muted-foreground capitalize",
-              "opacity-0 animate-fade-up",
+              "text-lg font-medium text-muted-foreground capitalize",
+              "animate-fade-down md:animate-fade-right",
               "transition-all duration-300 ease-in-out",
               "hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]",
               "active:scale-95"

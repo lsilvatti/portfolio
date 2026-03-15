@@ -1,43 +1,92 @@
 {
-  "pages": {
-    "home": {
-      "hero": {
-        "typewriter": {
-          "prefix": "Sou um Engenheiro Front-end que entrega ",
-          "words": [
-            "produtos escaláveis.",
-            "interfaces fluidas.",
-            "soluções focadas no usuário.",
-            "valor para o negócio."
-          ]
+    "pages": {
+        "home": {
+            "hero": {
+                "typewriter": {
+                    "prefix": "Sou um Engenheiro Front-end que entrega ",
+                    "words": [
+                        "produtos escaláveis.",
+                        "interfaces fluidas.",
+                        "soluções focadas no usuário.",
+                        "valor para o negócio."
+                    ]
+                },
+                "navMenuItems": [
+                    {
+                        "label": "conectar",
+                        "href": "/connect"
+                    },
+                    {
+                        "label": "projetos",
+                        "href": "/projects"
+                    },
+                    {
+                        "label": "currículo",
+                        "href": "/resume"
+                    }
+                ]
+            },
+            "underConstruction": {
+                "title": "Em Construção",
+                "description": "Esta página está em construção. Você ainda pode ver minhas conexões <link>aqui</link>.",
+                "ctaLabel": "Conecte-se comigo"
+            }
         },
-        "navMenuItems": [
-          { "label": "conectar", "href": "/connect" },
-          { "label": "projetos", "href": "/projects" },
-          { "label": "currículo", "href": "/resume" }
-        ]
-      },
-      "underConstruction": {
-        "title": "Em Construção",
-        "description": "Esta página está em construção. Você ainda pode ver minhas conexões <link>aqui</link>.",
-        "ctaLabel": "Conecte-se comigo"
-      }
+        "connect": {
+            "title": "Vamos nos Conectar",
+            "description": "Encontre as melhores formas de entrar em contato comigo."
+        },
+        "projects": {
+            "title": "Projetos",
+            "description": "Uma vitrine dos meus trabalhos e projetos pessoais."
+        },
+        "resume": {
+            "title": "Currículo",
+            "description": "Minha formação profissional, habilidades e experiências."
+        },
+        "notFound": {
+            "title": "404",
+            "description": "Página não encontrada"
+        }
     },
     "connect": {
-      "title": "Vamos nos Conectar",
-      "description": "Encontre as melhores formas de entrar em contato comigo."
-    },
-    "projects": {
-      "title": "Projetos",
-      "description": "Uma vitrine dos meus trabalhos e projetos pessoais."
-    },
-    "resume": {
-      "title": "Currículo",
-      "description": "Minha formação profissional, habilidades e experiências."
-    },
-    "notFound": {
-      "title": "404",
-      "description": "Página não encontrada"
+        "letsConnect": "Vamos nos Conectar!",
+        "description": "Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato comigo através de qualquer uma das plataformas abaixo!",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "email": "E-mail",
+        "calendly": "Calendly",
+        "sendMessage": "Ou se preferir, envie-me uma mensagem",
+        "form": {
+            "title": "Enviar Mensagem",
+            "description": "Responderei o mais breve possível.",
+            "backToLinks": "Voltar aos links",
+            "firstName": "Nome",
+            "lastName": "Sobrenome",
+            "email": "E-mail",
+            "phone": "Telefone",
+            "message": "Mensagem",
+            "messagePlaceholder": "Me conte o que você tem em mente…",
+            "send": "Enviar Mensagem",
+            "sending": "Enviando…",
+            "sent": "Enviado!",
+            "tryAgain": "Tentar novamente",
+            "sendError": "Algo deu errado. Por favor, tente novamente.",
+            "success": {
+                "title": "Mensagem Enviada!",
+                "description": "Obrigado pelo contato. Responderei o mais breve possível.",
+                "nextSteps": "Enquanto isso, você pode <goBack>voltar</goBack> ou <sendAnother>enviar outra mensagem</sendAnother>."
+            },
+            "validation": {
+                "nameRequired": "{label} é obrigatório.",
+                "nameTooShort": "{label} deve ter pelo menos 2 caracteres.",
+                "nameInvalidChars": "{label} pode conter apenas letras, espaços, hífens e apóstrofos.",
+                "emailRequired": "E-mail é obrigatório.",
+                "emailInvalid": "Insira um endereço de e-mail válido.",
+                "textRequired": "{label} é obrigatório.",
+                "textTooShort": "{label} deve ter pelo menos {min} caracteres.",
+                "textTooLong": "{label} não pode exceder {max} caracteres."
+            }
+        }
     }
-  }
 }

@@ -6,8 +6,8 @@ import { type Locale } from "@/i18n/config";
 import { cn } from "@/lib/utils";
 
 const locales = [
-  { code: "en" as Locale, label: "EN", ariaLabel: "Switch to English" },
-  { code: "br" as Locale, label: "PT", ariaLabel: "Mudar para Português" },
+  { code: "en" as Locale, label: "EN", ariaLabel: "EN – Switch to English" },
+  { code: "br" as Locale, label: "PT", ariaLabel: "PT – Mudar para Português" },
 ];
 
 export function LanguageToggle({ className }: { className?: string }) {

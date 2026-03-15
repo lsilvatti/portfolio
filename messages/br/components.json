@@ -1,12 +1,93 @@
 {
-  "components": {
-    "languageToggle": {
-      "label": "Idioma",
-      "en": "EN",
-      "pt-BR": "PT"
-    },
-    "goBackButton": {
-      "label": "Voltar"
+    "components": {
+        "languageToggle": {
+            "label": "Idioma",
+            "en": "EN",
+            "pt-BR": "PT"
+        },
+        "goBackButton": {
+            "label": "Voltar"
+        },
+
+        "phoneInput": {
+            "selectCountryLabel": "Selecionar país",
+            "searchPlaceholder": "Buscar país...",
+            "countriesListLabel": "Países",
+            "noResults": "Nenhum país encontrado",
+            "phonePlaceholder": "Número de telefone",
+            "countries": {
+                "US": "Estados Unidos",
+                "BR": "Brasil",
+                "GB": "Reino Unido",
+                "CA": "Canadá",
+                "AU": "Austrália",
+                "DE": "Alemanha",
+                "FR": "França",
+                "ES": "Espanha",
+                "IT": "Itália",
+                "PT": "Portugal",
+                "MX": "México",
+                "AR": "Argentina",
+                "CO": "Colômbia",
+                "CL": "Chile",
+                "PE": "Peru",
+                "IN": "Índia",
+                "CN": "China",
+                "JP": "Japão",
+                "KR": "Coreia do Sul",
+                "RU": "Rússia",
+                "NG": "Nigéria",
+                "ZA": "África do Sul",
+                "EG": "Egito",
+                "AE": "Emirados Árabes Unidos",
+                "SA": "Arábia Saudita",
+                "IL": "Israel",
+                "NL": "Países Baixos",
+                "SE": "Suécia",
+                "NO": "Noruega",
+                "DK": "Dinamarca",
+                "FI": "Finlândia",
+                "PL": "Polônia",
+                "CH": "Suíça",
+                "AT": "Áustria",
+                "BE": "Bélgica",
+                "SG": "Singapura",
+                "NZ": "Nova Zelândia",
+                "TH": "Tailândia",
+                "VN": "Vietnã",
+                "ID": "Indonésia",
+                "MY": "Malásia",
+                "PH": "Filipinas",
+                "PK": "Paquistão",
+                "BD": "Bangladesh",
+                "TW": "Taiwan",
+                "HK": "Hong Kong",
+                "CZ": "República Tcheca",
+                "HU": "Hungria",
+                "RO": "Romênia",
+                "GR": "Grécia",
+                "IE": "Irlanda",
+                "UA": "Ucrânia",
+                "TR": "Turquia",
+                "HR": "Croácia",
+                "SK": "Eslováquia",
+                "BG": "Bulgária",
+                "KE": "Quênia",
+                "ET": "Etiópia",
+                "GH": "Gana",
+                "TZ": "Tanzânia",
+                "MA": "Marrocos",
+                "VE": "Venezuela",
+                "EC": "Equador",
+                "UY": "Uruguai",
+                "BO": "Bolívia",
+                "CR": "Costa Rica",
+                "PA": "Panamá",
+                "GT": "Guatemala",
+                "QA": "Catar",
+                "KW": "Kuwait",
+                "JO": "Jordânia"
+            }
+        }
     }
-  }
 }

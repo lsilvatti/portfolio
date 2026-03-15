@@ -1,16 +1,38 @@
+import type { Metadata } from "next";
+import { ConnectView } from "@/components/organisms/ConnectView";
+import { CenteredLayout } from "@/components/templates";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export default async function ConnectPage({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("pages.connect");
 
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <h1 className="text-4xl font-bold">{t("title")}</h1>
-      <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-        {t("description")}
-      </p>
-    </div>
-  );
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: `/${locale}/connect`,
+      languages: {
+        en: "/en/connect",
+        "pt-BR": "/br/connect",
+      },
+    },
+  };
+}
+
+export default async function ConnectPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    setRequestLocale(locale);
+    const t = await getTranslations("pages.connect");
+
+    return (
+        <CenteredLayout>
+            <ConnectView />
+        </CenteredLayout>
+    );
 }
