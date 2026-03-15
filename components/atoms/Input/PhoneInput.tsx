@@ -78,7 +78,12 @@ export function PhoneInput({
     }));
 
     const [selectedCode, setSelectedCode] = useState(defaultCountryCode);
-    const selectedCountry = localizedCountries.find(c => c.code === selectedCode) ?? localizedCountries[0];
+    const [customDial, setCustomDial] = useState<string | null>(null);
+    const selectedCountry = localizedCountries.find(c => c.code === selectedCode);
+
+    // Effective values shown in the trigger and sent via onValueChange
+    const effectiveDial = customDial ?? selectedCountry?.dial ?? localizedCountries[0]?.dial ?? '';
+    const effectiveFlag = customDial ? WHITE_FLAG : (selectedCountry?.flag ?? localizedCountries[0]?.flag ?? WHITE_FLAG);
 
     const [number, setNumber] = useState('');
     const [internalError, setInternalError] = useState('');
@@ -118,9 +123,25 @@ export function PhoneInput({
 
     const selectCountry = useCallback((country: LocalizedCountry) => {
         setSelectedCode(country.code);
+        setCustomDial(null);
         setOpen(false);
         setSearch('');
         onValueChange?.({ countryCode: country.dial, number });
+    }, [number, onValueChange]);
+
+    /** Normalize a raw search string into a dial code (ensures leading +). */
+    const normalizeDial = (raw: string) => {
+        const stripped = raw.replace(/[^\d+]/g, '');
+        return stripped.startsWith('+') ? stripped : `+${stripped}`;
+    };
+
+    const selectCustomDial = useCallback((raw: string) => {
+        const dial = normalizeDial(raw);
+        setCustomDial(dial);
+        setSelectedCode('');
+        setOpen(false);
+        setSearch('');
+        onValueChange?.({ countryCode: dial, number });
     }, [number, onValueChange]);
 
     const handleTriggerKeyDown = (e: React.KeyboardEvent) => {
@@ -138,9 +159,13 @@ export function PhoneInput({
             e.preventDefault();
             setActiveIndex(i => Math.max(i - 1, 0));
         }
-        if (e.key === 'Enter' && filtered[activeIndex]) {
+        if (e.key === 'Enter') {
             e.preventDefault();
-            selectCountry(filtered[activeIndex]);
+            if (filtered[activeIndex]) {
+                selectCountry(filtered[activeIndex]);
+            } else if (filtered.length === 0 && search.trim()) {
+                selectCustomDial(search.trim());
+            }
         }
     };
 
@@ -155,7 +180,7 @@ export function PhoneInput({
         setNumber(val);
         setInternalError('');
         setInternalValid(false);
-        onValueChange?.({ countryCode: selectedCountry?.dial ?? '', number: val });
+        onValueChange?.({ countryCode: effectiveDial, number: val });
     };
 
     const handleNumberBlur = () => {
@@ -209,10 +234,10 @@ export function PhoneInput({
                     )}
                 >
                     <span className="text-base leading-none select-none">
-                        {selectedCountry?.flag ?? WHITE_FLAG}
+                        {effectiveFlag}
                     </span>
                     <span className="tabular-nums text-muted">
-                        {selectedCountry?.dial ?? '—'}
+                        {effectiveDial || '—'}
                     </span>
                     <ChevronDown
                         size={12}
@@ -233,7 +258,7 @@ export function PhoneInput({
                                 <span className="text-base leading-none select-none">
                                     {search.trim()
                                         ? (filtered[activeIndex]?.flag ?? WHITE_FLAG)
-                                        : (selectedCountry?.flag ?? WHITE_FLAG)
+                                        : effectiveFlag
                                     }
                                 </span>
                                 <input
@@ -259,7 +284,29 @@ export function PhoneInput({
                             className="overflow-y-auto max-h-52 py-1"
                         >
                             {filtered.length === 0 ? (
-                                <li className="px-3 py-2 text-sm text-muted-foreground">{tPhone('noResults')}</li>
+                                <li
+                                    role="option"
+                                    aria-selected={false}
+                                    onClick={() => search.trim() && selectCustomDial(search.trim())}
+                                    className={cn(
+                                        'px-3 py-2 text-sm',
+                                        search.trim()
+                                            ? 'cursor-pointer hover:bg-surface-hover transition-colors text-foreground'
+                                            : 'text-muted-foreground cursor-default'
+                                    )}
+                                >
+                                    {search.trim() ? (
+                                        <span>
+                                            {tPhone('noResults')}{' — '}
+                                            <span className="font-medium text-primary">
+                                                {normalizeDial(search.trim())}
+                                            </span>
+                                            {' ✓'}
+                                        </span>
+                                    ) : (
+                                        tPhone('noResults')
+                                    )}
+                                </li>
                             ) : (
                                 filtered.map((c, i) => (
                                     <li
