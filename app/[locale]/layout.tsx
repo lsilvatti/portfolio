@@ -141,7 +141,6 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const allMessages = await getMessages();
-  const { pages: _pages, ...clientMessages } = allMessages as Record<string, unknown>;
 
 return (
     <html lang={localeLangMap[locale] ?? locale} suppressHydrationWarning>
@@ -155,7 +154,7 @@ return (
       <body
         className={`${spaceGrotesk.variable} ${nunitoSans.variable} text-foreground antialiased min-h-dvh scroll-smooth`}
       >
-        <NextIntlClientProvider locale={locale} messages={clientMessages}>
+        <NextIntlClientProvider locale={locale} messages={allMessages}>
           <ThemeProvider>
             {children}
             <Analytics />
