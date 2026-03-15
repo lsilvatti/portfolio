@@ -15,16 +15,16 @@ export const BackgroundEffects = () => {
       </svg>
 
       <div 
-        className="absolute inset-0 opacity-[0.35]"
+        className="absolute inset-0 opacity-[0.5] dark:opacity-[0.2]"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23888888' fill-opacity='0.4'/%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23888888'/%3E%3C/svg%3E")`,
           backgroundSize: '32px 32px',
           maskImage: 'radial-gradient(circle at 30% 30%, white, transparent 90%)',
           WebkitMaskImage: 'radial-gradient(circle at 30% 30%, white, transparent 90%)'
         }}
       />
 
-      <div className="opacity-[0.5]">
+      <div className="opacity-[0.9] dark:opacity-[0.45]">
           <div
             className="absolute inset-0"
             style={{
@@ -38,15 +38,21 @@ export const BackgroundEffects = () => {
           />
 
           <div
-            className="absolute inset-0 opacity-[0.12]"
+            className="absolute inset-0 opacity-[0.3] dark:opacity-[0.2]"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
               backgroundRepeat: 'repeat',
               backgroundSize: '256px 256px',
-              mixBlendMode: 'overlay',
+              mixBlendMode: 'multiply', 
             }}
           />
         </div>
+        
+        <style jsx>{`
+          :global([data-theme='dark']) .fixed > div:first-of-type {
+            filter: invert(1) brightness(1.5);
+          }
+        `}</style>
     </div>
   );
 };

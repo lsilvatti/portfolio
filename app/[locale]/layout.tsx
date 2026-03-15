@@ -24,8 +24,7 @@ const nunitoSans = Nunito_Sans({
   display: "optional",
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://leonardo.silvatti.com.br";
 
 export async function generateMetadata({
   params,
