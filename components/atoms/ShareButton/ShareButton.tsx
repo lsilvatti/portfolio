@@ -25,7 +25,6 @@ export function ShareButton({ title, text, url, className, style }: ShareButtonP
             try {
                 await navigator.share({ title, text, url: shareUrl });
             } catch (err) {
-                // User cancelled the share dialog — do nothing
                 if (err instanceof Error && err.name !== 'AbortError') {
                     show(t('failed'));
                 }

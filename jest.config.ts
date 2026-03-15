@@ -7,9 +7,7 @@ const config: Config = {
     "^.+\\.(ts|tsx|js|jsx)$": "babel-jest",
   },
   moduleNameMapper: {
-    // Path alias: @/* → root
     "^@/(.*)$": "<rootDir>/$1",
-    // Ignore static assets
     "\\.(css|scss|sass|less)$": "<rootDir>/__mocks__/styleMock.ts",
     "\\.(jpg|jpeg|png|gif|svg|webp|ico|woff|woff2|ttf|eot)$": "<rootDir>/__mocks__/fileMock.ts",
   },

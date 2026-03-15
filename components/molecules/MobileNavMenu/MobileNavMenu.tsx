@@ -22,7 +22,6 @@ export const MobileNavMenu = ({ items, className }: MobileNavMenuProps) => {
 
   useEffect(() => { setMounted(true); }, []);
 
-  // Close on Escape
   useEffect(() => {
     if (!open) return;
     const onKeyDown = (e: KeyboardEvent) => {
@@ -32,7 +31,6 @@ export const MobileNavMenu = ({ items, className }: MobileNavMenuProps) => {
     return () => document.removeEventListener('keydown', onKeyDown);
   }, [open, close]);
 
-  // Close when clicking outside
   useEffect(() => {
     if (!open) return;
     const onClick = (e: MouseEvent) => {

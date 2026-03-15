@@ -1,4 +1,3 @@
-// Mock for next/image — returns a plain <img> so RTL can assert alt, src, etc.
 import React from "react";
 
 const Image = ({
@@ -18,7 +17,6 @@ const Image = ({
   className?: string;
   style?: React.CSSProperties;
 }) => (
-  // eslint-disable-next-line @next/next/no-img-element
   <img
     src={src}
     alt={alt}

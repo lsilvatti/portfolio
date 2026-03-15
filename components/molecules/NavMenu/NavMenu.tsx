@@ -1,7 +1,6 @@
 import { Link } from '@/components/atoms';
 import { cn } from '@/lib/utils';
 
-// Definimos o formato exato que os links precisam ter
 export interface NavItem {
   label: string;
   href: string;

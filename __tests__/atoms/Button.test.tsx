@@ -3,8 +3,6 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Button } from "@/components/atoms/Button/Button";
 
-// next/link is auto-mocked via __mocks__/next/link.tsx
-
 const MockIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg aria-hidden="true" {...props} />
 );
@@ -48,7 +46,6 @@ describe("Button", () => {
     it("renders iconLeft when provided", () => {
       render(<Button iconLeft={MockIcon}>With Icon</Button>);
       const btn = screen.getByRole("button");
-      // The SVG icon should be in the button
       expect(btn.querySelector("svg")).toBeInTheDocument();
     });
 

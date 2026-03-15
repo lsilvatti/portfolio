@@ -33,7 +33,6 @@ describe("useToast", () => {
     });
     expect(result.current.message).toBe("Same message");
 
-    // Reset and show the same message again
     act(() => {
       result.current.show("Same message");
       jest.runAllTimers();

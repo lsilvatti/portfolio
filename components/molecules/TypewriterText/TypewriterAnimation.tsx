@@ -13,14 +13,30 @@ interface TypewriterAnimationProps {
   initialText?: string;
 }
 
-export const TypewriterAnimation = ({ prefix = '', words, variant = 'h4', initialText }: TypewriterAnimationProps) => {
-  // Start the cycle from whichever word matches initialText so SSR and client agree
+export const TypewriterAnimation = ({ 
+  prefix = '', 
+  words, 
+  variant = 'h4', 
+  initialText 
+}: TypewriterAnimationProps) => {
   const startIndex = initialText ? Math.max(words.indexOf(initialText), 0) : 0;
   const [currentWordIndex, setCurrentWordIndex] = useState(startIndex);
   const [currentText, setCurrentText] = useState(initialText ?? words[0] ?? '');
-  const [isDeleting, setIsDeleting] = useState(false);
+  
+  const [isDeleting, setIsDeleting] = useState(true);
+
+  const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setHasStarted(true);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
     const typingSpeed = 100;
     const deletingSpeed = 50;
     const pauseAtEnd = 2000;
@@ -54,7 +70,7 @@ export const TypewriterAnimation = ({ prefix = '', words, variant = 'h4', initia
     }, isDeleting ? deletingSpeed : typingSpeed);
 
     return () => clearTimeout(timeout);
-  }, [currentText, isDeleting, currentWordIndex, words]);
+  }, [currentText, isDeleting, currentWordIndex, words, hasStarted]);
 
   return (
     <Typography
@@ -65,7 +81,12 @@ export const TypewriterAnimation = ({ prefix = '', words, variant = 'h4', initia
     >
       {prefix}
       <span className="text-primary font-medium">{currentText}</span>
-      <span className="animate-pulse text-primary" aria-hidden="true">_</span>
+      <span 
+        className={`text-primary ${hasStarted ? 'animate-pulse' : ''}`} 
+        aria-hidden="true"
+      >
+        _
+      </span>
     </Typography>
   );
 };

@@ -17,7 +17,6 @@ const linkVariants = cva("underline-offset-4 transition-colors duration-200", {
   },
 });
 
-// Atualizamos aqui para pegar os tipos do IntlLink em vez do NextLink
 type LinkProps = VariantProps<typeof linkVariants> & {
   className?: string;
   external?: boolean;
@@ -46,7 +45,6 @@ export function Link({
   }
 
   return (
-    // Renderizamos o IntlLink aqui
     <IntlLink className={classes} {...rest}>
       {children}
     </IntlLink>

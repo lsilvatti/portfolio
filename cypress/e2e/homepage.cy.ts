@@ -14,7 +14,6 @@ describe("Homepage", () => {
   });
 
   it("renders the hero section", () => {
-    // The main content area should be visible
     cy.get("main").should("exist");
   });
 

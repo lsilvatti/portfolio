@@ -2,8 +2,6 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Avatar } from "@/components/atoms/Avatar/Avatar";
 
-// next/image is auto-mocked via __mocks__/next/image.tsx
-
 describe("Avatar", () => {
   it("renders an img element", () => {
     render(<Avatar src="/photo.jpg" alt="Profile photo" />);

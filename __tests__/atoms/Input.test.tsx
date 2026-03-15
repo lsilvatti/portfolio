@@ -16,7 +16,6 @@ describe("Input", () => {
 
   it("shows required asterisk when required", () => {
     render(<Input label="Name" required />);
-    // Use role query since the label's textContent includes the '*' span
     expect(screen.getByRole("textbox")).toBeRequired();
     expect(screen.getByText("*")).toBeInTheDocument();
   });
@@ -61,10 +60,10 @@ describe("Input", () => {
   it("clears validation error on change after blur", async () => {
     render(<Input label="Name" validate="name" />);
     const input = screen.getByLabelText("Name");
-    await userEvent.type(input, "1"); // invalid
+    await userEvent.type(input, "1");
     await userEvent.tab();
     await waitFor(() => expect(screen.getByRole("alert")).toBeInTheDocument());
-    await userEvent.type(input, "a"); // start correcting
+    await userEvent.type(input, "a"); 
     await waitFor(() => expect(screen.queryByRole("alert")).not.toBeInTheDocument());
   });
 

@@ -1,6 +1,5 @@
 import "@testing-library/jest-dom";
 
-// jsdom does not implement window.matchMedia — provide a minimal stub
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query: string) => ({

@@ -2,7 +2,6 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Icon } from "@/components/atoms/Icon/Icon";
 
-// A minimal SVG icon component for testing
 const TestIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg data-testid="svg-icon" {...props} />
 );

@@ -80,7 +80,6 @@ describe("validatePhone", () => {
   });
 
   it("returns invalid when number is too long", () => {
-    // 16 digits
     expect(validatePhone("1234567890123456")).toMatchObject({ valid: false });
   });
 
@@ -90,7 +89,6 @@ describe("validatePhone", () => {
   });
 
   it("strips non-digit characters before validating length", () => {
-    // "(555) 123-45" => 9 digits — valid
     expect(validatePhone("(555) 123-45")).toMatchObject({ valid: true });
   });
 });
@@ -120,7 +118,6 @@ describe("validateText", () => {
   });
 
   it("trims whitespace before checking length", () => {
-    // 5 spaces → treated as empty → triggers required
     expect(validateText("     ", { required: true })).toMatchObject({ valid: false });
   });
 

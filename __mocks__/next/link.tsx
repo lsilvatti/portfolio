@@ -1,4 +1,3 @@
-// Mock for next/link — renders a plain <a> so RTL can assert href, etc.
 import React from "react";
 
 const Link = ({

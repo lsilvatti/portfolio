@@ -14,18 +14,18 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  display: "swap",
+  display: "optional",
 });
 
 const nunitoSans = Nunito_Sans({
   variable: "--font-nunito-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  display: "swap",
+  display: "optional",
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://leonardosilvatti.dev";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export async function generateMetadata({
   params,
@@ -141,7 +141,6 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const allMessages = await getMessages();
-  // Exclude `pages` namespace — only consumed by server components
   const { pages: _pages, ...clientMessages } = allMessages as Record<string, unknown>;
 
 return (

@@ -84,7 +84,6 @@ export function PhoneInput({
     const [internalError, setInternalError] = useState('');
     const [internalValid, setInternalValid] = useState(false);
 
-    // Dropdown state
     const [open, setOpen] = useState(false);
     const [search, setSearch] = useState('');
     const filtered = filterCountries(localizedCountries, search);
@@ -98,7 +97,6 @@ export function PhoneInput({
     const isSuccess = externalSuccess || (!errorMessage && internalValid);
     const state: InputState = errorMessage ? 'error' : isSuccess ? 'success' : 'default';
 
-    // Close on outside click
     useEffect(() => {
         if (!open) return;
         const handler = (e: MouseEvent) => {
@@ -111,7 +109,6 @@ export function PhoneInput({
         return () => document.removeEventListener('mousedown', handler);
     }, [open]);
 
-    // Focus search when dropdown opens
     useEffect(() => {
         if (open) {
             setActiveIndex(0);
@@ -147,7 +144,6 @@ export function PhoneInput({
         }
     };
 
-    // Scroll active item into view
     useEffect(() => {
         if (!open || !listRef.current) return;
         const item = listRef.current.children[activeIndex] as HTMLElement | undefined;
@@ -197,7 +193,6 @@ export function PhoneInput({
                     disabled && 'opacity-50 pointer-events-none'
                 )}
             >
-                {/* Country picker trigger */}
                 <button
                     type="button"
                     aria-haspopup="listbox"
@@ -225,7 +220,6 @@ export function PhoneInput({
                     />
                 </button>
 
-                {/* Dropdown */}
                 {open && (
                     <div
                         className={cn(
@@ -234,7 +228,6 @@ export function PhoneInput({
                             'flex flex-col overflow-hidden',
                         )}
                     >
-                        {/* Search input */}
                         <div className="p-2 border-b border-border">
                             <div className="flex items-center gap-2 rounded-md border border-border bg-surface px-2.5 h-8 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary/20 transition-colors">
                                 <span className="text-base leading-none select-none">
@@ -258,7 +251,6 @@ export function PhoneInput({
                             </div>
                         </div>
 
-                        {/* Country list */}
                         <ul
                             ref={listRef}
                             id={`${id}-listbox`}
@@ -294,7 +286,6 @@ export function PhoneInput({
                     </div>
                 )}
 
-                {/* Phone number input */}
                 <input
                     id={`${id}-number`}
                     type="tel"

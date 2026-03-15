@@ -10,7 +10,6 @@ describe("cn", () => {
   });
 
   it("resolves Tailwind conflicts via tailwind-merge (last wins)", () => {
-    // tailwind-merge should keep the last conflicting class
     expect(cn("p-4", "p-8")).toBe("p-8");
     expect(cn("text-red-500", "text-blue-500")).toBe("text-blue-500");
   });

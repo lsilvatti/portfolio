@@ -99,7 +99,6 @@ export function ContactForm({ onShowLinks, onSuccess }: ContactFormProps) {
         setStatus('submitting');
         
         try {
-            // Chamamos a action direto aqui!
             const result = await sendEmailAction({
                 firstName: firstName.trim(),
                 lastName: lastName.trim(),
