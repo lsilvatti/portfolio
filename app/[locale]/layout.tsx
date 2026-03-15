@@ -125,6 +125,11 @@ export function generateStaticParams() {
 
 export const dynamicParams = false;
 
+const localeLangMap: Record<string, string> = {
+  en: "en",
+  br: "pt-BR",
+};
+
 export default async function LocaleLayout({
   children,
   params,
@@ -144,7 +149,7 @@ export default async function LocaleLayout({
   const { pages: _pages, ...clientMessages } = allMessages as Record<string, unknown>;
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={localeLangMap[locale] ?? locale} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{

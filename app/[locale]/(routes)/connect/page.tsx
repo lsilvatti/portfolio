@@ -15,6 +15,13 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
+    alternates: {
+      canonical: `/${locale}/connect`,
+      languages: {
+        en: "/en/connect",
+        "pt-BR": "/br/connect",
+      },
+    },
   };
 }
 
