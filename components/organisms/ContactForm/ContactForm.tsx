@@ -157,7 +157,6 @@ export function ContactForm({ onShowLinks, onSuccess }: ContactFormProps) {
             </div>
 
             <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-3 sm:gap-4">
-                {/* Honeypot — hidden from real users; bots fill it and get silently rejected */}
                 <input
                     type="text"
                     name="website"
