@@ -145,7 +145,7 @@ export default async function LocaleLayout({
   const { pages: _pages, ...clientMessages } = allMessages as Record<string, unknown>;
 
 return (
-    <html lang={localeLangMap[locale] ?? locale} className="bg-background" suppressHydrationWarning>
+    <html lang={localeLangMap[locale] ?? locale} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -154,7 +154,7 @@ return (
         />
       </head>
       <body
-        className={`${spaceGrotesk.variable} ${nunitoSans.variable} bg-background text-foreground antialiased min-h-dvh scroll-smooth`}
+        className={`${spaceGrotesk.variable} ${nunitoSans.variable} text-foreground antialiased min-h-dvh scroll-smooth`}
       >
         <NextIntlClientProvider locale={locale} messages={clientMessages}>
           <ThemeProvider>
