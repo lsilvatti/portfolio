@@ -34,7 +34,6 @@ const switchLocale = (next: Locale) => {
       role="radiogroup"
       aria-label="Language"
     >
-      {/* Sliding pill indicator */}
       <span
         aria-hidden
         className="absolute top-0.5 bottom-0.5 w-[calc(50%-2px)] rounded-md bg-primary-light transition-transform duration-250 ease-in-out"

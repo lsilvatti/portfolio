@@ -18,10 +18,11 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${locale}/connect`,
       languages: {
-        en: "/en/connect",
+        "en": "/en/connect",
         "pt-BR": "/br/connect",
+        "x-default": "/en/connect"
       },
-    },
+    }
   };
 }
 

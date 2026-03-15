@@ -16,6 +16,7 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${locale}/resume`,
       languages: {
+        "x-default": "/en/resume",
         en: "/en/resume",
         "pt-BR": "/br/resume",
       },

@@ -5,24 +5,27 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { routing } from "@/i18n/routing";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 import "../globals.css";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  display: "swap",
+  display: "optional",
 });
 
 const nunitoSans = Nunito_Sans({
   variable: "--font-nunito-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  display: "swap",
+  display: "optional",
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://leonardosilvatti.dev";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export async function generateMetadata({
   params,
@@ -77,16 +80,6 @@ export async function generateMetadata({
       description: isEn
         ? "Frontend Engineer specializing in React, Next.js, and TypeScript. Passionate about crafting performant and accessible web applications."
         : "Engenheiro Frontend especializado em React, Next.js e TypeScript. Apaixonado por criar aplicações web performáticas e acessíveis.",
-      images: [
-        {
-          url: "/og-image.png",
-          width: 1200,
-          height: 630,
-          alt: isEn
-            ? "Leonardo Silvatti Silva – Frontend Engineer"
-            : "Leonardo Silvatti Silva – Engenheiro Frontend",
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -96,25 +89,6 @@ export async function generateMetadata({
       description: isEn
         ? "Frontend Engineer specializing in React, Next.js, and TypeScript. Passionate about crafting performant and accessible web applications."
         : "Engenheiro Frontend especializado em React, Next.js e TypeScript. Apaixonado por criar aplicações web performáticas e acessíveis.",
-      images: ["/og-image.png"],
-    },
-    alternates: {
-      canonical: `/${locale}`,
-      languages: {
-        en: "/en",
-        "pt-BR": "/br",
-      },
-    },
-    icons: {
-      icon: [
-        { url: "/favicon.ico", sizes: "any" },
-        { url: "/icon.svg", type: "image/svg+xml" },
-        { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-        { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
-      ],
-      apple: [
-        { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-      ],
     },
   };
 }
@@ -145,10 +119,8 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const allMessages = await getMessages();
-  // Exclude `pages` namespace — only consumed by server components
-  const { pages: _pages, ...clientMessages } = allMessages as Record<string, unknown>;
 
-  return (
+return (
     <html lang={localeLangMap[locale] ?? locale} suppressHydrationWarning>
       <head>
         <script
@@ -157,13 +129,14 @@ export default async function LocaleLayout({
           }}
         />
       </head>
-      {/* Aqui aplicamos as variáveis das fontes e as cores globais de bg e text */}
       <body
-        className={`${spaceGrotesk.variable} ${nunitoSans.variable} bg-background text-foreground antialiased min-h-dvh scroll-smooth`}
+        className={`${spaceGrotesk.variable} ${nunitoSans.variable} text-foreground antialiased min-h-dvh scroll-smooth`}
       >
-        <NextIntlClientProvider locale={locale} messages={clientMessages}>
+        <NextIntlClientProvider locale={locale} messages={allMessages}>
           <ThemeProvider>
             {children}
+            <Analytics />
+            <SpeedInsights />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

@@ -36,21 +36,20 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
 
   useEffect(() => {
-    // Sync with the value already applied by the inline <script> to avoid flicker
     const applied = document.documentElement.getAttribute(
       THEME_DATA_ATTRIBUTE
     ) as Theme | null;
     setTheme(applied === "light" || applied === "dark" ? applied : getInitialTheme());
   }, []);
 
-  useEffect(() => {
-    document.documentElement.setAttribute(THEME_DATA_ATTRIBUTE, theme);
-  }, [theme]);
 
   const toggleTheme = useCallback(() => {
     setTheme((prev) => {
       const next = prev === "light" ? "dark" : "light";
       localStorage.setItem(THEME_STORAGE_KEY, next);
+      
+      document.documentElement.setAttribute(THEME_DATA_ATTRIBUTE, next);
+      
       return next;
     });
   }, []);

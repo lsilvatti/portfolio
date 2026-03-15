@@ -16,10 +16,11 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${locale}/projects`,
       languages: {
-        en: "/en/projects",
+        "en": "/en/projects",
         "pt-BR": "/br/projects",
+        "x-default": "/en/projects"
       },
-    },
+    }
   };
 }
 

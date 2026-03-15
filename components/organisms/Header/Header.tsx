@@ -24,7 +24,6 @@ export const Header = () => {
             )}
         >
             <div className="flex items-center justify-between px-3 py-2.5">
-                {/* Nav — collapses to 0 on home, grows back on inner pages */}
                 <div
                     className={cn(
                         "overflow-hidden transition-opacity ease-in-out",
@@ -45,7 +44,6 @@ export const Header = () => {
                     />
                 </div>
 
-                {/* Toggles — always visible */}
                 <div className="flex items-center gap-2 shrink-0">
                     <LanguageToggle />
                     <ThemeToggle />
