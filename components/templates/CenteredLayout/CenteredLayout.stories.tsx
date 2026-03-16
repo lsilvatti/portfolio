@@ -16,6 +16,10 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+ args: {
+    children: "", 
+  },
+  
   render: () => (
     <CenteredLayout>
       <Typography variant="h1">Centered Content</Typography>
