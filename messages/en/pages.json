@@ -29,7 +29,7 @@
             "underConstruction": {
                 "title": "Under Construction",
                 "description": "This page is currently under construction. You can still check my connections <link>here</link>.",
-                "ctaLabel": "Connect with me"
+                "ctaLabel": "VB"
             }
         },
         "notFound": {
@@ -86,8 +86,8 @@
             "title": "Resume",
             "description": "Here's an overview of my professional journey, skills, and experiences. Feel free to download my full resume or explore my past experiences.",
             "downloadResume": "Download Resume as PDF",
-            "resumeUrl": "Resume - Leonardo Silvatti Silva.pdf",
-            "resumeFileName": "Leonardo_Silvatti_Silva_Resume.pdf"
+            "resumeUrl": "resume-en.pdf",
+            "resumeFileName": "Resume - Leonardo Silvatti Silva.pdf"
         }
     }
 }
