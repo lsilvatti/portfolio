@@ -85,7 +85,9 @@
         "resume": {
             "title": "Currículo",
             "description": "Aqui está uma visão geral do meu percurso profissional, habilidades e experiências. Sinta-se à vontade para baixar meu currículo completo ou explorar minhas experiências anteriores.",
-            "downloadResume": "Baixar Currículo"
+            "downloadResume": "Baixar Currículo como PDF",
+            "resumeUrl": "Currículo - Leonardo Silvatti.pdf",
+            "resumeFileName": "Leonardo_Silvatti_Curriculo.pdf"
         }
     }
 }

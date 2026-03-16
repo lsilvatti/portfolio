@@ -13,6 +13,7 @@ export { Divider } from "./Divider";
 export { BackgroundEffects } from "./BackgroundEffects";
 export { CopyButton, type CopyButtonProps } from "./CopyButton";
 export { ShareButton, type ShareButtonProps } from "./ShareButton";
+export { DownloadButton } from "./DownloadButton";
 export {
   Input,
   inputVariants,

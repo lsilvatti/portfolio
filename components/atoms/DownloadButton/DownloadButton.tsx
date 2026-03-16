@@ -1,17 +1,21 @@
-import type { ComponentPropsWithoutRef, ElementType } from "react";
+import type { ElementType, ReactNode } from "react";
 import type { VariantProps } from "class-variance-authority";
 import { Button, buttonVariants } from "@/components/atoms/Button";
 import { Download } from "lucide-react";
 
-type ButtonVariantProps = VariantProps<typeof buttonVariants>;
-
-type DownloadButtonProps = ButtonVariantProps & {
+type DownloadButtonProps = {
   href: string;
   filename?: string;
+  children?: ReactNode;
+  className?: string;
+  variant?: VariantProps<typeof buttonVariants>["variant"];
+  size?: VariantProps<typeof buttonVariants>["size"];
+  fullWidth?: boolean;
+  rounded?: boolean;
   iconLeft?: ElementType;
   iconRight?: ElementType;
-  rounded?: boolean;
-} & Omit<ComponentPropsWithoutRef<"a">, "href" | "download">;
+  disabled?: boolean;
+};
 
 export function DownloadButton({
   href,
