@@ -28,6 +28,7 @@ export const Disabled: Story = {
 };
 
 export const AllStates: Story = {
+  args: { label: 'React' },
   render: () => (
     <div style={{ display: 'flex', gap: 12 }}>
       <Chip label="React" />
