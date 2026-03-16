@@ -27,7 +27,7 @@ export const Muted: Story = { args: { variant: 'muted', children: 'Muted link' }
 export const Nav: Story = { args: { variant: 'nav', children: 'connect' } };
 
 export const NavActive: Story = {
-  args: { variant: 'nav', children: 'connect', 'data-active': true },
+  args: { variant: 'nav', children: 'connect' },
 };
 
 export const External: Story = {
