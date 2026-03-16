@@ -79,6 +79,16 @@ export async function generateMetadata({
       description: isEn
         ? "Frontend Engineer specializing in React, Next.js, and TypeScript. Passionate about crafting performant and accessible web applications."
         : "Engenheiro Frontend especializado em React, Next.js e TypeScript. Apaixonado por criar aplicações web performáticas e acessíveis.",
+      images: [
+        {
+          url: "/opengraph-image.png",
+          width: 1200,
+          height: 630,
+          alt: isEn
+            ? "Leonardo Silvatti Silva - Frontend Engineer"
+            : "Leonardo Silvatti Silva - Engenheiro Frontend",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -88,7 +98,28 @@ export async function generateMetadata({
       description: isEn
         ? "Frontend Engineer specializing in React, Next.js, and TypeScript. Passionate about crafting performant and accessible web applications."
         : "Engenheiro Frontend especializado em React, Next.js e TypeScript. Apaixonado por criar aplicações web performáticas e acessíveis.",
+      images: ["/opengraph-image.png"],
     },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    icons: {
+      icon: [
+        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      ],
+    },
+    manifest: "/manifest.webmanifest",
+    category: "technology",
   };
 }
 
@@ -125,6 +156,30 @@ return (
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('portfolio-theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}else if(window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}else{document.documentElement.setAttribute('data-theme','light');}}catch(e){}})()`,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Leonardo Silvatti Silva",
+              url: siteUrl,
+              jobTitle: locale === "en" ? "Frontend Engineer" : "Engenheiro Frontend",
+              sameAs: [
+                "https://linkedin.com/in/lsilvatti",
+                "https://github.com/lsilvatti",
+              ],
+              email: "leonardo@silvatti.com.br",
+              knowsAbout: [
+                "React",
+                "Next.js",
+                "TypeScript",
+                "JavaScript",
+                "Frontend Development",
+              ],
+            }),
           }}
         />
       </head>
