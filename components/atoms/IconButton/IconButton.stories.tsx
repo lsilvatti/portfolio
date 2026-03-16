@@ -1,3 +1,4 @@
+import type { ElementType } from 'react';
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { IconButton } from './IconButton';
 import { GithubIcon, LinkedinIcon, EmailIcon } from '@/components/atoms/Icon/icons';
@@ -23,7 +24,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = { args: { variant: 'primary' } };
 
-export const Secondary: Story = { args: { variant: 'secondary', icon: Heart, label: 'Like' } };
+export const Secondary: Story = { args: { variant: 'secondary', icon: Heart as ElementType, label: 'Like' } };
 
 export const Outline: Story = { args: { variant: 'outline' } };
 
@@ -57,10 +58,10 @@ export const AllVariants: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
       <IconButton icon={GithubIcon} label="Primary" variant="primary" />
-      <IconButton icon={Heart} label="Secondary" variant="secondary" />
+      <IconButton icon={Heart as ElementType} label="Secondary" variant="secondary" />
       <IconButton icon={LinkedinIcon} label="Outline" variant="outline" />
       <IconButton icon={EmailIcon} label="Ghost" variant="ghost" />
-      <IconButton icon={Share2} label="Disabled" variant="primary" disabled />
+      <IconButton icon={Share2 as ElementType} label="Disabled" variant="primary" disabled />
     </div>
   ),
 };
@@ -68,9 +69,9 @@ export const AllVariants: Story = {
 export const AllSizes: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-      <IconButton icon={Download} label="Small" size="sm" />
-      <IconButton icon={Download} label="Medium" size="md" />
-      <IconButton icon={Download} label="Large" size="lg" />
+      <IconButton icon={Download as ElementType} label="Small" size="sm" />
+      <IconButton icon={Download as ElementType} label="Medium" size="md" />
+      <IconButton icon={Download as ElementType} label="Large" size="lg" />
     </div>
   ),
 };
