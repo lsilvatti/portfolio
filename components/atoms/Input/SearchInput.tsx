@@ -11,19 +11,18 @@ interface SearchInputProps {
 export function SearchInput({ 
   value, 
   onChange, 
-  placeholder = "Buscar projetos...",
+  placeholder = "Buscar...",
   className
 }: SearchInputProps) {
   return (
-    <div className="w-full grow relative">
-      <Input
+    <Input
         type="search" 
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         className={className}
-        size="md"
+        size="md" 
+        hideHelper 
       />
-    </div>
   );
 }
