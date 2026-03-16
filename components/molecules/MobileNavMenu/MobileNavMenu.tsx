@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { ExternalLink } from 'lucide-react';
 import { createPortal } from 'react-dom';
 import { Link, Icon } from '@/components/atoms';
 import { MenuIcon, XIcon } from '@/components/atoms/Icon/icons';
@@ -63,14 +64,15 @@ export function MobileNavMenu({ items, className }: MobileNavMenuProps) {
     >
       <nav className="flex flex-col py-2">
         {items.map((item) => {
-          const isActive = pathname === item.href;
+          const isActive = !item.external && pathname === item.href;
           return (
             <Link
               key={item.label}
               href={item.href}
               onClick={close}
+              external={item.external}
               className={cn(
-                'px-4 py-2.5 text-base font-medium capitalize',
+                'inline-flex items-center gap-1.5 px-4 py-2.5 text-base font-medium capitalize',
                 'transition-colors duration-150',
                 isActive
                   ? 'text-secondary drop-shadow-[0_0_8px_var(--color-secondary)] hover:text-secondary hover:bg-surface-hover'
@@ -78,6 +80,7 @@ export function MobileNavMenu({ items, className }: MobileNavMenuProps) {
               )}
             >
               {item.label}
+              {item.external && <ExternalLink size={14} className="shrink-0 opacity-70" />}
             </Link>
           );
         })}

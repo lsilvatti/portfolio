@@ -1,5 +1,6 @@
 'use client';
 
+import { ExternalLink } from 'lucide-react';
 import { Link } from '@/components/atoms';
 import { usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
@@ -7,6 +8,7 @@ import { cn } from '@/lib/utils';
 export interface NavItem {
   label: string;
   href: string;
+  external?: boolean;
 }
 
 interface NavMenuProps {
@@ -28,7 +30,7 @@ export function NavMenu({
     <nav className={cn("flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10", className)}>
       {items.map((item, index) => {
         const currentDelay = baseDelay + (index * incrementDelay);
-        const isActive = pathname === item.href;
+        const isActive = !item.external && pathname === item.href;
 
         return (
           <Link
@@ -36,10 +38,12 @@ export function NavMenu({
             href={item.href}
             variant="nav"
             data-active={isActive}
-            className="animate-fade-down md:animate-fade-right"
+            external={item.external}
+            className="inline-flex items-center gap-1 animate-fade-down md:animate-fade-right"
             style={{ animationDelay: `${currentDelay}s` }}
           >
             {item.label}
+            {item.external && <ExternalLink size={14} className="shrink-0 opacity-70" />}
           </Link>
         );
       })}
