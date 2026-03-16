@@ -1,3 +1,5 @@
+export {};
+
 /**
  * E2E — Homepage
  *
