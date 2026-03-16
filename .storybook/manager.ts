@@ -1,7 +1,7 @@
 import { addons } from 'storybook/manager-api';
 import { create } from 'storybook/theming';
 
-const meuTema = create({
+const theme = create({
   base: 'dark',
   
   fontBase: '"Inter", sans-serif',
@@ -9,7 +9,7 @@ const meuTema = create({
 
   brandTitle: 'Leonardo Silvatti Silva - UI Kit',
   brandUrl: 'https://leonardo.silvatti.com.br',
-  brandImage: '/storybook-logo.svg',
+  brandImage: '/storybook-logo',
   brandTarget: '_self',
 
   colorPrimary: '#a78bfa',
@@ -21,5 +21,5 @@ const meuTema = create({
 });
 
 addons.setConfig({
-  theme: meuTema,
+  theme: theme,
 });

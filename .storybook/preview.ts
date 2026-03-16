@@ -1,6 +1,9 @@
 import type { Preview } from '@storybook/nextjs-vite';
 import React from 'react';
 import { NextIntlClientProvider } from 'next-intl';
+
+import { themes } from 'storybook/theming';
+
 import '../app/globals.css';
 import enCommon from '../messages/en/common.json';
 import enLayout from '../messages/en/layout.json';
@@ -11,6 +14,9 @@ const messages = { ...enCommon, ...enLayout, ...enPages, ...enComponents };
 
 const preview: Preview = {
   parameters: {
+    docs: {
+      theme: themes.dark,
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -20,7 +26,7 @@ const preview: Preview = {
     a11y: {
       test: 'todo',
     },
-    backgrounds: { disable: true },
+    backgrounds: { disable: true }, 
   },
   globalTypes: {
     theme: {

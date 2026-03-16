@@ -23,6 +23,11 @@
                     {
                         "label": "resume",
                         "href": "/resume"
+                    },
+                    {
+                        "label": "storybook",
+                        "href": "/storybook/index.html",
+                        "external": true
                     }
                 ]
             },
@@ -86,7 +91,7 @@
             "title": "Resume",
             "description": "Here's an overview of my professional journey, skills, and experiences. Feel free to download my full resume or explore my past experiences.",
             "downloadResume": "Download Resume as PDF",
-            "resumeUrl": "resume-en.pdf",
+            "resumeUrl": "/resume-en.pdf",
             "resumeFileName": "Resume - Leonardo Silvatti Silva.pdf"
         },
         "projects": {
