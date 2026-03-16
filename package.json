@@ -15,6 +15,9 @@
     "cypress:e2e": "cypress run --e2e"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "^16.1.6",
     "@radix-ui/react-popover": "^1.1.15",
     "@radix-ui/react-tooltip": "^1.2.8",
     "@vercel/analytics": "^2.0.1",
