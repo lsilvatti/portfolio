@@ -34,7 +34,7 @@ const buttonVariants = cva(
       variant: "primary",
       size: "md",
     },
-  },
+  }
 );
 
 type ButtonVariantProps = VariantProps<typeof buttonVariants>;
@@ -80,7 +80,12 @@ export function Button({
   iconRight: IconRight,
   ...rest
 }: ButtonProps) {
-  const classes = cn(buttonVariants({ variant, size, fullWidth }), rounded && "rounded-full", className);
+  const classes = cn(
+    buttonVariants({ variant, size, fullWidth }),
+    rounded && "rounded-full",
+    className
+  );
+  
   const iconSize = iconSizeMap[size ?? "md"];
 
   const content = (
@@ -102,6 +107,18 @@ export function Button({
         >
           {content}
         </span>
+      );
+    }
+
+    if ('download' in linkRest || linkRest.target === "_blank") {
+      return (
+        <a 
+          href={href} 
+          className={classes} 
+          {...(linkRest as ComponentPropsWithoutRef<"a">)}
+        >
+          {content}
+        </a>
       );
     }
 

@@ -1,6 +1,6 @@
 import type { ElementType, ReactNode } from "react";
 import type { VariantProps } from "class-variance-authority";
-import { Button, buttonVariants } from "@/components/atoms/Button";
+import { Button, buttonVariants } from "@/components/atoms/Button"; // Ajuste o caminho se necessário
 import { Download } from "lucide-react";
 
 type DownloadButtonProps = {
@@ -27,7 +27,7 @@ export function DownloadButton({
   return (
     <Button
       href={href}
-      download={filename ?? true}
+      download={filename || "true"} 
       target="_blank"
       rel="noopener noreferrer"
       iconLeft={iconLeft}
