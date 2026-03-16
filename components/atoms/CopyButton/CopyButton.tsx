@@ -1,7 +1,8 @@
 'use client';
 
 import { ClipboardCopy } from 'lucide-react';
-import { IconButton, Toast, useToast } from '@/components/atoms';
+import { IconButton, Toast } from '@/components/atoms';
+import { useToast } from '@/hooks';
 import { useTranslations } from 'next-intl';
 
 export interface CopyButtonProps {

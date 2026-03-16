@@ -24,6 +24,7 @@ export {
   validatePhone,
   validateText,
   COUNTRY_CODES,
+  SearchInput,
   type InputProps,
   type InputValidateType,
   type InputState,
@@ -33,7 +34,7 @@ export {
   type ValidationResult,
   type CountryCode,
 } from "./Input";
-export { Toast, toastVariants, useToast, type ToastProps, type ToastPosition } from "./Toast";
+export { Toast, toastVariants, type ToastProps, type ToastPosition } from "./Toast";
 export {
   Tooltip,
   TooltipProvider,
@@ -43,3 +44,4 @@ export {
   tooltipContentVariants,
   type TooltipContentProps,
 } from "./Tooltip";
+export { Chip } from "./Chip";

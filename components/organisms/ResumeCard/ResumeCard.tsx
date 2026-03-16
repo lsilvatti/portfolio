@@ -1,7 +1,6 @@
-import { Button, Card, DownloadButton, ShareButton } from '@/components/atoms';
+import { Card, DownloadButton, ShareButton } from '@/components/atoms';
 import { ResumeView } from '../ResumeView';
 import { useTranslations } from 'next-intl';
-import { Download } from 'lucide-react';
 
 export function ResumeCard(){
     const t = useTranslations('pages.resume');

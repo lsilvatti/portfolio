@@ -6,3 +6,5 @@ export { ConnectCard } from './ConnectCard';
 export { ContactForm, type ContactFormData } from './ContactForm';
 export { ConnectView } from './ConnectView';
 export { ResumeCard } from './ResumeCard';
+export { ResumeView } from './ResumeView';
+export { ProjectsView } from './ProjectsView';
