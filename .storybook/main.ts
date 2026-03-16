@@ -2,7 +2,6 @@ import type { StorybookConfig } from '@storybook/nextjs-vite';
 
 const config: StorybookConfig = {
   stories: [
-    '../components/**/*.mdx',
     '../components/**/*.stories.@(js|jsx|mjs|ts|tsx)',
   ],
   addons: [
@@ -14,5 +13,12 @@ const config: StorybookConfig = {
   ],
   framework: '@storybook/nextjs-vite',
   staticDirs: ['../public'],
+  viteFinal: async (config) => {
+    config.assetsInclude = config.assetsInclude || [];
+    if (Array.isArray(config.assetsInclude)) {
+      config.assetsInclude.push('**/*.md');
+    }
+    return config;
+  },
 };
 export default config;

@@ -4,7 +4,6 @@ import {
   createContext,
   useCallback,
   useContext,
-  useEffect,
   useLayoutEffect,
   useRef,
   useState,
@@ -38,18 +37,25 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
   const isFirstRender = useRef(true);
 
-  // After hydration, sync to the user's actual stored/system preference.
-  useEffect(() => {
-    setTheme(getStoredTheme());
-  }, []);
-
   // Sync the data-theme attribute before every paint so it survives
   // framework-driven DOM patches (e.g. locale navigation that re-renders <html>).
-  // Skip the very first render so the inline script's value is preserved through
-  // hydration and we don't flash the wrong theme.
+  //
+  // On the very first render (initial hydration OR a remount caused by a locale
+  // switch): read the attribute the inline <script> already wrote — or fall back
+  // to localStorage — so we never flash the wrong theme and the ThemeToggle icon
+  // is correct from the first paint even after remounting.
+  //
+  // On every subsequent render: keep the attribute in sync with state.
   useLayoutEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false;
+      const domTheme = document.documentElement.getAttribute(THEME_DATA_ATTRIBUTE);
+      const realTheme: Theme =
+        domTheme === "light" || domTheme === "dark" ? domTheme : getStoredTheme();
+      document.documentElement.setAttribute(THEME_DATA_ATTRIBUTE, realTheme);
+      if (realTheme !== theme) {
+        setTheme(realTheme);
+      }
       return;
     }
     document.documentElement.setAttribute(THEME_DATA_ATTRIBUTE, theme);
