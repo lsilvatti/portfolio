@@ -9,7 +9,7 @@ const theme = create({
 
   brandTitle: 'Leonardo Silvatti Silva - UI Kit',
   brandUrl: 'https://leonardo.silvatti.com.br',
-  brandImage: '/storybook-logo',
+  brandImage: '/storybook-logo.svg',
   brandTarget: '_self',
 
   colorPrimary: '#a78bfa',
