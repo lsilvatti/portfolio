@@ -88,6 +88,10 @@
             "downloadResume": "Baixar Currículo como PDF",
             "resumeUrl": "resume-pt.pdf",
             "resumeFileName": "Currículo - Leonardo Silvatti Silva.pdf"
+        },
+        "projects": {
+            "title": "Projetos",
+            "description": "Aqui estão alguns dos projetos em que trabalhei. Cada um deles reflete minha paixão por criar soluções inovadoras e impactantes. Sinta-se à vontade para explorar e conhecer mais sobre meu trabalho!"
         }
     }
 }
