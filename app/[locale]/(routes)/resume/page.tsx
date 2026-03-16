@@ -1,4 +1,4 @@
-import { GoToTop } from "@/components/atoms";
+import { GoToTop, Typography } from "@/components/atoms";
 import { ResumeCard } from "@/components/organisms";
 import { CenteredLayout } from "@/components/templates";
 import type { Metadata } from "next";
@@ -34,7 +34,13 @@ export default async function ResumePage({ params }: { params: Promise<{ locale:
 
   return (
     <>
-      <CenteredLayout>
+      <CenteredLayout className="mt-8 mb-8">
+        <Typography variant='h1' as="h2" className="mt-0 mb-0">
+          {t('title')}
+        </Typography>
+        <Typography variant="body" className='max-w-2xl text-center mt-0 mb-0'>
+          {t('description')}
+        </Typography>
         <ResumeCard />
       </CenteredLayout>
       <GoToTop />

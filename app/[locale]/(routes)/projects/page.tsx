@@ -50,7 +50,7 @@ export default async function ProjectsPage() {
       <Typography variant='h1' as="h2">
         {t('title')}
       </Typography>
-      <Typography variant="body" className='max-w-xl text-center'>
+      <Typography variant="body" className='max-w-2xl text-center'>
         {t('description')}
       </Typography>
       <ProjectsView projects={processedProjects} />
