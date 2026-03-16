@@ -6,7 +6,7 @@ São Paulo, Brazil (GMT-3) | +55 14 99678-3741 [leonardo@silvatti.com.br](mailto
 
 [github.com/lsilvatti](http://github.com/lsilvatti) | [leonardo.silvatti.com.br](http://leonardo.silvatti.com.br)
 
-## PROFESSIONAL SUMMARY
+## PROFESSIONAL SUMMARY 
 
 Senior Front-End Engineer with over 7 years of experience building scalable, high-traffic web applications. Specializing in React, Next.js, and TypeScript, with a proven track record of architecting and executing complex legacy system migrations (AngularJS/PHP to modern React ecosystems). Adept at integrating AI-Augmented Development workflows (Claude Code, Cursor, Copilot) to accelerate delivery, optimize boilerplate generation, and ensure robust code quality. Strong background in technical leadership, seamlessly bridging product strategy with engineering execution to deliver high-impact features and optimize team velocity.
 
