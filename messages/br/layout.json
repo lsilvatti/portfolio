@@ -17,6 +17,11 @@
                 {
                     "label": "currículo",
                     "href": "/resume"
+                },
+                {
+                    "label": "storybook",
+                    "href": "/storybook/index.html",
+                    "external": true
                 }
             ]
         },

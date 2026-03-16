@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run build-storybook && next build",
     "start": "next start",
     "lint": "eslint",
     "test": "jest --passWithNoTests",
@@ -12,7 +12,9 @@
     "test:coverage": "jest --coverage",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "cypress:e2e": "cypress run --e2e"
+    "cypress:e2e": "cypress run --e2e",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build --output-dir public/storybook"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
@@ -54,6 +56,19 @@
     "jest": "^30.3.0",
     "jest-environment-jsdom": "^30.3.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "storybook": "^10.2.19",
+    "@storybook/nextjs-vite": "^10.2.19",
+    "@chromatic-com/storybook": "^5.0.1",
+    "@storybook/addon-vitest": "^10.2.19",
+    "@storybook/addon-a11y": "^10.2.19",
+    "@storybook/addon-docs": "^10.2.19",
+    "@storybook/addon-onboarding": "^10.2.19",
+    "vite": "^8.0.0",
+    "eslint-plugin-storybook": "^10.2.19",
+    "vitest": "^4.1.0",
+    "playwright": "^1.58.2",
+    "@vitest/browser-playwright": "^4.1.0",
+    "@vitest/coverage-v8": "^4.1.0"
   }
 }

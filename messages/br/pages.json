@@ -23,6 +23,11 @@
                     {
                         "label": "currículo",
                         "href": "/resume"
+                    },
+                    {
+                        "label": "storybook",
+                        "href": "/storybook/index.html",
+                        "external": true
                     }
                 ]
             },
@@ -86,7 +91,7 @@
             "title": "Currículo",
             "description": "Aqui está uma visão geral do meu percurso profissional, habilidades e experiências. Sinta-se à vontade para baixar meu currículo completo ou explorar minhas experiências anteriores.",
             "downloadResume": "Baixar Currículo como PDF",
-            "resumeUrl": "resume-pt.pdf",
+            "resumeUrl": "/resume-pt.pdf",
             "resumeFileName": "Currículo - Leonardo Silvatti Silva.pdf"
         },
         "projects": {
