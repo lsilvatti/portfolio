@@ -32,69 +32,60 @@
                 "ctaLabel": "Connect with me"
             }
         },
-        "connect": {
-            "title": "Let's Connect",
-            "description": "Find the best ways to reach out and connect with me."
-        },
-        "projects": {
-            "title": "Projects",
-            "description": "A showcase of my work and personal projects."
-        },
-        "resume": {
-            "title": "Resume",
-            "description": "My professional background, skills, and experience."
-        },
         "notFound": {
             "title": "404",
             "description": "Page not found"
-        }
-    },
-    "connect": {
-        "letsConnect": "Let's Connect!",
-        "description": "I'm always open to new opportunities and collaborations. Feel free to reach out to me through any of the platforms below!",
-        "linkedin": "LinkedIn",
-        "github": "GitHub",
-        "email": "E-mail",
-        "calendly": "Calendly",
-        "sendMessage": "Or if you prefer, send me a message",
-        "form": {
-            "title": "Send a Message",
-            "description": "I'll get back to you as soon as possible.",
-            "backToLinks": "Back to links",
-            "firstName": "First Name",
-            "lastName": "Last Name",
-            "email": "Email",
-            "phone": "Phone",
-            "message": "Message",
-            "messagePlaceholder": "Tell me what's on your mind…",
-            "send": "Send Message",
-            "sending": "Sending…",
-            "sent": "Sent!",
-            "tryAgain": "Retry",
-            "sendError": "Something went wrong. Please try again.",
-            "error": {
-                "title": "Message Not Sent",
-                "description": "Something went wrong while sending your message.",
-                "hint": "Please <tryAgain>try again</tryAgain> or <goBack>go back to links</goBack>."
-            },
-            "success": {
-                "title": "Message Sent!",
-                "description": "Thank you for reaching out. I'll get back to you as soon as possible.",
-                "nextSteps": "In the mean time you can <goBack>go back</goBack> or <sendAnother>send another message</sendAnother>."
-            },
-            "validation": {
-                "nameRequired": "{label} is required.",
-                "nameTooShort": "{label} must be at least 2 characters.",
-                "nameInvalidChars": "{label} may only contain letters, spaces, hyphens, and apostrophes.",
-                "emailRequired": "Email is required.",
-                "emailInvalid": "Please enter a valid email address.",
-                "textRequired": "{label} is required.",
-                "textTooShort": "{label} must be at least {min} characters.",
-                "textTooLong": "{label} must not exceed {max} characters."
+        },
+        "connect": {
+            "title": "Connect",
+            "letsConnect": "Let's Connect!",
+            "description": "I'm always open to new opportunities and collaborations. Feel free to reach out to me through any of the platforms below!",
+            "linkedin": "LinkedIn",
+            "github": "GitHub",
+            "email": "E-mail",
+            "calendly": "Calendly",
+            "sendMessage": "Or if you prefer, send me a message",
+            "form": {
+                "title": "Send a Message",
+                "description": "I'll get back to you as soon as possible.",
+                "backToLinks": "Back to links",
+                "firstName": "First Name",
+                "lastName": "Last Name",
+                "email": "Email",
+                "phone": "Phone",
+                "message": "Message",
+                "messagePlaceholder": "Tell me what's on your mind…",
+                "send": "Send Message",
+                "sending": "Sending…",
+                "sent": "Sent!",
+                "tryAgain": "Retry",
+                "sendError": "Something went wrong. Please try again.",
+                "error": {
+                    "title": "Message Not Sent",
+                    "description": "Something went wrong while sending your message.",
+                    "hint": "Please <tryAgain>try again</tryAgain> or <goBack>go back to links</goBack>."
+                },
+                "success": {
+                    "title": "Message Sent!",
+                    "description": "Thank you for reaching out. I'll get back to you as soon as possible.",
+                    "nextSteps": "In the mean time you can <goBack>go back</goBack> or <sendAnother>send another message</sendAnother>."
+                },
+                "validation": {
+                    "nameRequired": "{label} is required.",
+                    "nameTooShort": "{label} must be at least 2 characters.",
+                    "nameInvalidChars": "{label} may only contain letters, spaces, hyphens, and apostrophes.",
+                    "emailRequired": "Email is required.",
+                    "emailInvalid": "Please enter a valid email address.",
+                    "textRequired": "{label} is required.",
+                    "textTooShort": "{label} must be at least {min} characters.",
+                    "textTooLong": "{label} must not exceed {max} characters."
+                }
             }
+        },
+        "resume": {
+            "title": "Resume",
+            "description": "Here's an overview of my professional journey, skills, and experiences. Feel free to download my full resume or explore my past experiences.",
+            "downloadResume": "Download Resume"
         }
-    },
-    "resume": {
-        "downloadResume": "Download Resume"
     }
 }

@@ -3,7 +3,7 @@ import { TypewriterText } from "@/components/molecules";
 import { NavMenu } from "@/components/molecules/NavMenu/NavMenu";
 import { useTranslations } from "next-intl";
 
-export const HeroSection = () => {
+export function HeroSection() {
     const t = useTranslations("pages.home.hero");
 
     return (
@@ -31,5 +31,5 @@ export const HeroSection = () => {
             />
 
         </>
-    )
+    );
 }

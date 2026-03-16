@@ -1,4 +1,4 @@
-export const BackgroundEffects = () => {
+export function BackgroundEffects() {
   return (
     <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-background">
       <svg aria-hidden="true" style={{ position: 'absolute', width: 0, height: 0, overflow: 'hidden' }}>
@@ -49,4 +49,4 @@ export const BackgroundEffects = () => {
         </div>
     </div>
   );
-};
+}

@@ -12,7 +12,7 @@ interface MobileNavMenuProps {
   className?: string;
 }
 
-export const MobileNavMenu = ({ items, className }: MobileNavMenuProps) => {
+export function MobileNavMenu({ items, className }: MobileNavMenuProps) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -117,4 +117,4 @@ export const MobileNavMenu = ({ items, className }: MobileNavMenuProps) => {
       {mounted && createPortal(dropdown, document.body)}
     </div>
   );
-};
+}

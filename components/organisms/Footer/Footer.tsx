@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { usePathname } from "@/i18n/navigation"; 
 
 
-export const Footer = () => {
+export function Footer() {
     const t = useTranslations("layout.footer");
     const pathname = usePathname();
 

@@ -6,7 +6,7 @@ import { NavMenu, MobileNavMenu } from "@/components/molecules";
 import { usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
-export const Header = () => {
+export function Header() {
     const pathname = usePathname();
     const t = useTranslations("layout.header");
 

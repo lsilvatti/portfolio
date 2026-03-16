@@ -8,8 +8,8 @@ interface ConnectCardProps {
     onShowForm?: () => void;
 }
 
-export const ConnectCard = ({ onShowForm }: ConnectCardProps) => {
-    const t = useTranslations('connect');
+export function ConnectCard({ onShowForm }: ConnectCardProps) {
+    const t = useTranslations('pages.connect');
     
     return (
         <Card className="mt-20 opacity-0 flex flex-col items-center gap-3 sm:gap-4 relative w-full max-w-xl px-4 sm:mt-0 sm:px-6 pt-8 sm:pt-12 pb-6 sm:pb-8 animate-fade-pop-in" style={{ animationDelay: '0.1s' }}>
@@ -120,4 +120,4 @@ export const ConnectCard = ({ onShowForm }: ConnectCardProps) => {
             </button>
         </Card>
     );
-};
+}

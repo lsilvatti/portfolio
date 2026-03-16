@@ -13,7 +13,7 @@ interface TypewriterTextProps {
   style?: React.CSSProperties;
 }
 
-export const TypewriterText = ({ prefix = '', words, variant = 'h4', className, style }: TypewriterTextProps) => {
+export function TypewriterText({ prefix = '', words, variant = 'h4', className, style }: TypewriterTextProps) {
   const longestWord = words.reduce((a, b) => (a.length > b.length ? a : b), '');
 
   return (
@@ -31,4 +31,4 @@ export const TypewriterText = ({ prefix = '', words, variant = 'h4', className, 
       <TypewriterAnimation words={words} prefix={prefix} variant={variant} initialText={longestWord} />
     </div>
   );
-};
+}

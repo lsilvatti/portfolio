@@ -1,4 +1,4 @@
-import React from 'react';
+import { getLocale } from 'next-intl/server';
 import { Divider, Link, Typography } from '@/components/atoms'; 
 
 const mdxComponents = {
@@ -13,9 +13,10 @@ const mdxComponents = {
     li: (props: any) => <Typography variant="li" className='mb-1' {...props} />,
 };
 
-export const ResumeView = async ({ locale }: { locale: string }) => {
+export async function ResumeView() {
+    const locale = await getLocale();
     let CvComponent;
-    
+
     if (locale === "en") {
         const file = await import('@/app/data/cv.md'); 
         CvComponent = file.default;
@@ -29,4 +30,4 @@ export const ResumeView = async ({ locale }: { locale: string }) => {
             <CvComponent components={mdxComponents} />
         </div>
     );
-};
+}

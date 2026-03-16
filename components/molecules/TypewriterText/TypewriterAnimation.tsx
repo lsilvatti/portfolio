@@ -13,12 +13,12 @@ interface TypewriterAnimationProps {
   initialText?: string;
 }
 
-export const TypewriterAnimation = ({ 
+export function TypewriterAnimation({ 
   prefix = '', 
   words, 
   variant = 'h4', 
   initialText 
-}: TypewriterAnimationProps) => {
+}: TypewriterAnimationProps) {
   const startIndex = initialText ? Math.max(words.indexOf(initialText), 0) : 0;
   const [currentWordIndex, setCurrentWordIndex] = useState(startIndex);
   const [currentText, setCurrentText] = useState(initialText ?? words[0] ?? '');
@@ -89,4 +89,4 @@ export const TypewriterAnimation = ({
       </span>
     </Typography>
   );
-};
+}

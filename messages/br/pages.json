@@ -32,69 +32,60 @@
                 "ctaLabel": "Conecte-se comigo"
             }
         },
-        "connect": {
-            "title": "Vamos nos Conectar",
-            "description": "Encontre as melhores formas de entrar em contato comigo."
-        },
-        "projects": {
-            "title": "Projetos",
-            "description": "Uma vitrine dos meus trabalhos e projetos pessoais."
-        },
-        "resume": {
-            "title": "Currículo",
-            "description": "Minha formação profissional, habilidades e experiências."
-        },
         "notFound": {
             "title": "404",
             "description": "Página não encontrada"
-        }
-    },
-    "connect": {
-        "letsConnect": "Vamos nos Conectar!",
-        "description": "Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato comigo através de qualquer uma das plataformas abaixo!",
-        "linkedin": "LinkedIn",
-        "github": "GitHub",
-        "email": "E-mail",
-        "calendly": "Calendly",
-        "sendMessage": "Ou se preferir, envie-me uma mensagem",
-        "form": {
-            "title": "Enviar Mensagem",
-            "description": "Responderei o mais breve possível.",
-            "backToLinks": "Voltar aos links",
-            "firstName": "Nome",
-            "lastName": "Sobrenome",
+        },
+        "connect": {
+            "title": "Conectar",
+            "letsConnect": "Vamos nos Conectar!",
+            "description": "Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato comigo através de qualquer uma das plataformas abaixo!",
+            "linkedin": "LinkedIn",
+            "github": "GitHub",
             "email": "E-mail",
-            "phone": "Telefone",
-            "message": "Mensagem",
-            "messagePlaceholder": "Me conte o que você tem em mente…",
-            "send": "Enviar Mensagem",
-            "sending": "Enviando…",
-            "sent": "Enviado!",
-            "tryAgain": "Tentar novamente",
-            "sendError": "Algo deu errado. Por favor, tente novamente.",
-            "error": {
-                "title": "Mensagem Não Enviada",
-                "description": "Algo deu errado ao enviar sua mensagem.",
-                "hint": "Por favor, <tryAgain>tente novamente</tryAgain> ou <goBack>volte aos links</goBack>."
-            },
-            "success": {
-                "title": "Mensagem Enviada!",
-                "description": "Obrigado pelo contato. Responderei o mais breve possível.",
-                "nextSteps": "Enquanto isso, você pode <goBack>voltar</goBack> ou <sendAnother>enviar outra mensagem</sendAnother>."
-            },
-            "validation": {
-                "nameRequired": "{label} é obrigatório.",
-                "nameTooShort": "{label} deve ter pelo menos 2 caracteres.",
-                "nameInvalidChars": "{label} pode conter apenas letras, espaços, hífens e apóstrofos.",
-                "emailRequired": "E-mail é obrigatório.",
-                "emailInvalid": "Insira um endereço de e-mail válido.",
-                "textRequired": "{label} é obrigatório.",
-                "textTooShort": "{label} deve ter pelo menos {min} caracteres.",
-                "textTooLong": "{label} não pode exceder {max} caracteres."
+            "calendly": "Calendly",
+            "sendMessage": "Ou se preferir, envie-me uma mensagem",
+            "form": {
+                "title": "Enviar Mensagem",
+                "description": "Responderei o mais breve possível.",
+                "backToLinks": "Voltar aos links",
+                "firstName": "Nome",
+                "lastName": "Sobrenome",
+                "email": "E-mail",
+                "phone": "Telefone",
+                "message": "Mensagem",
+                "messagePlaceholder": "Me conte o que você tem em mente…",
+                "send": "Enviar Mensagem",
+                "sending": "Enviando…",
+                "sent": "Enviado!",
+                "tryAgain": "Tentar novamente",
+                "sendError": "Algo deu errado. Por favor, tente novamente.",
+                "error": {
+                    "title": "Mensagem Não Enviada",
+                    "description": "Algo deu errado ao enviar sua mensagem.",
+                    "hint": "Por favor, <tryAgain>tente novamente</tryAgain> ou <goBack>volte aos links</goBack>."
+                },
+                "success": {
+                    "title": "Mensagem Enviada!",
+                    "description": "Obrigado pelo contato. Responderei o mais breve possível.",
+                    "nextSteps": "Enquanto isso, você pode <goBack>voltar</goBack> ou <sendAnother>enviar outra mensagem</sendAnother>."
+                },
+                "validation": {
+                    "nameRequired": "{label} é obrigatório.",
+                    "nameTooShort": "{label} deve ter pelo menos 2 caracteres.",
+                    "nameInvalidChars": "{label} pode conter apenas letras, espaços, hífens e apóstrofos.",
+                    "emailRequired": "E-mail é obrigatório.",
+                    "emailInvalid": "Insira um endereço de e-mail válido.",
+                    "textRequired": "{label} é obrigatório.",
+                    "textTooShort": "{label} deve ter pelo menos {min} caracteres.",
+                    "textTooLong": "{label} não pode exceder {max} caracteres."
+                }
             }
+        },
+        "resume": {
+            "title": "Currículo",
+            "description": "Aqui está uma visão geral do meu percurso profissional, habilidades e experiências. Sinta-se à vontade para baixar meu currículo completo ou explorar minhas experiências anteriores.",
+            "downloadResume": "Baixar Currículo"
         }
-    },
-    "resume": {
-        "downloadResume": "Baixar Currículo"
-     }
+    }
 }

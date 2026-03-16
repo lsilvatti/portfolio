@@ -13,12 +13,12 @@ interface NavMenuProps {
   className?: string;
 }
 
-export const NavMenu = ({ 
+export function NavMenu({ 
   items, 
   baseDelay = 0.5,
   incrementDelay = 0.1,
   className 
-}: NavMenuProps) => {
+}: NavMenuProps) {
   return (
     <nav className={cn("flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10", className)}>
       {items.map((item, index) => {
@@ -38,4 +38,4 @@ export const NavMenu = ({
       })}
     </nav>
   );
-};
+}

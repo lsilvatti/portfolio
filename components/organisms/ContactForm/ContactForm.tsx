@@ -32,7 +32,7 @@ interface FieldErrors {
 }
 
 export function ContactForm({ onShowLinks, onSuccess }: ContactFormProps) {
-    const t = useTranslations('connect.form');
+    const t = useTranslations('pages.connect.form');
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');

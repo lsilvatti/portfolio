@@ -16,7 +16,7 @@ interface SuccessCardProps {
 }
 
 function SuccessCard({ onGoBack, onSendAnother }: SuccessCardProps) {
-    const t = useTranslations('connect.form');
+    const t = useTranslations('pages.connect.form');
 
     return (
         <Card className="opacity-0 flex flex-col items-center gap-6 w-full max-w-xl px-4 py-10 sm:px-6 sm:py-12 animate-fade-pop-in text-center" style={{ animationDelay: '0.05s' }}>

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/atoms";
 
-export const GoBackButton = () => {
+export function GoBackButton() {
   const router = useRouter();
   const t = useTranslations("components.goBackButton");
   const [isInternal, setIsInternal] = useState(false);
@@ -30,4 +30,4 @@ export const GoBackButton = () => {
       {t("label")}
     </Button>
   );
-};
+}
