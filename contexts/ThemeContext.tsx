@@ -5,6 +5,8 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useLayoutEffect,
+  useRef,
   useState,
 } from "react";
 import {
@@ -21,9 +23,7 @@ interface ThemeContextValue {
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
-function getInitialTheme(): Theme {
-  if (typeof window === "undefined") return DEFAULT_THEME;
-
+function getStoredTheme(): Theme {
   const stored = localStorage.getItem(THEME_STORAGE_KEY);
   if (stored === "light" || stored === "dark") return stored;
 
@@ -33,23 +33,32 @@ function getInitialTheme(): Theme {
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  // Always start with DEFAULT_THEME so the first client render matches the
+  // server-rendered HTML, avoiding a hydration mismatch.
   const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
+  const isFirstRender = useRef(true);
 
+  // After hydration, sync to the user's actual stored/system preference.
   useEffect(() => {
-    const applied = document.documentElement.getAttribute(
-      THEME_DATA_ATTRIBUTE
-    ) as Theme | null;
-    setTheme(applied === "light" || applied === "dark" ? applied : getInitialTheme());
+    setTheme(getStoredTheme());
   }, []);
 
+  // Sync the data-theme attribute before every paint so it survives
+  // framework-driven DOM patches (e.g. locale navigation that re-renders <html>).
+  // Skip the very first render so the inline script's value is preserved through
+  // hydration and we don't flash the wrong theme.
+  useLayoutEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    document.documentElement.setAttribute(THEME_DATA_ATTRIBUTE, theme);
+  });
 
   const toggleTheme = useCallback(() => {
     setTheme((prev) => {
       const next = prev === "light" ? "dark" : "light";
       localStorage.setItem(THEME_STORAGE_KEY, next);
-      
-      document.documentElement.setAttribute(THEME_DATA_ATTRIBUTE, next);
-      
       return next;
     });
   }, []);

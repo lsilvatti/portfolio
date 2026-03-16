@@ -72,6 +72,11 @@
             "sent": "Sent!",
             "tryAgain": "Retry",
             "sendError": "Something went wrong. Please try again.",
+            "error": {
+                "title": "Message Not Sent",
+                "description": "Something went wrong while sending your message.",
+                "hint": "Please <tryAgain>try again</tryAgain> or <goBack>go back to links</goBack>."
+            },
             "success": {
                 "title": "Message Sent!",
                 "description": "Thank you for reaching out. I'll get back to you as soon as possible.",
@@ -88,5 +93,8 @@
                 "textTooLong": "{label} must not exceed {max} characters."
             }
         }
+    },
+    "resume": {
+        "downloadResume": "Download Resume"
     }
 }

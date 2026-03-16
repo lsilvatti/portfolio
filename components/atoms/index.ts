@@ -1,4 +1,5 @@
 export { ThemeToggle } from "./ThemeToggle";
+export { GoToTop } from "./GoToTop";
 export { Typography, typographyVariants } from "./Typography";
 export { IconButton, iconButtonVariants } from "./IconButton";
 export { Button, buttonVariants } from "./Button";

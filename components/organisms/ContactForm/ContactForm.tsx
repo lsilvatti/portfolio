@@ -2,8 +2,8 @@
 
 import { type ChangeEvent, type SubmitEvent, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { ArrowLeft, Loader2, Send } from 'lucide-react';
-import { Button, Card, Input, PhoneInput, Textarea, Typography, validateName, validateEmail, validateText  } from '@/components/atoms';
+import { AlertCircle, ArrowLeft, Loader2, Send } from 'lucide-react';
+import { Button, Card, Input, Link, PhoneInput, Textarea, Typography, validateName, validateEmail, validateText  } from '@/components/atoms';
 import type { PhoneValue } from '@/components/atoms';
 import { sendEmailAction } from '@/app/actions/send-email';
 
@@ -137,6 +137,42 @@ export function ContactForm({ onShowLinks, onSuccess }: ContactFormProps) {
         error: t('tryAgain'),
     }[status];
 
+    if (status === 'error') {
+        return (
+            <Card className="opacity-0 flex flex-col items-center gap-6 w-full max-w-xl px-4 py-10 sm:px-6 sm:py-12 animate-fade-pop-in text-center" style={{ animationDelay: '0.05s' }}>
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-red-500/10">
+                    <AlertCircle size={32} className="text-red-500" />
+                </div>
+                <div className="flex flex-col gap-2">
+                    <Typography variant="h2">{t('error.title')}</Typography>
+                    <Typography variant="body">{serverError || t('error.description')}</Typography>
+                </div>
+                <Typography variant="body" className="text-muted">
+                    {t.rich('error.hint', {
+                        tryAgain: (chunks) => (
+                            <Link
+                                variant="primary"
+                                href={''}
+                                onClick={(e) => { e.preventDefault(); setStatus('idle'); setServerError(null); }}
+                            >
+                                {chunks}
+                            </Link>
+                        ),
+                        goBack: (chunks) => (
+                            <Link
+                                variant="primary"
+                                href={''}
+                                onClick={(e) => { e.preventDefault(); onShowLinks?.(); }}
+                            >
+                                {chunks}
+                            </Link>
+                        ),
+                    })}
+                </Typography>
+            </Card>
+        );
+    }
+
     return (
         <Card className="opacity-0 flex flex-col gap-4 sm:gap-5 w-full max-w-xl px-4 py-4 sm:px-6 sm:py-6 animate-fade-pop-in" style={{ animationDelay: '0.1s' }}>
             <div className="flex flex-col-reverse gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
@@ -228,13 +264,7 @@ export function ContactForm({ onShowLinks, onSuccess }: ContactFormProps) {
                     }}
                 />
 
-                <div aria-live="polite" aria-atomic="true">
-                    {status === 'error' && (
-                        <p role="alert" className="text-sm text-red-500 text-center">
-                            {serverError || t('sendError')}
-                        </p>
-                    )}
-                </div>
+
 
                 <Button
                     type="submit"

@@ -12,6 +12,9 @@ const typographyVariants = cva("", {
       body: "text-base",
       small: "text-sm text-muted",
       caption: "text-xs text-muted-foreground",
+      ul: "list-disc pl-6 space-y-1 text-base",
+      ol: "list-decimal pl-6 space-y-1 text-base",
+      li: "text-base",
     },
   },
   defaultVariants: {
@@ -31,6 +34,9 @@ const defaultTags: Record<TypographyVariant, ElementType> = {
   body: "p",
   small: "span",
   caption: "span",
+  ul: "ul",
+  ol: "ol",
+  li: "li",
 };
 
 type TypographyProps<T extends ElementType = "p"> = {

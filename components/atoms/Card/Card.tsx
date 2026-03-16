@@ -14,6 +14,7 @@ const cardVariants = cva(
         default: "bg-surface border border-border",
         primary: "bg-primary-light border border-primary/20",
         ghost: "bg-transparent border border-border/50",
+        glass: "backdrop-blur-md bg-background/40 border border-white/10 dark:border-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]",
       },
       padding: {
         none: "p-0",

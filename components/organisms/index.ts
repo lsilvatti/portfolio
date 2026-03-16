@@ -5,3 +5,4 @@ export { Footer } from './Footer';
 export { ConnectCard } from './ConnectCard';
 export { ContactForm, type ContactFormData } from './ContactForm';
 export { ConnectView } from './ConnectView';
+export { ResumeCard } from './ResumeCard';

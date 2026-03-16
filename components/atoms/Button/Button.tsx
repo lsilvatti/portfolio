@@ -53,6 +53,7 @@ type BaseProps = ButtonVariantProps & {
   iconLeft?: ElementType;
   iconRight?: ElementType;
   fullWidth?: boolean;
+  rounded?: boolean;
 };
 
 type ButtonAsButton = BaseProps &
@@ -72,13 +73,14 @@ export function Button({
   variant,
   size,
   fullWidth,
+  rounded,
   className,
   children,
   iconLeft: IconLeft,
   iconRight: IconRight,
   ...rest
 }: ButtonProps) {
-  const classes = cn(buttonVariants({ variant, size, fullWidth }), className);
+  const classes = cn(buttonVariants({ variant, size, fullWidth }), rounded && "rounded-full", className);
   const iconSize = iconSizeMap[size ?? "md"];
 
   const content = (

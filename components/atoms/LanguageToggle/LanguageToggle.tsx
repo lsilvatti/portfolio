@@ -4,7 +4,6 @@ import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { type Locale } from "@/i18n/config";
 import { cn } from "@/lib/utils";
-import { THEME_DATA_ATTRIBUTE } from "@/constants/theme";
 
 const locales = [
   { code: "en" as Locale, label: "EN", ariaLabel: "EN – Switch to English" },
@@ -18,12 +17,6 @@ export function LanguageToggle({ className }: { className?: string }) {
 
 const switchLocale = (next: Locale) => {
     if (next === locale) return;
-    
-    const currentTheme = document.documentElement.getAttribute(THEME_DATA_ATTRIBUTE);
-    
-    if (currentTheme) {
-      document.documentElement.setAttribute(THEME_DATA_ATTRIBUTE, currentTheme);
-    }
 
     document.cookie = `NEXT_LOCALE=${next}; path=/; max-age=31536000; SameSite=Lax`;
 

@@ -25,6 +25,7 @@ const iconButtonVariants = cva(
     variants: {
       variant: {
         primary: "bg-primary text-primary-foreground hover:bg-primary-hover shadow-sm",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary-hover shadow-sm",
         outline: "border border-border bg-transparent text-foreground hover:bg-surface-hover",
         ghost: "bg-transparent text-foreground hover:bg-surface-hover",
       },

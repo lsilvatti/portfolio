@@ -72,6 +72,11 @@
             "sent": "Enviado!",
             "tryAgain": "Tentar novamente",
             "sendError": "Algo deu errado. Por favor, tente novamente.",
+            "error": {
+                "title": "Mensagem Não Enviada",
+                "description": "Algo deu errado ao enviar sua mensagem.",
+                "hint": "Por favor, <tryAgain>tente novamente</tryAgain> ou <goBack>volte aos links</goBack>."
+            },
             "success": {
                 "title": "Mensagem Enviada!",
                 "description": "Obrigado pelo contato. Responderei o mais breve possível.",
@@ -88,5 +93,8 @@
                 "textTooLong": "{label} não pode exceder {max} caracteres."
             }
         }
-    }
+    },
+    "resume": {
+        "downloadResume": "Baixar Currículo"
+     }
 }

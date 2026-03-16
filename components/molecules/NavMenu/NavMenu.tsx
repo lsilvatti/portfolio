@@ -28,13 +28,8 @@ export const NavMenu = ({
           <Link
             key={item.label}
             href={item.href}
-            className={cn(
-              "text-lg font-medium text-muted-foreground capitalize",
-              "animate-fade-down md:animate-fade-right",
-              "transition-all duration-300 ease-in-out",
-              "hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]",
-              "active:scale-95"
-            )}
+            variant="nav"
+            className="animate-fade-down md:animate-fade-right"
             style={{ animationDelay: `${currentDelay}s` }}
           >
             {item.label}

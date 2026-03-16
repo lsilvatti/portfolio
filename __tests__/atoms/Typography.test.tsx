@@ -53,4 +53,19 @@ describe("Typography", () => {
     render(<Typography data-testid="typo">Test</Typography>);
     expect(screen.getByTestId("typo")).toBeInTheDocument();
   });
+
+  it("renders ul variant as <ul>", () => {
+    render(<Typography variant="ul"><li>Item</li></Typography>);
+    expect(screen.getByRole("list").tagName).toBe("UL");
+  });
+
+  it("renders ol variant as <ol>", () => {
+    render(<Typography variant="ol"><li>Item</li></Typography>);
+    expect(screen.getByRole("list").tagName).toBe("OL");
+  });
+
+  it("renders li variant as <li>", () => {
+    render(<ul><Typography variant="li">List item</Typography></ul>);
+    expect(screen.getByRole("listitem").tagName).toBe("LI");
+  });
 });
