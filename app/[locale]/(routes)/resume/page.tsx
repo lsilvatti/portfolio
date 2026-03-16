@@ -35,7 +35,7 @@ export default async function ResumePage({ params }: { params: Promise<{ locale:
   return (
     <>
       <CenteredLayout>
-        <ResumeCard params={params} />
+        <ResumeCard />
       </CenteredLayout>
       <GoToTop />
     </>
