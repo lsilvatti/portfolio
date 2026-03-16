@@ -6,7 +6,7 @@ import { NavMenu, MobileNavMenu } from "@/components/molecules";
 import { usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
-export function Header() {
+export const Header = () => {
     const pathname = usePathname();
     const t = useTranslations("layout.header");
 
@@ -29,7 +29,7 @@ export function Header() {
                         "overflow-hidden transition-opacity ease-in-out",
                         isHomePage
                             ? "w-0 opacity-0 pointer-events-none duration-150"
-                            : "flex-1 min-w-0 pr-4 opacity-100 duration-300 delay-250",
+                            : "flex-1 min-w-0 pr-4 opacity-100 duration-300 delay-250 px-4",
                     )}
                 >
                     <NavMenu

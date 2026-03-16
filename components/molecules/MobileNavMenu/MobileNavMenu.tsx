@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, Icon } from '@/components/atoms';
 import { MenuIcon, XIcon } from '@/components/atoms/Icon/icons';
+import { usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import type { NavItem } from '../NavMenu/NavMenu';
 
@@ -13,6 +14,7 @@ interface MobileNavMenuProps {
 }
 
 export function MobileNavMenu({ items, className }: MobileNavMenuProps) {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -60,20 +62,25 @@ export function MobileNavMenu({ items, className }: MobileNavMenuProps) {
       aria-label="Navigation"
     >
       <nav className="flex flex-col py-2">
-        {items.map((item) => (
-          <Link
-            key={item.label}
-            href={item.href}
-            onClick={close}
-            className={cn(
-              'px-4 py-2.5 text-base font-medium capitalize',
-              'text-muted-foreground hover:text-primary hover:bg-surface-hover',
-              'transition-colors duration-150',
-            )}
-          >
-            {item.label}
-          </Link>
-        ))}
+        {items.map((item) => {
+          const isActive = pathname === item.href;
+          return (
+            <Link
+              key={item.label}
+              href={item.href}
+              onClick={close}
+              className={cn(
+                'px-4 py-2.5 text-base font-medium capitalize',
+                'transition-colors duration-150',
+                isActive
+                  ? 'text-secondary drop-shadow-[0_0_8px_var(--color-secondary)] hover:text-secondary hover:bg-surface-hover'
+                  : 'text-muted-foreground hover:text-primary hover:bg-surface-hover',
+              )}
+            >
+              {item.label}
+            </Link>
+          );
+        })}
       </nav>
     </div>
   );

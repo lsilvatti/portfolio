@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Typography } from "@/components/atoms";
 import { Link } from "@/components/atoms/Link/Link";
 import { Button } from "@/components/atoms/Button/Button";
+import { GoBackButton } from "@/components/molecules";
 
 export function UnderConstructionBanner() {
   const t = useTranslations("pages.home.underConstruction");
@@ -22,9 +23,7 @@ export function UnderConstructionBanner() {
         })}
       </Typography>
 
-      <Button href="/connect" variant="outline" size="md">
-        {t("ctaLabel")}
-      </Button>
+      <GoBackButton />
     </div>
   );
 }
