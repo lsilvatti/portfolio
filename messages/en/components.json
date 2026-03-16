@@ -109,6 +109,10 @@
                 "KW": "Kuwait",
                 "JO": "Jordan"
             }
+        },
+
+        "chipDropdown": {
+            "clean": "Clear filters"
         }
     }
 }

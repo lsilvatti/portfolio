@@ -96,7 +96,14 @@
         },
         "projects": {
             "title": "Projetos",
-            "description": "Aqui estão alguns dos projetos em que trabalhei. Cada um deles reflete minha paixão por criar soluções inovadoras e impactantes. Sinta-se à vontade para explorar e conhecer mais sobre meu trabalho!"
+            "description": "Bem-vindo ao meu playground do GitHub. Enquanto o código do meu dia a dia é privado, estes repositórios mostram meus experimentos pessoais, estudos contínuos e pequenos projetos. Mergulhe no código e veja com o que tenho brincado ultimamente.",
+            "noResults": "Nenhum projeto encontrado com estes filtros.",
+            "searchInput": {
+                "placeholder": "Pesquisar projetos..."
+            },
+            "chipDropdown": {
+                "label": "Tecnologias"
+            }
         }
     }
 }
