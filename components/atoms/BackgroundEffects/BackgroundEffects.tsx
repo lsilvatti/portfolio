@@ -1,4 +1,4 @@
-export const BackgroundEffects = () => {
+export function BackgroundEffects() {
   return (
     <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-background">
       <svg aria-hidden="true" style={{ position: 'absolute', width: 0, height: 0, overflow: 'hidden' }}>
@@ -15,7 +15,7 @@ export const BackgroundEffects = () => {
       </svg>
 
       <div 
-        className="absolute inset-0 opacity-[0.5] dark:opacity-[0.2]"
+        className="absolute inset-0 opacity-[0.5] dark:opacity-[0.4] dark:invert dark:brightness-150"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23888888'/%3E%3C/svg%3E")`,
           backgroundSize: '32px 32px',
@@ -47,12 +47,6 @@ export const BackgroundEffects = () => {
             }}
           />
         </div>
-        
-        <style jsx>{`
-          :global([data-theme='dark']) .fixed > div:first-of-type {
-            filter: invert(1) brightness(1.5);
-          }
-        `}</style>
     </div>
   );
-};
+}

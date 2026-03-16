@@ -1,4 +1,5 @@
 export { ThemeToggle } from "./ThemeToggle";
+export { GoToTop } from "./GoToTop";
 export { Typography, typographyVariants } from "./Typography";
 export { IconButton, iconButtonVariants } from "./IconButton";
 export { Button, buttonVariants } from "./Button";
@@ -12,6 +13,7 @@ export { Divider } from "./Divider";
 export { BackgroundEffects } from "./BackgroundEffects";
 export { CopyButton, type CopyButtonProps } from "./CopyButton";
 export { ShareButton, type ShareButtonProps } from "./ShareButton";
+export { DownloadButton } from "./DownloadButton";
 export {
   Input,
   inputVariants,

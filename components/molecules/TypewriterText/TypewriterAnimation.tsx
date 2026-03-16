@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, startTransition } from 'react';
-import { Typography, typographyVariants } from '@/components/atoms/Typography/Typography';
+import { Typography, typographyVariants } from '@/components/atoms';
 import { type VariantProps } from 'class-variance-authority';
 
 type TypographyVariant = NonNullable<VariantProps<typeof typographyVariants>['variant']>;
@@ -13,12 +13,12 @@ interface TypewriterAnimationProps {
   initialText?: string;
 }
 
-export const TypewriterAnimation = ({ 
+export function TypewriterAnimation({ 
   prefix = '', 
   words, 
   variant = 'h4', 
   initialText 
-}: TypewriterAnimationProps) => {
+}: TypewriterAnimationProps) {
   const startIndex = initialText ? Math.max(words.indexOf(initialText), 0) : 0;
   const [currentWordIndex, setCurrentWordIndex] = useState(startIndex);
   const [currentText, setCurrentText] = useState(initialText ?? words[0] ?? '');
@@ -89,4 +89,4 @@ export const TypewriterAnimation = ({
       </span>
     </Typography>
   );
-};
+}

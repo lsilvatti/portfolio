@@ -9,6 +9,7 @@ const linkVariants = cva("underline-offset-4 transition-colors duration-200", {
       default: "text-foreground",
       primary: "text-primary hover:text-primary-hover",
       muted: "text-muted hover:text-foreground",
+      nav: "text-lg font-medium text-muted-foreground capitalize transition-all duration-300 ease-in-out hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)] active:scale-95 data-[active=true]:text-secondary data-[active=true]:drop-shadow-[0_0_8px_var(--color-secondary)]",
       unstyled: "",
     },
   },

@@ -40,14 +40,14 @@ type DividerProps = {
 } & VariantProps<typeof dividerVariants> &
   ComponentPropsWithoutRef<"hr">;
 
-export const Divider = ({
+export function Divider({
   animated = false,
   color,
   size,
   orientation,
   className,
   ...rest
-}: DividerProps) => {
+}: DividerProps) {
   return (
     <hr
       className={cn(
@@ -58,4 +58,4 @@ export const Divider = ({
       {...rest}
     />
   );
-};
+}
