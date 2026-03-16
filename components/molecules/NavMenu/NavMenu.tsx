@@ -1,3 +1,5 @@
+'use client';
+
 import { Link } from '@/components/atoms';
 import { usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
