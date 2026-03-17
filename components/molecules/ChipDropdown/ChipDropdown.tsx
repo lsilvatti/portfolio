@@ -10,6 +10,8 @@ interface ChipDropdownProps {
   onToggle: (option: string) => void;
   onClear: () => void;
   label?: string;
+  className?: string;
+  style: React.CSSProperties
 }
 
 export function ChipDropdown({ 
@@ -17,7 +19,9 @@ export function ChipDropdown({
   selectedOptions, 
   onToggle, 
   onClear, 
-  label = "Tecnologias" 
+  label = "Tecnologias",
+  className = "",
+  style
 }: ChipDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -39,7 +43,7 @@ export function ChipDropdown({
   if (options.length === 0) return null;
 
   return (
-    <div className="relative w-full sm:w-62.5" ref={dropdownRef}>
+    <div className={`relative w-full sm:w-62.5 ${className}`} style={style} ref={dropdownRef}>
       
       <div
         role="button"
@@ -82,7 +86,7 @@ export function ChipDropdown({
       </div>
 
       {isOpen && (
-        <div className="absolute right-0 top-full mt-2 w-75 max-h-75 overflow-y-auto bg-surface border border-border rounded-lg shadow-lg z-10 p-4 animate-in fade-in slide-in-from-top-2">
+        <div className="absolute right-0 top-full mt-2 w-75 max-h-75 overflow-y-auto bg-surface border border-border rounded-lg shadow-lg z-50 p-4 animate-in fade-in slide-in-from-top-2">
           <div className="flex flex-wrap gap-2">
             {options.map((topic) => (
               <Chip
