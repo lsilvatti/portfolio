@@ -2,7 +2,6 @@
 
 import { useCallback, useState } from 'react';
 
-// Exportamos o tipo para poder reaproveitar no componente do Toast
 export type ToastVariant = 'default' | 'primary' | 'success' | 'warning' | 'error';
 
 export interface ToastMessage {
