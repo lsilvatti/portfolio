@@ -11,7 +11,8 @@ interface ChipDropdownProps {
   onClear: () => void;
   label?: string;
   className?: string;
-  style: React.CSSProperties
+  style: React.CSSProperties;
+  chipColor?: 'default' | 'outline' | 'primary' | 'secondary' | 'outline-primary' | 'outline-secondary';
 }
 
 export function ChipDropdown({ 
@@ -21,7 +22,8 @@ export function ChipDropdown({
   onClear, 
   label = "Tecnologias",
   className = "",
-  style
+  style,
+  chipColor = "default"
 }: ChipDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -61,12 +63,12 @@ export function ChipDropdown({
           ) : (
             <div className="flex items-center gap-1.5 w-full overflow-hidden mask-[linear-gradient(to_right,black_70%,transparent_100%)]">
               {selectedOptions.map((opt) => (
-                <span 
-                  key={opt} 
-                  className="shrink-0 whitespace-nowrap px-2 py-0.5 text-[11px] font-medium rounded-full bg-primary text-primary-foreground shadow-sm"
-                >
-                  {opt}
-                </span>
+                <Chip
+                  key={opt}
+                  label={opt}
+                  selected={true}
+                  variant={chipColor}
+                />
               ))}
             </div>
           )}
@@ -94,6 +96,7 @@ export function ChipDropdown({
                 label={topic}
                 selected={selectedOptions.includes(topic)}
                 onClick={() => onToggle(topic)}
+                variant={chipColor}
               />
             ))}
           </div>
