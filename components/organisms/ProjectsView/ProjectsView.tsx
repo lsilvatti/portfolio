@@ -54,7 +54,6 @@ export function ProjectsView({ projects, initialDelay = 0 }: ProjectsViewProps) 
   }, [projects]);
 
   const clearLanguages = () => setSelectedLanguages([]);
-
   const clearTags = () => setSelectedTags([]);
 
   const filteredProjects = useMemo(() => {
@@ -75,6 +74,18 @@ export function ProjectsView({ projects, initialDelay = 0 }: ProjectsViewProps) 
     });
   }, [projects, debouncedSearchTerm, selectedLanguages, selectedTags]);
 
+  const availableLanguages = useMemo(() => {
+    const available = new Set<string>();
+    filteredProjects.forEach(p => p.languages.forEach(l => available.add(l)));
+    return Array.from(available);
+  }, [filteredProjects]);
+
+  const availableTags = useMemo(() => {
+    const available = new Set<string>();
+    filteredProjects.forEach(p => p.tags?.forEach(t => available.add(t)));
+    return Array.from(available);
+  }, [filteredProjects]);
+
   return (
     <>
       <Card className="flex flex-col sm:flex-row gap-4 items-start w-full animate-fade-pop-in z-2 backdrop-blur-sm bg-background/35" style={{ animationDelay: `${initialDelay}s` }}>
@@ -90,10 +101,11 @@ export function ProjectsView({ projects, initialDelay = 0 }: ProjectsViewProps) 
 
         <ChipDropdown
           options={allLanguages}
+          availableOptions={availableLanguages}
           selectedOptions={selectedLanguages}
           onToggle={toggleLanguage}
           onClear={clearLanguages}
-          label={t('chipDropdown.languages.label')}
+          label={t('languages')}
           className='animate-fade-pop-in'
           style={{ animationDelay: `${initialDelay + 0.2}s` }}
           chipColor="outline-primary"
@@ -101,10 +113,11 @@ export function ProjectsView({ projects, initialDelay = 0 }: ProjectsViewProps) 
 
         <ChipDropdown
           options={allTags}
+          availableOptions={availableTags}
           selectedOptions={selectedTags}
           onToggle={toggleTag}
           onClear={clearTags}
-          label={t('chipDropdown.tags.label')}
+          label={t('technologies')}
           className='animate-fade-pop-in'
           style={{ animationDelay: `${initialDelay + 0.2}s` }}
           chipColor="outline-secondary"

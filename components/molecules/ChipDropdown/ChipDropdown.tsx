@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 
 interface ChipDropdownProps {
   options: string[];
+  availableOptions: string[];
   selectedOptions: string[];
   onToggle: (option: string) => void;
   onClear: () => void;
@@ -17,6 +18,7 @@ interface ChipDropdownProps {
 
 export function ChipDropdown({ 
   options, 
+  availableOptions,
   selectedOptions, 
   onToggle, 
   onClear, 
@@ -68,6 +70,12 @@ export function ChipDropdown({
                   label={opt}
                   selected={true}
                   variant={chipColor}
+                  selectable
+                  active={true}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onToggle(opt);
+                  }}
                 />
               ))}
             </div>
@@ -90,15 +98,22 @@ export function ChipDropdown({
       {isOpen && (
         <div className="absolute right-0 top-full mt-2 w-75 max-h-75 overflow-y-auto bg-surface border border-border rounded-lg shadow-lg z-50 p-4 animate-in fade-in slide-in-from-top-2">
           <div className="flex flex-wrap gap-2">
-            {options.map((topic) => (
-              <Chip
-                key={topic}
-                label={topic}
-                selected={selectedOptions.includes(topic)}
-                onClick={() => onToggle(topic)}
-                variant={chipColor}
-              />
-            ))}
+            {options.map((topic) => {
+              const isSelected = selectedOptions.includes(topic);
+              const isActive = availableOptions.includes(topic) || isSelected;
+
+              return (
+                <Chip
+                  key={topic}
+                  label={topic}
+                  selected={isSelected}
+                  active={isActive}
+                  selectable={isActive}
+                  variant={chipColor}
+                  onClick={() => isActive && onToggle(topic)}
+                />
+              );
+            })}
           </div>
           
           {selectedOptions.length > 0 && (
