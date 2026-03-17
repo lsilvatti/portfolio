@@ -3,15 +3,16 @@
 import { useState, useMemo } from 'react';
 import type { ProcessedProject } from '@/app/[locale]/(routes)/projects/page';
 import { Card, SearchInput } from '@/components/atoms';
-import { ChipDropdown, } from '@/components/molecules';
+import { ChipDropdown, ProjectCard, } from '@/components/molecules';
 import { useDebounce } from '@/hooks/useDebounce'; // Importe o novo hook
 import { useTranslations } from 'next-intl';
 
 interface ProjectsViewProps {
   projects: ProcessedProject[];
+  initialDelay?: number;
 }
 
-export function ProjectsView({ projects }: ProjectsViewProps) {
+export function ProjectsView({ projects, initialDelay = 0 }: ProjectsViewProps) {
   const t = useTranslations('pages.projects');
   const [searchTerm, setSearchTerm] = useState('');
   const debouncedSearchTerm = useDebounce(searchTerm, 400);
@@ -49,14 +50,20 @@ export function ProjectsView({ projects }: ProjectsViewProps) {
       return searchMatch && topicsMatch;
     });
   }, [projects, debouncedSearchTerm, selectedTopics]);
+
+
+
+
   return (
     <>
-    <Card className="flex flex-col sm:flex-row gap-4 items-start w-full">
+    <Card className="flex flex-col sm:flex-row gap-4 items-start w-full animate-fade-pop-in z-2" style={{ animationDelay: `${initialDelay}s` }}>
       <div className="w-full grow">
         <SearchInput
           value={searchTerm}
           onChange={setSearchTerm}
           placeholder={t('searchInput.placeholder')}
+          className='animate-fade-pop-in'
+          style={{ animationDelay: `${initialDelay + 0.1}s` }}
         />
       </div>
 
@@ -66,6 +73,8 @@ export function ProjectsView({ projects }: ProjectsViewProps) {
         onToggle={toggleTopic}
         onClear={clearTopics}
         label={t('chipDropdown.label')}
+        className='animate-fade-pop-in'
+        style={{ animationDelay: `${initialDelay + 0.2}s` }}
       />
     </Card>
 
@@ -77,12 +86,16 @@ export function ProjectsView({ projects }: ProjectsViewProps) {
           {t('noResults')}
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filteredProjects.map((project) => (
-            <div key={project.name} className="flex flex-col border border-neutral-800 bg-neutral-900/50 rounded-lg p-5 transition-colors hover:border-neutral-600">
-              <h3 className="text-xl font-bold text-white capitalize">{project.name.replace(/-/g, ' ')}</h3>
-              <p className="text-sm text-neutral-400 mb-4">{project.description}</p>
-            </div>
+        <div className="columns-1 sm:columns-2 gap-6 space-y-6">
+          {filteredProjects.map((project, index) => (
+            <ProjectCard
+              key={project.name}
+              title={project.name}
+              description={project.description || ''}
+              languages={project.languages}
+              tags={project.tags}
+              />
+
           ))}
         </div>
       )}
