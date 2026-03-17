@@ -6,13 +6,15 @@ interface SearchInputProps {
   onChange: (value: string) => void;
   placeholder?: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export function SearchInput({ 
   value, 
   onChange, 
   placeholder = "Buscar...",
-  className
+  className,
+  style,
 }: SearchInputProps) {
   return (
     <Input
@@ -21,6 +23,7 @@ export function SearchInput({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         className={className}
+        style={style}
         size="md" 
         hideHelper 
       />
