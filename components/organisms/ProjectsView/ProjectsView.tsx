@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react';
 import type { ProcessedProject } from '@/app/[locale]/(routes)/projects/page';
 import { Card, SearchInput } from '@/components/atoms';
-import { ChipDropdown, ProjectCard } from '@/components/molecules';
+import { ChipDropdown } from '@/components/molecules';
 import { useDebounce } from '@/hooks/useDebounce';
 import { useTranslations } from 'next-intl';
 import { ProjectList } from '../ProjectList';

@@ -40,7 +40,11 @@ export function ProjectListCard({
               label={lang}
               variant={filteredLanguages?.includes(lang) ? 'primary' : 'outline-primary'}
               className="mb-2"
-              onClick={() => onClickLanguageChip?.(lang)}
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                onClickLanguageChip?.(lang);
+              }}
             />
           ))}
           {tags && tags.map((tag) => (
@@ -50,7 +54,11 @@ export function ProjectListCard({
               label={tag}
               variant={filteredTags?.includes(tag) ? 'secondary' : 'outline-secondary'}
               className="mb-2"
-              onClick={() => onClickTagChip?.(tag)}
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                onClickTagChip?.(tag);
+              }}
             />
           ))}
         </div>

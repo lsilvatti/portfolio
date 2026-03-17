@@ -34,6 +34,7 @@ type AvatarProps = VariantProps<typeof avatarVariants> & {
   priority?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  loading?: "eager" | "lazy";
 };
 
 export function Avatar({
@@ -44,6 +45,7 @@ export function Avatar({
   priority = false,
   className,
   style,
+  loading,
 }: AvatarProps) {
   return (
     <Image
@@ -54,6 +56,7 @@ export function Avatar({
       priority={priority}
       className={cn(avatarVariants({ size, border }), className)}
       style={style}
+      loading={loading}
     />
   );
 }
