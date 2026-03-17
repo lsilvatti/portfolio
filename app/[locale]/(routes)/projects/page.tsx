@@ -1,9 +1,10 @@
-import { getLocale } from 'next-intl/server';
+import { getLocale, setRequestLocale } from 'next-intl/server';
 import { fetchGitHubRepos } from '@/lib/github'; 
 import { ProjectsView } from '@/components/organisms';
 import { Typography } from '@/components/atoms';
 import { getTranslations } from 'next-intl/server';
 import { HorizontallyCenteredLayout } from '@/components/templates';
+import { Metadata } from 'next';
 
 
 export interface ProcessedProject {
@@ -16,6 +17,29 @@ export interface ProcessedProject {
   languages: string[];
   tags: string[] | null;
   content: string | null; 
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("pages.projects");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: `/${locale}/projects`,
+      languages: {
+        "en": "/en/projects",
+        "pt-BR": "/br/projects",
+        "x-default": "/en/projects"
+      },
+    }
+  };
 }
 
 export default async function ProjectsPage() {
