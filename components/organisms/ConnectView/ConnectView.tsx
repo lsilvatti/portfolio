@@ -15,6 +15,11 @@ interface SuccessCardProps {
     onSendAnother: () => void;
 }
 
+interface ConnectViewProps {
+    className?: string;
+    style?: React.CSSProperties;
+}
+
 function SuccessCard({ onGoBack, onSendAnother }: SuccessCardProps) {
     const t = useTranslations('pages.connect.form');
 
@@ -41,11 +46,11 @@ function SuccessCard({ onGoBack, onSendAnother }: SuccessCardProps) {
     );
 }
 
-export function ConnectView() {
+export function ConnectView({ className, style }: ConnectViewProps) {
     const [view, setView] = useState<ConnectView>('links');
 
     return (
-        <div className="grid w-full max-w-xl mx-auto">
+        <div className={`grid w-full max-w-xl mx-auto ${className}`} style={style}>
             
             <div
                 className={cn(

@@ -34,13 +34,13 @@ export default async function ConnectPage({ params }: { params: Promise<{ locale
 
     return (
         <CenteredLayout className="mt-8 mb-0 md:-mt-8">
-                  <Typography variant='h1' as="h2" className="mt-0 mb-0">
+                  <Typography variant='h1' as="h2" className="mt-0 mb-0 animate-fade-up">
                     {t('title')}
                   </Typography>
-                  <Typography variant="body" className='max-w-2xl text-center mt-0 mb-0'>
+                  <Typography variant="body" className='max-w-2xl text-center mt-0 mb-0 animate-fade-up' style={{ animationDelay: '0.1s' }}>
                     {t('description')}
                   </Typography>
-            <ConnectView />
+            <ConnectView className="animate-fade-up" style={{ animationDelay: '0.2s' }} />
         </CenteredLayout>
     );
 }
