@@ -1,6 +1,6 @@
 import { GoToTop, Typography } from "@/components/atoms";
 import { ResumeCard } from "@/components/organisms";
-import { CenteredLayout } from "@/components/templates";
+import { HorizontallyCenteredLayout } from "@/components/templates";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
@@ -34,7 +34,7 @@ export default async function ResumePage({ params }: { params: Promise<{ locale:
 
   return (
     <>
-      <CenteredLayout className="mt-8 mb-8">
+      <HorizontallyCenteredLayout className="mt-8 mb-8">
         <Typography variant='h1' as="h2" className="mt-0 mb-0">
           {t('title')}
         </Typography>
@@ -42,7 +42,7 @@ export default async function ResumePage({ params }: { params: Promise<{ locale:
           {t('description')}
         </Typography>
         <ResumeCard />
-      </CenteredLayout>
+      </HorizontallyCenteredLayout>
       <GoToTop />
     </>
 
