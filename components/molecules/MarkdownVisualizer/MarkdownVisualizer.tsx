@@ -14,7 +14,7 @@ const mdxComponents = {
     h3: ({ node, ...props }: any) => <Typography variant="h3" className='mb-2 font-bold' {...props} />,
     h4: ({ node, ...props }: any) => <Typography variant="h4" className='mb-1 text-secondary-hover' {...props} />,
     p:  ({ node, ...props }: any) => <Typography variant="body" className='mb-2' {...props} />,
-    a:  ({ node, ...props }: any) => <Link variant="primary" target={props.href.charAt(0) === '#' ? '_self' : '_blank'} rel='noopener noreferrer' {...props} />,
+    a:  ({ node, ...props }: any) => <Link variant="primary" target={props.href.charAt(0) === '#' ? '_self' : '_blank'} rel='noopener noreferrer' {...props} className='wrap-break-word'/>,
     ul: ({ node, ...props }: any) => <Typography variant="ul" className='mb-2 ml-4 list-disc' {...props} />,
     ol: ({ node, ...props }: any) => <Typography variant="ol" className='mb-2 ml-4 list-decimal' {...props} />,
     li: ({ node, ...props }: any) => <Typography variant="li" className='mb-1' {...props} />,
@@ -29,7 +29,7 @@ const mdxComponents = {
     td: ({ node, ...props }: any) => <TableCell {...props} />,
 
     code: ({ node, inline, className, children, ...props }: any) => (
-        <CodeBlock inline={inline} className={className} {...props}>
+        <CodeBlock inline={inline} className={`wrap-break-word ${className}`} {...props}>
             {children}
         </CodeBlock>
     ),
