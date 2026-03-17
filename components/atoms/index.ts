@@ -45,3 +45,6 @@ export {
   type TooltipContentProps,
 } from "./Tooltip";
 export { Chip } from "./Chip";
+export { BlockQuote } from "./BlockQuote";
+export { CodeBlock } from "./CodeBlock";
+export { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "./Table";
