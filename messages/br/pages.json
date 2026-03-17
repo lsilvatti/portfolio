@@ -39,7 +39,8 @@
         },
         "notFound": {
             "title": "404",
-            "description": "Página não encontrada"
+            "description": "Página não encontrada",
+            "catchphrase": "Bem, isso é constrangedor. A página que você está procurando não existe. Mas ei, pelo menos temos uma foto de gato para melhorar, certo?"
         },
         "connect": {
             "title": "Conectar",

@@ -39,8 +39,10 @@
         },
         "notFound": {
             "title": "404",
-            "description": "Page not found"
+            "description": "Page not found",
+            "catchphrase": "Well, this is awkward. The page you're looking for doesn't exist. But hey, at least we have a cat picture to make it better, right?"
         },
+        
         "connect": {
             "title": "Connect",
             "letsConnect": "Let's Connect!",
