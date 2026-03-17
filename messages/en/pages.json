@@ -103,7 +103,12 @@
             },
             
             "chipDropdown": {
-                "label": "Technologies"
+                "languages": {
+                    "label": "Languages"
+                },
+                "tags": {
+                    "label": "Technologies"
+                }
             }
         }
     }

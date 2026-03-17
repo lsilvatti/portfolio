@@ -102,7 +102,16 @@
                 "placeholder": "Pesquisar projetos..."
             },
             "chipDropdown": {
-                "label": "Tecnologias"
+                "languages": {
+                    "label": "Linguagens"
+                },
+                "tags": {
+                    "label": "Tecnologias"
+                }
+            },
+            "projects": {
+               "game-tracker-api": "Uma API RESTful construída com Node.js, Express e TypeScript para gerenciar sua coleção e backlog de videogames. Inclui documentação com Swagger, validação com Joi e arquitetura em camadas.",
+               "portfolio": "Meu site portfólio pessoal, desenvolvido com Next.js, TypeScript e React. Inclui internacionalização (i18n), testes automatizados (Cypress, Vitest) e biblioteca de componentes com Storybook."
             }
         }
     }
