@@ -5,3 +5,4 @@ export { MobileNavMenu } from './MobileNavMenu';
 export { MarkdownVisualizer } from './MarkdownVisualizer';
 export { ChipDropdown } from './ChipDropdown';
 export { ProjectListCard } from './ProjectListCard';
+export { ProjectActionButtons } from './ProjectActionButtons';

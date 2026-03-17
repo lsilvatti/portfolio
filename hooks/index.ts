@@ -1,2 +1,2 @@
 export { useDebounce } from './useDebounce';
-export { useToast } from './useToast';
+export { useToast, type ToastMessage, type ToastVariant } from './useToast';
