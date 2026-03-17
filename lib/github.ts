@@ -54,7 +54,7 @@ export async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
                 "Authorization": `Bearer ${process.env.GITHUB_PUBLIC_KEY}`,
             },
             body: JSON.stringify({ query }),
-            // next: { revalidate: 60 * 60 * 24 }, // 24h cache
+            next: { revalidate: 60 * 60 * 24 }, // 24h cache
         });
 
         if (!response.ok) {
@@ -163,23 +163,13 @@ export const fetchGitHubRepo = async (repoName: string): Promise<GitHubRepoDetai
         "Authorization": `Bearer ${process.env.GITHUB_PUBLIC_KEY}`,
       },
       body: JSON.stringify({ query, variables: { repoName } }),
-      // next: { revalidate: 3600 } 
+      next: { revalidate: 60 * 60 } // 1h cache
     });
 
     if (!response.ok) throw new Error(`GitHub API error: ${response.status}`);
 
     const json = await response.json();
 
-    if (json.errors) {
-        // Adicione este console.log detalhado
-        console.error('ERRO DO GITHUB:', JSON.stringify(json.errors, null, 2));
-        return null; 
-    }
-    
-    if (!json.data || !json.data.repository) {
-        console.error('REPOSITÓRIO NÃO ENCONTRADO NO GITHUB. Verifique o nome:', repoName);
-        return null;
-    }
     if (json.errors || !json.data.repository) {
         return null; 
     }
