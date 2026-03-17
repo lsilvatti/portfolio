@@ -1,0 +1,50 @@
+import { ProcessedProject } from "@/app/[locale]/(routes)/projects/page";
+import { ProjectCard } from "@/components/molecules";
+import { SearchX } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useMemo } from "react";
+
+export function ProjectList({ projects, selectedLanguages, selectedTags, toggleLanguage, toggleTag }: {
+    projects: ProcessedProject[];
+    selectedLanguages: string[];
+    selectedTags: string[];
+    toggleLanguage: (lang: string) => void;
+    toggleTag: (tag: string) => void;
+}) {
+    const t = useTranslations('pages.projects');
+
+    if (projects.length === 0) {
+        return (
+            <div className="text-center flex flex-col text-neutral-500 py-10 gap-4">
+                <SearchX size={48} className="mx-auto" />
+                <p className="text-lg">{t('noResults')}</p>
+            </div>
+        )
+    }
+
+    return (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+            {projects.map((project) => {
+                let localizedDescription = project.description || '';
+                if (t.has(`projects.${project.name}`)) {
+                    localizedDescription = t(`projects.${project.name}`);
+                }
+
+                return (
+                    <div key={project.name} className="break-inside-avoid inline-block w-full">
+                        <ProjectCard
+                            title={project.name}
+                            description={localizedDescription}
+                            languages={project.languages}
+                            tags={project.tags}
+                            filteredLanguages={selectedLanguages}
+                            filteredTags={selectedTags}
+                            onClickLanguageChip={toggleLanguage}
+                            onClickTagChip={toggleTag}
+                        />
+                    </div>
+                );
+            })}
+        </div >
+    )
+}

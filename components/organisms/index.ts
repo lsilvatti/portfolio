@@ -8,3 +8,4 @@ export { ConnectView } from './ConnectView';
 export { ResumeCard } from './ResumeCard';
 export { ResumeView } from './ResumeView';
 export { ProjectsView } from './ProjectsView';
+export { ProjectList } from './ProjectList';
