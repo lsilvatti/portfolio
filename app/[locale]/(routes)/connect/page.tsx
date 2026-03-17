@@ -33,7 +33,7 @@ export default async function ConnectPage({ params }: { params: Promise<{ locale
     const t = await getTranslations("pages.connect");
 
     return (
-        <CenteredLayout className="mt-8 mb-0">
+        <CenteredLayout className="mt-8 mb-0 md:-mt-8">
                   <Typography variant='h1' as="h2" className="mt-0 mb-0">
                     {t('title')}
                   </Typography>

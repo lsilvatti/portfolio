@@ -50,7 +50,7 @@ export default async function ProjectsPage() {
     .filter((project) => project.content !== null);
 
   return (
-    <HorizontallyCenteredLayout>
+    <HorizontallyCenteredLayout className='mb-0'>
       <Typography variant='h1' as="h2" className="animate-fade-up mt-0 mb-0">
         {t('title')}
       </Typography>
