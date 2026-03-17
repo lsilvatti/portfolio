@@ -1,8 +1,7 @@
 import { ProcessedProject } from "@/app/[locale]/(routes)/projects/page";
-import { ProjectCard } from "@/components/molecules";
+import { ProjectListCard } from "@/components/molecules";
 import { SearchX } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useMemo } from "react";
 
 export function ProjectList({ projects, selectedLanguages, selectedTags, toggleLanguage, toggleTag }: {
     projects: ProcessedProject[];
@@ -32,7 +31,7 @@ export function ProjectList({ projects, selectedLanguages, selectedTags, toggleL
 
                 return (
                     <div key={project.name} className="break-inside-avoid inline-block w-full">
-                        <ProjectCard
+                        <ProjectListCard
                             title={project.name}
                             description={localizedDescription}
                             languages={project.languages}
