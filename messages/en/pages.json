@@ -103,15 +103,27 @@
             "searchInput": {
                 "placeholder": "Search projects..."
             },
-            
-            "chipDropdown": {
-                "languages": {
-                    "label": "Languages"
-                },
-                "tags": {
-                    "label": "Technologies"
-                }
-            }
+
+            "stars": "Stars",
+            "forks": "Forks",
+            "lastUpdated": "Last Updated",
+
+            "backToProjects": "Back to Projects",
+            "languages": "Languages",
+            "technologies": "Technologies",
+            "archived": "Archived",
+            "viewOnGitHub": "View on GitHub",
+            "liveDemo": "Live Demo",
+            "warningAlreadyInProject": "Live Paradox",
+            "collapseImminent": "Live Collapse",
+            "inceptionModeBoom": "Recovering space-time fabric!",
+            "inceptionModeActivated": "⏱️ Temporal Loop detected!",
+            "alreadyInProject": "You just pierced the space-time and returned to the same project! Be careful not to create a temporal paradox!",
+            "warning": "⚠️ Warning!",
+            "spaceTimeWarning": "You did it again! The space-time is starting to become unstable!",
+            "boom": "💥 Boom!",
+            "universeCollapsed": "Universe Collapsed, recovering the timeline..."
+
         }
     }
 }
