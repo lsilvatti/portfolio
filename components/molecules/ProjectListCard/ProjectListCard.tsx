@@ -20,8 +20,6 @@ export function ProjectListCard({
   style,
   filteredLanguages,
   filteredTags,
-  onClickLanguageChip,
-  onClickTagChip
 }: ProjectListCardProps) {
 
   return (
@@ -36,29 +34,17 @@ export function ProjectListCard({
           {languages.map((lang) => (
             <Chip
               key={lang}
-              selectable
               label={lang}
               variant={filteredLanguages?.includes(lang) ? 'primary' : 'outline-primary'}
               className="mb-2"
-              onClick={(e) => {
-                e.stopPropagation();
-                e.preventDefault();
-                onClickLanguageChip?.(lang);
-              }}
             />
           ))}
           {tags && tags.map((tag) => (
             <Chip
               key={tag}
-              selectable
               label={tag}
               variant={filteredTags?.includes(tag) ? 'secondary' : 'outline-secondary'}
               className="mb-2"
-              onClick={(e) => {
-                e.stopPropagation();
-                e.preventDefault();
-                onClickTagChip?.(tag);
-              }}
             />
           ))}
         </div>

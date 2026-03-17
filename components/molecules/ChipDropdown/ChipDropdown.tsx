@@ -47,7 +47,7 @@ export function ChipDropdown({
   if (options.length === 0) return null;
 
   return (
-    <div className={`relative w-full sm:w-62.5 ${className}`} style={style} ref={dropdownRef}>
+    <div className={`relative w-full sm:w-62.5 ${className} ${isOpen ? 'z-50' : 'z-10'}`} style={style} ref={dropdownRef}>
       
       <div
         role="button"
