@@ -48,11 +48,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   const content = localeStr === 'br' 
     ? (repo.readmePt || repo.readmeEn) 
     : (repo.readmeEn || repo.readmePt);
-
-  const lastUpdated = new Date(repo.updatedAt).toLocaleDateString(localeStr === 'br' ? 'pt-BR' : 'en-US', {
-    year: 'numeric', month: 'long', day: 'numeric'
-  });
-
+    
   return (
     <HorizontallyCenteredLayout className="pb-20 mt-5">
       <div className="w-full max-w-full flex items-center justify-center md:justify-between">

@@ -1,11 +1,8 @@
-import { Button, Card, Chip, Divider, ShareButton, Tooltip, Typography } from "@/components/atoms";
-import Image from 'next/image';
-import { Github, ExternalLink, Star, GitFork, Clock, Play } from 'lucide-react'; // Sugestão de ícones
+import { Card, Chip, Divider, ShareButton, Tooltip, Typography } from "@/components/atoms";
+import {Star, GitFork, Clock } from 'lucide-react';
 import { GitHubRepoDetails } from "@/lib/github";
 import { getLocale, getTranslations } from "next-intl/server";
-import { GithubIcon } from "@/components/atoms/Icon";
 import { ProjectActionButtons } from "@/components/molecules/ProjectActionButtons/ProjectActionButtons";
-import { useMemo } from "react";
 
 export async function ProjectHeader({ repo }: { repo: GitHubRepoDetails }) {
     const t = await getTranslations('pages.projects');
