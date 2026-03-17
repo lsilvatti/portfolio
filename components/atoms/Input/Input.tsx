@@ -48,6 +48,8 @@ export interface InputProps extends Omit<ComponentPropsWithoutRef<'input'>, 'siz
     /** Show character counter. Automatically enabled when maxLength is set. */
     showCharCount?: boolean;
     size?: NonNullable<VariantProps<typeof inputVariants>['size']>;
+    /** Hides the bottom helper text area (useful for inline inputs like search bars) */
+    hideHelper?: boolean;
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
@@ -59,6 +61,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         validate,
         showCharCount,
         size = 'md',
+        hideHelper = false,
         className,
         id: externalId,
         required,
@@ -141,30 +144,32 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
                 {...rest}
             />
 
-            <div className="flex justify-between items-start gap-2 min-h-4">
-                {errorMessage ? (
-                    <p id={errorId} role="alert" className="text-xs text-red-500">
-                        {errorMessage}
-                    </p>
-                ) : hint ? (
-                    <p id={hintId} className="text-xs text-muted">
-                        {hint}
-                    </p>
-                ) : (
-                    <span />
-                )}
+            {!hideHelper && (
+                <div className="flex justify-between items-start gap-2 min-h-4">
+                    {errorMessage ? (
+                        <p id={errorId} role="alert" className="text-xs text-red-500">
+                            {errorMessage}
+                        </p>
+                    ) : hint ? (
+                        <p id={hintId} className="text-xs text-muted-foreground">
+                            {hint}
+                        </p>
+                    ) : (
+                        <span />
+                    )}
 
-                {(showCharCount || maxLength !== undefined) && (
-                    <span
-                        className={cn(
-                            'text-xs shrink-0',
-                            charCount === maxLength ? 'text-red-500' : 'text-muted-foreground'
-                        )}
-                    >
-                        {charCount}{maxLength !== undefined ? `/${maxLength}` : ''}
-                    </span>
-                )}
-            </div>
+                    {(showCharCount || maxLength !== undefined) && (
+                        <span
+                            className={cn(
+                                'text-xs shrink-0',
+                                charCount === maxLength ? 'text-red-500' : 'text-muted-foreground'
+                            )}
+                        >
+                            {charCount}{maxLength !== undefined ? `/${maxLength}` : ''}
+                        </span>
+                    )}
+                </div>
+            )}
         </div>
     );
 });

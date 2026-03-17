@@ -1,7 +1,8 @@
 'use client';
 
 import { Share2 } from 'lucide-react';
-import { IconButton, Toast, useToast } from '@/components/atoms';
+import { IconButton, Toast } from '@/components/atoms';
+import { useToast } from '@/hooks';
 import { useTranslations } from 'next-intl';
 
 export interface ShareButtonProps {
@@ -24,15 +25,15 @@ export function ShareButton({ title, text, url, className, style }: ShareButtonP
                 await navigator.share({ title, text, url: shareUrl });
             } catch (err) {
                 if (err instanceof Error && err.name !== 'AbortError') {
-                    show(t('failed'));
+                    show({ title: t('failed'), variant: 'error' });
                 }
             }
         } else {
             try {
                 await navigator.clipboard.writeText(shareUrl);
-                show(t('copied'));
+                show({ title: t('copied'), variant: 'success' });
             } catch {
-                show(t('failed'));
+                show({ title: t('failed'), variant: 'error' });
             }
         }
     };

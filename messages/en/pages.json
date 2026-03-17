@@ -39,8 +39,10 @@
         },
         "notFound": {
             "title": "404",
-            "description": "Page not found"
+            "description": "Page not found",
+            "catchphrase": "Well, this is awkward. The page you're looking for doesn't exist. But hey, at least we have a cat picture to make it better, right?"
         },
+        
         "connect": {
             "title": "Connect",
             "letsConnect": "Let's Connect!",
@@ -96,7 +98,32 @@
         },
         "projects": {
             "title": "Projects",
-            "description": "Here are some of the projects I've worked on. Each one reflects my passion for creating innovative and impactful solutions. Feel free to explore and learn more about my work!"
+            "description": "Welcome to my GitHub playground. While my day-to-day enterprise code is private, these repositories showcase my personal experiments, ongoing studies, and open-source projects. Dive into the code and see what I've been tinkering with.",
+            "noResults": "No projects found with these filters.",
+            "searchInput": {
+                "placeholder": "Search projects..."
+            },
+
+            "stars": "Stars",
+            "forks": "Forks",
+            "lastUpdated": "Last Updated",
+
+            "backToProjects": "Back to Projects",
+            "languages": "Languages",
+            "technologies": "Technologies",
+            "archived": "Archived",
+            "viewOnGitHub": "View on GitHub",
+            "liveDemo": "Live Demo",
+            "warningAlreadyInProject": "Live Paradox",
+            "collapseImminent": "Live Collapse",
+            "inceptionModeBoom": "Recovering space-time fabric!",
+            "inceptionModeActivated": "⏱️ Temporal Loop detected!",
+            "alreadyInProject": "You just pierced the space-time and returned to the same project! Be careful not to create a temporal paradox!",
+            "warning": "⚠️ Warning!",
+            "spaceTimeWarning": "You did it again! The space-time is starting to become unstable!",
+            "boom": "💥 Boom!",
+            "universeCollapsed": "Universe Collapsed, recovering the timeline..."
+
         }
     }
 }

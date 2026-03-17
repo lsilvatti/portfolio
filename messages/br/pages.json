@@ -39,7 +39,8 @@
         },
         "notFound": {
             "title": "404",
-            "description": "Página não encontrada"
+            "description": "Página não encontrada",
+            "catchphrase": "Bem, isso é constrangedor. A página que você está procurando não existe. Mas ei, pelo menos temos uma foto de gato para melhorar, certo?"
         },
         "connect": {
             "title": "Conectar",
@@ -96,7 +97,36 @@
         },
         "projects": {
             "title": "Projetos",
-            "description": "Aqui estão alguns dos projetos em que trabalhei. Cada um deles reflete minha paixão por criar soluções inovadoras e impactantes. Sinta-se à vontade para explorar e conhecer mais sobre meu trabalho!"
+            "description": "Bem-vindo ao meu playground do GitHub. Enquanto o código do meu dia a dia é privado, estes repositórios mostram meus experimentos pessoais, estudos contínuos e pequenos projetos. Mergulhe no código e veja com o que tenho brincado ultimamente.",
+            "noResults": "Nenhum projeto encontrado com estes filtros.",
+            "searchInput": {
+                "placeholder": "Pesquisar projetos..."
+            },
+
+            "projects": {
+               "game-tracker-api": "Uma API RESTful construída com Node.js, Express e TypeScript para gerenciar sua coleção e backlog de videogames. Inclui documentação com Swagger, validação com Joi e arquitetura em camadas.",
+               "portfolio": "Meu site portfólio pessoal, desenvolvido com Next.js, TypeScript e React. Inclui internacionalização (i18n), testes automatizados (Cypress, Vitest) e biblioteca de componentes com Storybook."
+            },
+
+            "stars": "Estrelas",
+            "forks": "Bifurcações",
+            "lastUpdated": "Última Atualização",
+
+            "backToProjects": "Voltar para Projetos",
+            "languages": "Linguagens",
+            "technologies": "Tecnologias",
+            "archived": "Arquivado",
+            "viewOnGitHub": "Ver no GitHub",
+            "liveDemo": "Demo ao Vivo",
+            "warningAlreadyInProject": "Paradoxo ao Vivo",
+            "collapseImminent": "Colapso ao Vivo",
+            "inceptionModeBoom": "Recuperar tecido do espaço-tempo!",
+            "inceptionModeActivated": "⏱️ Loop Temporal detectado!",
+            "alreadyInProject": "Você acaba de furar o espaço-tempo e voltar para o mesmo projeto! Cuidado para não criar um paradoxo temporal!",
+            "warning": "⚠️ Aviso!",
+            "spaceTimeWarning": "Você fez de novo! O espaço-tempo está começando a ficar instável!",
+            "boom": "💥 Boom!",
+            "universeCollapsed": "Universo Colapsado, recuperando a linha temporal..."
         }
     }
 }

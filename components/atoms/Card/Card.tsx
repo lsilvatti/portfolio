@@ -32,6 +32,7 @@ const cardVariants = cva(
 
 type CardProps = VariantProps<typeof cardVariants> & {
   className?: string;
+  as?: React.ElementType;
 } & ComponentPropsWithoutRef<"div">;
 
 export function Card({
@@ -41,10 +42,11 @@ export function Card({
   children,
   ...rest
 }: CardProps) {
+  const Component = rest.as || 'div';
   return (
-    <div className={cn(cardVariants({ variant, padding }), className)} {...rest}>
+    <Component className={cn(cardVariants({ variant, padding }), className)} {...rest}>
       {children}
-    </div>
+    </Component>
   );
 }
 

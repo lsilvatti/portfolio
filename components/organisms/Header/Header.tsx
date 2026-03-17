@@ -18,7 +18,7 @@ export const Header = () => {
             className={cn(
                 "fixed top-4 left-1/2 -translate-x-1/2 z-50",
                 "w-[calc(100%-2rem)] overflow-hidden",
-                "rounded-2xl border border-border bg-background/40 backdrop-blur-md shadow-lg",
+                "rounded-2xl border border-border bg-background/60 backdrop-blur-md shadow-lg",
                 "transition-[max-width] duration-500 ease-in-out",
                 isHomePage ? "max-w-38" : "max-w-4xl",
             )}

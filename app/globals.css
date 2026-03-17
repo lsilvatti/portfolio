@@ -164,3 +164,29 @@ html[data-theme='dark'] .sbdocs.sbdocs-wrapper div {
 html[data-theme='dark'] .docs-story {
   background-color: transparent !important;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; /* Para scroll horizontal, se houver */
+}
+
+/* O fundo por onde a barra corre */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+/* A barrinha em si (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--border)); /* Usa a cor das suas bordas se estiver usando variáveis do shadcn/Tailwind */
+  border-radius: 10px;
+}
+
+/* Quando passa o mouse por cima */
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--primary) / 0.5); /* Fica com o tom da sua cor primária com opacidade */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}

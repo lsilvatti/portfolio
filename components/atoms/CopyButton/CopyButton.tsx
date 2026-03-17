@@ -1,7 +1,8 @@
 'use client';
 
 import { ClipboardCopy } from 'lucide-react';
-import { IconButton, Toast, useToast } from '@/components/atoms';
+import { IconButton, Toast } from '@/components/atoms';
+import { useToast } from '@/hooks';
 import { useTranslations } from 'next-intl';
 
 export interface CopyButtonProps {
@@ -17,9 +18,9 @@ export function CopyButton({ value, className, style }: CopyButtonProps) {
     const handleCopy = async () => {
         try {
             await navigator.clipboard.writeText(value);
-            show(t('copied'));
+            show({ title: t('copied'), variant: 'success' });
         } catch {
-            show(t('failed'));
+            show({ title: t('failed'), variant: 'error' });
         }
     };
 

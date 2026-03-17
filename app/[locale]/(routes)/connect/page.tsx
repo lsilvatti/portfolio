@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ConnectView } from "@/components/organisms/ConnectView";
 import { CenteredLayout } from "@/components/templates";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Typography } from "@/components/atoms/Typography/Typography";
 
 export async function generateMetadata({
   params,
@@ -32,7 +33,13 @@ export default async function ConnectPage({ params }: { params: Promise<{ locale
     const t = await getTranslations("pages.connect");
 
     return (
-        <CenteredLayout>
+        <CenteredLayout className="mt-8 mb-0 md:-mt-8">
+                  <Typography variant='h1' as="h2" className="mt-0 mb-0">
+                    {t('title')}
+                  </Typography>
+                  <Typography variant="body" className='max-w-2xl text-center mt-0 mb-0'>
+                    {t('description')}
+                  </Typography>
             <ConnectView />
         </CenteredLayout>
     );

@@ -174,11 +174,11 @@ export function ContactForm({ onShowLinks, onSuccess }: ContactFormProps) {
     }
 
     return (
-        <Card className="opacity-0 flex flex-col gap-4 sm:gap-5 w-full max-w-xl px-4 py-4 sm:px-6 sm:py-6 animate-fade-pop-in" style={{ animationDelay: '0.1s' }}>
+        <Card className="opacity-0 flex flex-col gap-4 sm:gap-5 w-full max-w-xl overflow-hidden px-4 py-4 sm:px-6 sm:py-6 animate-fade-pop-in" style={{ animationDelay: '0.1s' }}>
             <div className="flex flex-col-reverse gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-                <div>
-                    <Typography variant="h2" className="text-2xl sm:text-3xl">{t('title')}</Typography>
-                    <Typography variant="small" className="mt-1">{t('description')}</Typography>
+                <div className="min-w-0 wrap-break-word">
+                    <Typography variant="h2" className="text-2xl sm:text-3xl wrap-break-word">{t('title')}</Typography>
+                    <Typography variant="small" className="mt-1 wrap-break-word">{t('description')}</Typography>
                 </div>
                 <button
                     type="button"
@@ -191,7 +191,7 @@ export function ContactForm({ onShowLinks, onSuccess }: ContactFormProps) {
                 </button>
             </div>
 
-            <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-3 sm:gap-4">
+            <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-3 sm:gap-4 w-full">
                 <input
                     type="text"
                     name="website"
@@ -202,69 +202,78 @@ export function ContactForm({ onShowLinks, onSuccess }: ContactFormProps) {
                     aria-hidden="true"
                     className="sr-only"
                 />
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                    <div className="w-full min-w-0">
+                        <Input
+                            label={t('firstName')}
+                            required
+                            validate="name"
+                            value={firstName}
+                            error={errors.firstName}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                                setFirstName(e.target.value);
+                                clearError('firstName');
+                            }}
+                        />
+                    </div>
+                    <div className="w-full min-w-0">
+                        <Input
+                            label={t('lastName')}
+                            validate="name"
+                            value={lastName}
+                            error={errors.lastName}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                                setLastName(e.target.value);
+                                clearError('lastName');
+                            }}
+                        />
+                    </div>
+                </div>
+
+                <div className="w-full min-w-0">
                     <Input
-                        label={t('firstName')}
+                        label={t('email')}
+                        type="email"
                         required
-                        validate="name"
-                        value={firstName}
-                        error={errors.firstName}
+                        validate="email"
+                        value={email}
+                        error={errors.email}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                            setFirstName(e.target.value);
-                            clearError('firstName');
-                        }}
-                    />
-                    <Input
-                        label={t('lastName')}
-                        validate="name"
-                        value={lastName}
-                        error={errors.lastName}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                            setLastName(e.target.value);
-                            clearError('lastName');
+                            setEmail(e.target.value);
+                            clearError('email');
                         }}
                     />
                 </div>
 
-                <Input
-                    label={t('email')}
-                    type="email"
-                    required
-                    validate="email"
-                    value={email}
-                    error={errors.email}
-                    onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                        setEmail(e.target.value);
-                        clearError('email');
-                    }}
-                />
+                <div className="w-full min-w-0">
+                    <PhoneInput
+                        label={t('phone')}
+                        error={errors.phone}
+                        onValueChange={(val) => {
+                            setPhone(val);
+                            clearError('phone');
+                        }}
+                    />
+                </div>
 
-                <PhoneInput
-                    label={t('phone')}
-                    error={errors.phone}
-                    onValueChange={(val) => {
-                        setPhone(val);
-                        clearError('phone');
-                    }}
-                />
-
-                <Textarea
-                    label={t('message')}
-                    required
-                    minLength={10}
-                    maxLength={500}
-                    rows={3}
-                    showCharCount
-                    placeholder={t('messagePlaceholder')}
-                    value={message}
-                    error={errors.message}
-                    onChange={(e: ChangeEvent<HTMLTextAreaElement>) => {
-                        setMessage(e.target.value);
-                        clearError('message');
-                    }}
-                />
-
-
+                <div className="w-full min-w-0">
+                    <Textarea
+                        label={t('message')}
+                        required
+                        minLength={10}
+                        maxLength={500}
+                        rows={3}
+                        showCharCount
+                        placeholder={t('messagePlaceholder')}
+                        value={message}
+                        error={errors.message}
+                        onChange={(e: ChangeEvent<HTMLTextAreaElement>) => {
+                            setMessage(e.target.value);
+                            clearError('message');
+                        }}
+                    />
+                </div>
 
                 <Button
                     type="submit"

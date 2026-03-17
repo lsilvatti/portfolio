@@ -9,6 +9,7 @@ const config: Config = {
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/$1",
     "^next-intl(/.*)?$": "<rootDir>/__mocks__/next-intl.ts",
+    "^react-syntax-highlighter(/.*)?$": "<rootDir>/__mocks__/react-syntax-highlighter.ts",
     "\\.(css|scss|sass|less)$": "<rootDir>/__mocks__/styleMock.ts",
     "\\.(jpg|jpeg|png|gif|svg|webp|ico|woff|woff2|ttf|eot)$": "<rootDir>/__mocks__/fileMock.ts",
   },
