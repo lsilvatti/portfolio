@@ -37,15 +37,12 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
   const repo = await fetchGitHubRepo(repository);
 
-  // Se a API retornar null, manda pra página de 404 automaticamente
   if (!repo) notFound();
 
-  // Lógica de fallback do Readme baseada no idioma
   const content = localeStr === 'br' 
     ? (repo.readmePt || repo.readmeEn) 
     : (repo.readmeEn || repo.readmePt);
 
-  // Formatação de data (opcional, pode extrair pra um utilitário)
   const lastUpdated = new Date(repo.updatedAt).toLocaleDateString(localeStr === 'br' ? 'pt-BR' : 'en-US', {
     year: 'numeric', month: 'long', day: 'numeric'
   });
