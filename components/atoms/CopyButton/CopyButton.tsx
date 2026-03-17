@@ -18,9 +18,9 @@ export function CopyButton({ value, className, style }: CopyButtonProps) {
     const handleCopy = async () => {
         try {
             await navigator.clipboard.writeText(value);
-            show(t('copied'));
+            show({ title: t('copied'), variant: 'success' });
         } catch {
-            show(t('failed'));
+            show({ title: t('failed'), variant: 'error' });
         }
     };
 

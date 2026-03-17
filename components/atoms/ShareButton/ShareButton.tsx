@@ -25,15 +25,15 @@ export function ShareButton({ title, text, url, className, style }: ShareButtonP
                 await navigator.share({ title, text, url: shareUrl });
             } catch (err) {
                 if (err instanceof Error && err.name !== 'AbortError') {
-                    show(t('failed'));
+                    show({ title: t('failed'), variant: 'error' });
                 }
             }
         } else {
             try {
                 await navigator.clipboard.writeText(shareUrl);
-                show(t('copied'));
+                show({ title: t('copied'), variant: 'success' });
             } catch {
-                show(t('failed'));
+                show({ title: t('failed'), variant: 'error' });
             }
         }
     };
