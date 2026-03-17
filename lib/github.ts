@@ -93,8 +93,28 @@ export async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
     }
 }
 
-export const fetchGitHubRepo = async (repoName: string): Promise<GitHubRepo> => {
-    const query = `
+// lib/github.ts
+
+export interface GitHubRepoDetails {
+  name: string;
+  description: string | null;
+  url: string;
+  homepageUrl: string | null;
+  stargazerCount: number;
+  forkCount: number;
+  updatedAt: string;
+  isArchived: boolean;
+  openGraphImageUrl: string;
+  licenseName: string | null;
+  languages: string[];
+  tags: string[];
+  topics: string[];
+  readmeEn: string | null;
+  readmePt: string | null;
+}
+
+export const fetchGitHubRepo = async (repoName: string): Promise<GitHubRepoDetails | null> => {
+  const query = `
     query($repoName: String!) {
       repository(owner: "lsilvatti", name: $repoName) {
         name
@@ -102,8 +122,14 @@ export const fetchGitHubRepo = async (repoName: string): Promise<GitHubRepo> => 
         url
         homepageUrl
         stargazerCount
-        repositoryTopics(first: 10)
-        {
+        forkCount
+        updatedAt
+        isArchived
+        openGraphImageUrl
+        licenseInfo {
+          name
+        }
+        repositoryTopics(first: 10) {
           nodes {
             topic {
               name
@@ -129,50 +155,58 @@ export const fetchGitHubRepo = async (repoName: string): Promise<GitHubRepo> => 
     }
   `;
 
-    try {
-        const response = await fetch(process.env.GITHUB_GRAPHQL_API!, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${process.env.GITHUB_PUBLIC_KEY}`,
-            },
-            body: JSON.stringify({ query, variables: { repoName } }),
-        });
+  try {
+    const response = await fetch(process.env.GITHUB_GRAPHQL_API!, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.GITHUB_PUBLIC_KEY}`,
+      },
+      body: JSON.stringify({ query, variables: { repoName } }),
+      // next: { revalidate: 3600 } 
+    });
 
-        if (!response.ok) {
-            throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
-        }
+    if (!response.ok) throw new Error(`GitHub API error: ${response.status}`);
 
-        const json = await response.json();
+    const json = await response.json();
 
-        if (json.errors) {
-            console.error('Erros no GraphQL:', json.errors);
-            throw new Error('Erro ao processar a query GraphQL no GitHub.');
-        }
-
-        const repo = json.data.repository;
-
-        const languages = repo.languages?.nodes.map((lang: any) => lang.name) || [];
-            
-        const tags = repo.repositoryTopics?.nodes.map((topicNode: any) => topicNode.topic.name) || [];
-        
-        const allTopics = Array.from(new Set([...languages, ...tags]));
-
-        return {
-            name: repo.name,
-            description: repo.description,
-            url: repo.url,
-            homepageUrl: repo.homepageUrl,
-            stargazerCount: repo.stargazerCount,
-            languages: languages,
-            tags: tags,
-            topics: allTopics,
-            readmeEn: repo.readmeEn?.text || null, 
-            readmePt: repo.readmePt?.text || null,
-        };
+    if (json.errors) {
+        // Adicione este console.log detalhado
+        console.error('ERRO DO GITHUB:', JSON.stringify(json.errors, null, 2));
+        return null; 
     }
-    catch (error) {
-        console.error('Erro ao buscar repositório do GitHub:', error);
-        throw error;
+    
+    if (!json.data || !json.data.repository) {
+        console.error('REPOSITÓRIO NÃO ENCONTRADO NO GITHUB. Verifique o nome:', repoName);
+        return null;
     }
+    if (json.errors || !json.data.repository) {
+        return null; 
+    }
+
+    const repo = json.data.repository;
+    const languages = repo.languages?.nodes.map((lang: any) => lang.name) || [];
+    const tags = repo.repositoryTopics?.nodes.map((topicNode: any) => topicNode.topic.name) || [];
+
+    return {
+      name: repo.name,
+      description: repo.description,
+      url: repo.url,
+      homepageUrl: repo.homepageUrl,
+      stargazerCount: repo.stargazerCount,
+      forkCount: repo.forkCount,
+      updatedAt: repo.updatedAt,
+      isArchived: repo.isArchived,
+      openGraphImageUrl: repo.openGraphImageUrl,
+      licenseName: repo.licenseInfo?.name || null,
+      languages,
+      tags,
+      topics: Array.from(new Set([...languages, ...tags])),
+      readmeEn: repo.readmeEn?.text || null, 
+      readmePt: repo.readmePt?.text || null,
+    };
+  } catch (error) {
+    console.error('Erro ao buscar repositório do GitHub:', error);
+    return null;
+  }
 }
