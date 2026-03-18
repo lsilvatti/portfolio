@@ -34,14 +34,14 @@ export default async function ResumePage({ params }: { params: Promise<{ locale:
 
   return (
     <>
-      <HorizontallyCenteredLayout className="mt-8 mb-8 animate-fade-up">
-        <Typography variant='h1' as="h2" className="mt-0 mb-0">
+      <HorizontallyCenteredLayout>
+        <Typography variant='h1' as="h2" className="mt-0 mb-0 animate-fade-up">
           {t('title')}
         </Typography>
         <Typography variant="body" className='max-w-2xl text-center mt-0 mb-0 animate-fade-up' style={{ animationDelay: '0.1s' }}>
           {t('description')}
         </Typography>
-        <ResumeCard style={{ animationDelay: '0.2s' }} />
+        <ResumeCard className="animate-fade-up mt-16" style={{ animationDelay: '0.2s' }} />
       </HorizontallyCenteredLayout>
       <GoToTop />
     </>

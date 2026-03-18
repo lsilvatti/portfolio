@@ -20,7 +20,7 @@ export function ProjectList({ projects, selectedLanguages, selectedTags }: {
     }
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full">
             {projects.map((project) => {
                 let localizedDescription = project.description || '';
                 if (t.has(`projects.${project.name}`)) {
