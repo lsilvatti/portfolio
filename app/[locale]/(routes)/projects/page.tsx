@@ -79,7 +79,7 @@ export default async function ProjectsPage() {
         {t('title')}
       </Typography>
 
-      <Typography variant="body" className='max-w-2xl text-center animate-fade-up' style={{ animationDelay: '0.1s' }}>
+      <Typography variant="body" className='max-w-2xl text-center animate-fade-up mb-16' style={{ animationDelay: '0.1s' }}>
         {t('description')}
       </Typography>
 
