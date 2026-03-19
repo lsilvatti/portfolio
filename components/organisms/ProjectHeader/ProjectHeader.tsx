@@ -1,11 +1,8 @@
-import { Button, Card, Chip, Divider, ShareButton, Tooltip, Typography } from "@/components/atoms";
-import Image from 'next/image';
-import { Github, ExternalLink, Star, GitFork, Clock, Play } from 'lucide-react'; // Sugestão de ícones
+import { Card, Chip, Divider, ShareButton, Tooltip, Typography } from "@/components/atoms";
+import {Star, GitFork, Clock } from 'lucide-react';
 import { GitHubRepoDetails } from "@/lib/github";
 import { getLocale, getTranslations } from "next-intl/server";
-import { GithubIcon } from "@/components/atoms/Icon";
 import { ProjectActionButtons } from "@/components/molecules/ProjectActionButtons/ProjectActionButtons";
-import { useMemo } from "react";
 
 export async function ProjectHeader({ repo }: { repo: GitHubRepoDetails }) {
     const t = await getTranslations('pages.projects');
@@ -23,18 +20,18 @@ export async function ProjectHeader({ repo }: { repo: GitHubRepoDetails }) {
             <div className="w-full flex flex-col gap-8">
 
 
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col ">
                     <Typography variant="h1" className="mb-0 m-0 capitalize animate-fade-down" style={{ animationDelay: '0.05s' }}>
                         {repo.name.replace(/-/g, ' ')}
                     </Typography>
 
-                    <Divider animated color="secondary" />
+                    <Divider animated color="secondary" className="mt-4 mb-12"/>
 
-                    <Typography variant="body" className="text-lg text-muted-foreground animate-fade-down" style={{ animationDelay: '0.1s' }}>
+                    <Typography variant="body" className="text-lg text-muted-foreground animate-fade-down mb-8" style={{ animationDelay: '0.1s' }}>
                         {t.has('projects.' + repo.name) ? t('projects.' + repo.name) : repo.description}
                     </Typography>
 
-                    <div className="animate-fade-down" style={{ animationDelay: '0.15s' }}>
+                    <div className="animate-fade-down mb-12" style={{ animationDelay: '0.15s' }}>
                         <Typography variant="body" className="font-medium">
                             {t('languages')}
                         </Typography>
@@ -46,7 +43,7 @@ export async function ProjectHeader({ repo }: { repo: GitHubRepoDetails }) {
                         </div>
 
                     </div>
-                    <div className="animate-fade-down" style={{ animationDelay: '0.2s' }}>
+                    <div className="animate-fade-down mb-8" style={{ animationDelay: '0.2s' }}>
                         <Typography variant="body" className="font-medium">
                             {t('technologies')}
                         </Typography>

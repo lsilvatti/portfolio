@@ -128,8 +128,6 @@ export function ProjectsView({ projects, initialDelay = 0 }: ProjectsViewProps) 
         projects={filteredProjects}
         selectedLanguages={selectedLanguages}
         selectedTags={selectedTags}
-        toggleLanguage={toggleLanguage}
-        toggleTag={toggleTag}
       />
     </>
   );

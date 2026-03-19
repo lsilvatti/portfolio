@@ -7,17 +7,17 @@ const mdxComponents = {
     h1: ({ node, ...props }: any) => <Typography variant="h1" className='mb-4' {...props} />,
     h2: ({ node, ...props }: any) => (
         <>
-            <Typography variant="h2" className='mt-8 mb-2' {...props} />
+            <Typography variant="h2" className='mt-14 mb-2 tracking-wide' {...props} />
             <Divider className='mb-5' />
         </>
     ),
-    h3: ({ node, ...props }: any) => <Typography variant="h3" className='mb-2 font-bold' {...props} />,
-    h4: ({ node, ...props }: any) => <Typography variant="h4" className='mb-1 text-secondary-hover' {...props} />,
-    p:  ({ node, ...props }: any) => <Typography variant="body" className='mb-2' {...props} />,
-    a:  ({ node, ...props }: any) => <Link variant="primary" target={props.href.charAt(0) === '#' ? '_self' : '_blank'} rel='noopener noreferrer' {...props} />,
-    ul: ({ node, ...props }: any) => <Typography variant="ul" className='mb-2 ml-4 list-disc' {...props} />,
-    ol: ({ node, ...props }: any) => <Typography variant="ol" className='mb-2 ml-4 list-decimal' {...props} />,
-    li: ({ node, ...props }: any) => <Typography variant="li" className='mb-1' {...props} />,
+    h3: ({ node, ...props }: any) => <Typography variant="h3" className='mb-8 font-bold' {...props} />,
+    h4: ({ node, ...props }: any) => <Typography variant="h4" className='mb-6 text-secondary-hover' {...props} />,
+    p:  ({ node, ...props }: any) => <Typography variant="body" className='mb-4' {...props} />,
+    a:  ({ node, ...props }: any) => <Link variant="primary" target={props.href.charAt(0) === '#' ? '_self' : '_blank'} rel='noopener noreferrer' {...props} className='wrap-break-word'/>,
+    ul: ({ node, ...props }: any) => <Typography variant="ul" className='mb-3 ml-4 list-disc' {...props} />,
+    ol: ({ node, ...props }: any) => <Typography variant="ol" className='mb-3 ml-4 list-decimal' {...props} />,
+    li: ({ node, ...props }: any) => <Typography variant="li" className='mb-2' {...props} />,
 
     blockquote: ({ node, ...props }: any) => <BlockQuote {...props} />,
     
@@ -29,7 +29,7 @@ const mdxComponents = {
     td: ({ node, ...props }: any) => <TableCell {...props} />,
 
     code: ({ node, inline, className, children, ...props }: any) => (
-        <CodeBlock inline={inline} className={className} {...props}>
+        <CodeBlock inline={inline} className={`wrap-break-word ${className}`} {...props}>
             {children}
         </CodeBlock>
     ),

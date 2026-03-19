@@ -81,7 +81,6 @@ export function PhoneInput({
     const [customDial, setCustomDial] = useState<string | null>(null);
     const selectedCountry = localizedCountries.find(c => c.code === selectedCode);
 
-    // Effective values shown in the trigger and sent via onValueChange
     const effectiveDial = customDial ?? selectedCountry?.dial ?? localizedCountries[0]?.dial ?? '';
     const effectiveFlag = customDial ? WHITE_FLAG : (selectedCountry?.flag ?? localizedCountries[0]?.flag ?? WHITE_FLAG);
 
