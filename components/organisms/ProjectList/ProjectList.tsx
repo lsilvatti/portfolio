@@ -3,12 +3,10 @@ import { ProjectListCard } from "@/components/molecules";
 import { SearchX } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-export function ProjectList({ projects, selectedLanguages, selectedTags, toggleLanguage, toggleTag }: {
+export function ProjectList({ projects, selectedLanguages, selectedTags }: {
     projects: ProcessedProject[];
     selectedLanguages: string[];
     selectedTags: string[];
-    toggleLanguage: (lang: string) => void;
-    toggleTag: (tag: string) => void;
 }) {
     const t = useTranslations('pages.projects');
 
@@ -22,8 +20,13 @@ export function ProjectList({ projects, selectedLanguages, selectedTags, toggleL
     }
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full">
             {projects.map((project) => {
+
+                if(project.tags?.includes('hidden-from-portfolio')) {
+                    return null;
+                }
+
                 let localizedDescription = project.description || '';
                 if (t.has(`projects.${project.name}`)) {
                     localizedDescription = t(`projects.${project.name}`);
@@ -38,8 +41,6 @@ export function ProjectList({ projects, selectedLanguages, selectedTags, toggleL
                             tags={project.tags}
                             filteredLanguages={selectedLanguages}
                             filteredTags={selectedTags}
-                            onClickLanguageChip={toggleLanguage}
-                            onClickTagChip={toggleTag}
                         />
                     </div>
                 );
