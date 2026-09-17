@@ -25,10 +25,14 @@ export function NavMenu({
   className 
 }: NavMenuProps) {
   const pathname = usePathname();
+  const showStorybook = process.env.NEXT_PUBLIC_SHOW_STORYBOOK === 'true';
+  const visibleItems = showStorybook
+    ? items
+    : items.filter((item) => !item.href.includes('/storybook/'));
 
   return (
     <nav className={cn("flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10", className)}>
-      {items.map((item, index) => {
+      {visibleItems.map((item, index) => {
         const currentDelay = baseDelay + (index * incrementDelay);
         const isActive = !item.external && pathname.includes(item.href) && item.href !== '/';
 
