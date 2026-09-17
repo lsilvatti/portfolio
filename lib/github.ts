@@ -11,6 +11,75 @@ export interface GitHubRepo {
     readmePt: string | null;
 }
 
+  interface GitHubRepositoryTopicNode {
+    topic: {
+      name: string;
+    };
+  }
+
+  interface GitHubRepositoryLanguageNode {
+    name: string;
+  }
+
+  interface GitHubReadmeNode {
+    text: string | null;
+  }
+
+  interface GitHubRepositoryNode {
+    name: string;
+    description: string | null;
+    url: string;
+    homepageUrl: string | null;
+    stargazerCount: number;
+    repositoryTopics?: {
+      nodes?: GitHubRepositoryTopicNode[] | null;
+    } | null;
+    languages?: {
+      nodes?: GitHubRepositoryLanguageNode[] | null;
+    } | null;
+    readmeEn?: GitHubReadmeNode | null;
+    readmePt?: GitHubReadmeNode | null;
+  }
+
+  interface GitHubReposResponse {
+    data?: {
+      user?: {
+        repositories?: {
+          nodes?: GitHubRepositoryNode[] | null;
+        } | null;
+      } | null;
+    };
+    errors?: Array<{
+      message: string;
+    }>;
+  }
+
+  function getTopicNames(topics?: GitHubRepositoryNode['repositoryTopics']): string[] {
+    return topics?.nodes?.map((topicNode) => topicNode.topic.name) ?? [];
+  }
+
+  function getLanguageNames(languages?: GitHubRepositoryNode['languages']): string[] {
+    return languages?.nodes?.map((language) => language.name) ?? [];
+  }
+
+  function mapRepositoryNode(node: GitHubRepositoryNode): GitHubRepo {
+    const languages = getLanguageNames(node.languages);
+    const tags = getTopicNames(node.repositoryTopics);
+
+    return {
+      name: node.name,
+      description: node.description,
+      url: node.url,
+      homepageUrl: node.homepageUrl,
+      stargazerCount: node.stargazerCount,
+      topics: Array.from(new Set([...languages, ...tags])),
+      languages,
+      tags,
+      readmeEn: node.readmeEn?.text ?? null,
+      readmePt: node.readmePt?.text ?? null,
+    };
+  }
+
 export async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
     if (!process.env.GITHUB_PUBLIC_KEY) {
         throw new Error("GITHUB_PUBLIC_KEY is not defined in environment variables");
@@ -27,6 +96,9 @@ export async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
           nodes {
             name
             description
+            url
+            homepageUrl
+            stargazerCount
             repositoryTopics(first: 10) {
               nodes {
                 topic {
@@ -38,6 +110,18 @@ export async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
             languages(first: 5, orderBy: {field: SIZE, direction: DESC}) {
               nodes {
                 name
+              }
+            }
+
+            readmeEn: object(expression: "HEAD:README.md") {
+              ... on Blob {
+                text
+              }
+            }
+
+            readmePt: object(expression: "HEAD:README-pt.md") {
+              ... on Blob {
+                text
               }
             }
           }
@@ -61,34 +145,21 @@ export async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
             throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
         }
 
-        const json = await response.json();
+        const json = (await response.json()) as GitHubReposResponse;
 
         if (json.errors) {
-            console.error('Erros no GraphQL:', json.errors);
-            throw new Error('Erro ao processar a query GraphQL no GitHub.');
+          console.error("Erros no GraphQL:", json.errors);
+          throw new Error("Erro ao processar a query GraphQL no GitHub.");
         }
 
-        const repositories = json.data.user.repositories.nodes.filter((node: any) => node.name !== 'lsilvatti').map((node: any) => {
+        const repositories = json.data?.user?.repositories?.nodes ?? [];
 
-            const languages = node.languages?.nodes.map((lang: any) => lang.name) || [];
-            
-            const tags = node.repositoryTopics?.nodes.map((topicNode: any) => topicNode.topic.name) || [];
-            
-            const allTopics = Array.from(new Set([...languages, ...tags]));
-
-            return {
-                name: node.name,
-                description: node.description,
-                languages: languages,
-                tags: tags,
-                topics: allTopics,
-            };
-        });
-
-        return repositories;
+        return repositories
+          .filter((node) => node.name !== "lsilvatti")
+          .map(mapRepositoryNode);
 
     } catch (error) {
-        console.error('Erro ao buscar repositórios do GitHub:', error);
+        console.error("Erro ao buscar repositórios do GitHub:", error);
         throw error;
     }
 }
@@ -111,6 +182,36 @@ export interface GitHubRepoDetails {
   topics: string[];
   readmeEn: string | null;
   readmePt: string | null;
+}
+
+interface GitHubRepoResponse {
+  data?: {
+    repository?: {
+      name: string;
+      description: string | null;
+      url: string;
+      homepageUrl: string | null;
+      stargazerCount: number;
+      forkCount: number;
+      updatedAt: string;
+      isArchived: boolean;
+      openGraphImageUrl: string;
+      licenseInfo: {
+        name: string;
+      } | null;
+      repositoryTopics?: {
+        nodes?: GitHubRepositoryTopicNode[] | null;
+      } | null;
+      languages?: {
+        nodes?: GitHubRepositoryLanguageNode[] | null;
+      } | null;
+      readmeEn?: GitHubReadmeNode | null;
+      readmePt?: GitHubReadmeNode | null;
+    } | null;
+  };
+  errors?: Array<{
+    message: string;
+  }>;
 }
 
 export const fetchGitHubRepo = async (repoName: string): Promise<GitHubRepoDetails | null> => {
@@ -168,15 +269,15 @@ export const fetchGitHubRepo = async (repoName: string): Promise<GitHubRepoDetai
 
     if (!response.ok) throw new Error(`GitHub API error: ${response.status}`);
 
-    const json = await response.json();
+    const json = (await response.json()) as GitHubRepoResponse;
 
-    if (json.errors || !json.data.repository) {
+    if (json.errors || !json.data?.repository) {
         return null; 
     }
 
     const repo = json.data.repository;
-    const languages = repo.languages?.nodes.map((lang: any) => lang.name) || [];
-    const tags = repo.repositoryTopics?.nodes.map((topicNode: any) => topicNode.topic.name) || [];
+    const languages = getLanguageNames(repo.languages);
+    const tags = getTopicNames(repo.repositoryTopics);
 
     return {
       name: repo.name,
