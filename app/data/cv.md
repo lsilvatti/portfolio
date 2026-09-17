@@ -1,56 +1,68 @@
 # Leonardo Silvatti Silva
 
-# Senior Front-End Engineer & Product Team Lead
+## Senior Front-End Engineer | Product Team Lead | Full-Stack Collaborator
 
-São Paulo, Brazil (GMT-3) | +55 14 99678-3741 [leonardo@silvatti.com.br](mailto:leonardo@silvatti.com.br) | [linkedin.com/in/lsilvatti](http://linkedin.com/in/lsilvatti)
+São Paulo, Brazil (GMT-3) | +55 14 99678-3741 | [leonardo@silvatti.com.br](mailto:leonardo@silvatti.com.br) | [LinkedIn](https://www.linkedin.com/in/lsilvatti) | [GitHub](https://github.com/lsilvatti) | [Portfolio](https://leonardo.silvatti.com.br)
 
-[github.com/lsilvatti](http://github.com/lsilvatti) | [leonardo.silvatti.com.br](http://leonardo.silvatti.com.br)
+## PROFESSIONAL SUMMARY
 
-## PROFESSIONAL SUMMARY 
+Senior Front-End Engineer and Product Team Lead with 7+ years of experience designing and delivering scalable, high-traffic web platforms across SaaS, e-commerce, ERP, and subscription products. Expert in React, Next.js, TypeScript, JavaScript, HTML5, CSS3, SASS, and modern frontend architecture, with a proven track record in legacy migration, SEO, performance optimization, responsive UI development, and accessible user experiences. Experienced in technical roadmap planning, stakeholder alignment, team mentoring, and cross-functional leadership, while collaborating closely with backend teams on APIs, integrations, data flows, and business-facing product delivery. Strong full-stack collaboration profile with a focus on web application architecture, product growth, and engineering execution.
 
-Senior Front-End Engineer with over 7 years of experience building scalable, high-traffic web applications. Specializing in React, Next.js, and TypeScript, with a proven track record of architecting and executing complex legacy system migrations (AngularJS/PHP to modern React ecosystems). Adept at integrating AI-Augmented Development workflows (Claude Code, Cursor, Copilot) to accelerate delivery, optimize boilerplate generation, and ensure robust code quality. Strong background in technical leadership, seamlessly bridging product strategy with engineering execution to deliver high-impact features and optimize team velocity.
+## CORE COMPETENCIES
 
-## TECHNICAL SKILLS
-
-* Languages & Core: JavaScript (ES6+), TypeScript, HTML5, CSS3, SASS/LESS.
-* Frameworks & Libraries: React.js, Next.js, Vue.js, AngularJS, React Native, Redux, Tailwind CSS.
+* Front-End Development: React, Next.js, TypeScript, JavaScript (ES6+), HTML5, CSS3, SASS, Tailwind CSS, Responsive Design, Accessibility (WCAG), Component Architecture, Frontend Performance, SEO, Design Systems.
+* Product & Management: Technical Roadmap, Product Strategy, Agile/Scrum, Stakeholder Management, Cross-Functional Leadership, Team Mentoring, Code Review, Delivery Planning, Business Prioritization.
+* Full-Stack Collaboration: REST APIs, API Integration, Backend Collaboration, Data Flow Design, Business Logic Alignment, PHP, RabbitMQ, Deployment Workflows, CI/CD.
+* Quality & Delivery: Jest, Cypress, React Testing Library, Storybook, Git, GitHub, GitLab, Vercel, AWS, Docker, Webpack, Vite, Testing Automation, Performance Optimization.
 * AI-Augmented Development: Claude (Opus, Sonnet, Haiku), Cursor, GitHub Copilot, Prompt Engineering.
-* Testing, Tools & CI/CD: Jest, Cypress, React Testing Library, Puppeteer, Git, Webpack, Vite, AWS, GitHub Actions, GitLab Pipelines, Vercel, Docker, NPM/Yarn, Storybook.
-* Methodologies: Agile/Scrum, Architectural Design, Technical Mentorship.
 * Languages: Portuguese (Native), English (Advanced), Spanish (Intermediate).
 
 ## PROFESSIONAL EXPERIENCE
 
-### eSapiens Technology | Remote / Brazil 
+### Trustly | Remote / Brazil
 
-#### Product Team Lead & Tech Lead | January 2025 – February 2026
+#### Senior Front-End Engineer | May 2026 - September 2026
 
-* Technical Roadmap & Architecture: Led the technical direction for high-traffic platforms, translating complex business requirements into scalable engineering solutions and ensuring alignment between product stakeholders and developers.
-* AI-Driven Development: Implemented AI-augmented workflows using Claude (Opus/Sonnet) and Cursor to accelerate API integrations and boilerplate generation, while maintaining strict human oversight on core business logic and edge cases.
-* Delivery Optimization: Streamlined development processes and resolved technical blockers, increasing the team's story point delivery velocity by 30%.
-* Engineering Quality & Mentorship: Enforced high code quality standards through rigorous code reviews and architectural discussions, actively mentoring junior and mid-level developers on modern best practices.
+* Developed and maintained customer-facing features for the product widget and lightbox using React, TypeScript, Next.js, and Tailwind CSS.
+* Improved checkout and payment experience for merchants and end users by optimizing responsiveness, usability, and error-state handling across critical payment flows.
+* Collaborated with product, design, and engineering stakeholders to prioritize frontend improvements with measurable impact on conversion, usability, and customer experience.
+* Added and maintained automated tests to support quality, stability, and regression prevention across critical user journeys.
+
+### eSapiens Technology | Remote / Brazil
+
+#### Product Team Lead & Tech Lead | January 2025 - February 2026
+
+* Led technical strategy and delivery for high-traffic platforms, translating business requirements into scalable engineering solutions and maintaining alignment across product, design, and development teams.
+* Managed roadmap prioritization, dependency planning, and engineering execution for product initiatives while supporting stakeholder communication and delivery accountability.
+* Introduced AI-assisted development workflows using Claude and Cursor to accelerate API integrations, frontend scaffolding, and boilerplate generation while preserving rigorous code quality review standards.
+* Increased team delivery velocity by 30% by removing bottlenecks, standardizing engineering practices, and mentoring engineers on architecture and code quality.
+* Partnered with backend teams on API contracts, integrations, and data flows to support reliable product delivery and faster iteration cycles.
 
 #### Senior Front-End Engineer | July 2021 - January 2025
 
-* Legacy Modernization: Architected and executed the critical migration of the Astrolink platform from a legacy AngularJS/PHP stack to a modern React and Next.js architecture, significantly improving site performance and SEO for over 15 million users.
-* High-Impact Feature Development: Engineered responsive and accessible UI components using TypeScript and SASS, delivering growth-focused initiatives.
-* Revenue & Product Growth: Architected and developed a new One-Time Sale (OTS) product from scratch, diversifying the platform's subscription-only model. Led the end-to-end frontend implementation and directed the backend team on use-case structuring and API design, successfully increasing the product's monthly revenue by 20%.
-* System Stability: Maintained and optimized legacy PHP modules, ensuring zero downtime and a seamless user experience during the progressive transition to the modern stack.
+* Architected and executed the migration of the Astrolink platform from AngularJS/PHP to React and Next.js, improving performance, maintainability, and SEO for more than 15 million users.
+* Built reusable, accessible, and scalable UI components in TypeScript and SASS, improving consistency, maintainability, and delivery speed across the platform.
+* Delivered high-impact growth initiatives, including conversion-focused features, responsive landing pages, and user flows aligned with commercial goals.
+* Designed and developed a new One-Time Sale (OTS) product from concept to launch, leading frontend implementation and collaborating with backend teams on use-case definition and API design.
+* Increased monthly revenue by 20% through product expansion and improved conversion paths across the user journey.
+* Maintained legacy PHP modules while supporting a gradual modernization strategy, ensuring zero downtime and a stable customer experience.
 
-### Alternativa Systems | Bauru, Brazil 
+### Alternativa Systems | Bauru, Brazil
 
 #### Front-End Engineer | March 2021 - July 2021
 
-* Cloud ERP Engineering: Developed the cloud-based web version of a desktop ERP system using Next.js and SASS, integrating RabbitMQ for asynchronous data processing to support over 100 enterprise clients.
-* Internal Tooling: Modernized internal operational tools using Vue.js and pure CSS, significantly optimizing internal workflows and product management efficiency.
+* Developed a cloud-based web version of a desktop ERP system using Next.js and SASS, improving usability and accessibility for enterprise customers.
+* Integrated RabbitMQ workflows and asynchronous data processing to support more than 100 enterprise clients and improve operational efficiency.
+* Modernized internal operational tools with Vue.js and CSS, reducing friction in internal workflows and improving product management efficiency.
 
-### Cocreare | Bauru, Brazil 
+### Cocreare | Bauru, Brazil
 
-#### Front-End Engineer | January 2020  \- March 2021
+#### Front-End Engineer | January 2020 - March 2021
 
-* Cross-Platform & Web Development: Built and deployed responsive web and mobile applications using React Native, Ionic, React, Vue, and Angular with LESS pre-processing.
-* UI/UX Implementation: Bridged the gap between design and engineering by collaborating closely with design teams to translate high-fidelity Adobe XD and Figma prototypes into functional code.
+* Built responsive web and mobile applications using React Native, Ionic, React, Vue, and Angular with LESS preprocessing.
+* Collaborated directly with design teams to transform high-fidelity Adobe XD and Figma prototypes into production-ready frontend experiences.
+* Supported cross-platform UI implementation and feature delivery to improve consistency across web and mobile products.
 
 ## EDUCATION
 
-Bachelor of Computer Science São Paulo State University (UNESP) | Bauru, Brazil 2016 - 2022
+Bachelor of Computer Science, São Paulo State University (UNESP) | Bauru, Brazil | 2016 - 2022
