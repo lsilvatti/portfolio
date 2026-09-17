@@ -2,11 +2,13 @@
 
 ## Senior Front-End Engineer | Product Team Lead | Full-Stack Collaborator
 
-São Paulo, Brazil (GMT-3) | +55 14 99678-3741 | [leonardo@silvatti.com.br](mailto:leonardo@silvatti.com.br) | [LinkedIn](https://www.linkedin.com/in/lsilvatti) | [GitHub](https://github.com/lsilvatti) | [Portfolio](https://leonardo.silvatti.com.br)
+Location: São Paulo, Brazil (GMT-3)  •  Phone: +55 14 99678-3741  •  Email: [leonardo@silvatti.com.br](mailto:leonardo@silvatti.com.br)  •  [LinkedIn](https://www.linkedin.com/in/lsilvatti)  •  [GitHub](https://github.com/lsilvatti)  •  [Portfolio](https://leonardo.silvatti.com.br)
 
 ## PROFESSIONAL SUMMARY
 
-Senior Front-End Engineer and Product Team Lead with 7+ years of experience designing and delivering scalable, high-traffic web platforms across SaaS, e-commerce, ERP, and subscription products. Expert in React, Next.js, TypeScript, JavaScript, HTML5, CSS3, SASS, and modern frontend architecture, with a proven track record in legacy migration, SEO, performance optimization, responsive UI development, and accessible user experiences. Experienced in technical roadmap planning, stakeholder alignment, team mentoring, and cross-functional leadership, while collaborating closely with backend teams on APIs, integrations, data flows, and business-facing product delivery. Strong full-stack collaboration profile with a focus on web application architecture, product growth, and engineering execution.
+Senior Front-End Engineer and Product Team Lead with 7+ years of experience designing and delivering scalable, high-traffic web platforms across SaaS, e-commerce, ERP, and subscription products. Expert in React, Next.js, TypeScript, JavaScript, HTML5, CSS3, SASS, and modern frontend architecture, with a proven track record in legacy migration, SEO, performance optimization, responsive UI development, and accessible user experiences.
+
+Experienced in technical roadmap planning, stakeholder alignment, team mentoring, and cross-functional leadership, while collaborating closely with backend teams on APIs, integrations, data flows, and business-facing product delivery. Strong full-stack collaboration profile with a focus on web application architecture, product growth, and engineering execution.
 
 ## CORE COMPETENCIES
 
