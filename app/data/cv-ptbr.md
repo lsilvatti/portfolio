@@ -2,7 +2,8 @@
 
 ## Desenvolvedor Front-End Sênior | Tech Lead | Full-Stack | React, Next.js, TypeScript, Java
 
-Localização: São Paulo, Brasil (GMT-3)  •  Telefone: +55 14 99678-3741  •  E-mail: leonardo@silvatti.com.br  •  [LinkedIn](https://www.linkedin.com/in/lsilvatti)  •  [GitHub](https://github.com/lsilvatti)  •  [Portfólio](https://leonardo.silvatti.com.br)
+Localização: São Paulo, Brasil (GMT-3)  •  Telefone: +55 14 99678-3741  •  E-mail: leonardo@silvatti.com.br
+LinkedIn: linkedin.com/in/lsilvatti  •  GitHub: github.com/lsilvatti  •  Portfólio: leonardo.silvatti.com.br
 
 ## RESUMO PROFISSIONAL
 
@@ -24,13 +25,13 @@ Orientado ao crescimento do produto e eficiência do time, com vivência em gest
 
 ### Trustly | Remoto / Brasil
 #### Desenvolvedor Frontend | Maio 2026 - Setembro 2026
-* Atuou no desenvolvimento full-stack, integrando aplicações frontend em React, Next.js e TypeScript com serviços backend baseados em Java.
-* Otimizou o fluxo de checkout e pagamento para usuários finais e parceiros comerciais, melhorando a escalabilidade e a estabilidade do widget principal do produto.
-* Implementou fluxos de testes automatizados para reduzir regressões e garantir a confiabilidade em jornadas críticas de pagamento.
+* Atuou no desenvolvimento full-stack de sistemas críticos de pagamento, integrando o widget principal em React, Next.js e TypeScript com serviços de backend robustos em Java.
+* Garantiu a estabilidade e escalabilidade de fluxos complexos de checkout, suportando transações seguras para múltiplos parceiros comerciais e milhares de usuários finais.
+* Arquitetou e implementou fluxos de testes automatizados abrangentes, focados na prevenção de regressões em jornadas de alta sensibilidade financeira.
 
 ### eSapiens Tecnologia | Remoto / Brasil
-#### Product Owner | Janeiro 2025 - Fevereiro 2026
-* Atuou em um papel híbrido como Product Owner, Tech Lead e Scrum Master, gerenciando o roadmap técnico e o alinhamento entre as áreas de engenharia, design e negócios.
+#### Tech Lead / Product Owner | Janeiro 2025 - Fevereiro 2026
+* Atuou em um papel híbrido de liderança, gerenciando o roadmap técnico e garantindo o alinhamento arquitetural entre as áreas de engenharia, design e negócios.
 * Otimizou processos ágeis e eliminou bloqueios técnicos, aumentando a velocidade de entrega do time em 30%.
 * Introduziu fluxos de trabalho com IA utilizando Claude e Cursor para acelerar integrações de API e geração de código boilerplate, mantendo padrões estritos de qualidade de código.
 * Colaborou com times de backend para definir contratos de API, fluxos de dados e soluções de arquitetura escaláveis.
@@ -44,7 +45,7 @@ Orientado ao crescimento do produto e eficiência do time, com vivência em gest
 ### Alternativa Sistemas | Bauru, Brasil
 #### Desenvolvedor Frontend | Março 2021 - Julho 2021
 * Desenvolveu a versão web baseada em nuvem de um sistema ERP desktop utilizando Next.js e SASS.
-* Integrou fluxos do RabbitMQ para processamento de dados assíncrono, suportando mais de 100 clientes corporativos.
+* Integrou fluxos do RabbitMQ para processamento de dados assíncrono, suportando transações simultâneas para mais de 100 clientes corporativos.
 * Modernizou ferramentas operacionais internas usando Vue.js, otimizando os fluxos internos e a eficiência da gestão de produtos.
 
 ### Cocreare | Bauru, Brasil

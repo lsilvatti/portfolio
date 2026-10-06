@@ -2,7 +2,8 @@
 
 ## Senior Front-End Engineer | Tech Lead | Full-Stack | React, Next.js, TypeScript, Java
 
-Location: São Paulo, Brazil (GMT-3)  •  Phone: +55 14 99678-3741  •  Email: leonardo@silvatti.com.br  •  [LinkedIn](https://www.linkedin.com/in/lsilvatti)  •  [GitHub](https://github.com/lsilvatti)  •  [Portfolio](https://leonardo.silvatti.com.br)
+Location: São Paulo, Brazil (GMT-3)  •  Phone: +55 14 99678-3741  •  Email: leonardo@silvatti.com.br
+LinkedIn: linkedin.com/in/lsilvatti  •  GitHub: github.com/lsilvatti  •  Portfolio: leonardo.silvatti.com.br
 
 ## PROFESSIONAL SUMMARY
 
@@ -24,13 +25,13 @@ I am driven by product growth and team efficiency, having previously managed tec
 
 ### Trustly | Remote / Brazil
 #### Frontend Developer | May 2026 - September 2026
-* Collaborated on full-stack development, integrating React, Next.js, and TypeScript frontend applications with Java-based backend services.
-* Optimized the checkout and payment flow for end-users and merchant partners, improving the scalability and stability of the core product widget.
-* Implemented automated testing workflows to reduce regressions and ensure reliability across critical payment journeys.
+* Collaborated on the full-stack development of critical payment systems, integrating the core widget in React, Next.js, and TypeScript with robust Java-based backend services.
+* Ensured the stability and scalability of complex checkout flows, supporting secure transactions for multiple merchant partners and thousands of end-users.
+* Architected and implemented comprehensive automated testing workflows, focused on preventing regressions in highly sensitive financial journeys.
 
 ### eSapiens Technology | Remote / Brazil
-#### Product Owner | January 2025 - February 2026
-* Acted in a hybrid role as Product Owner, Tech Lead, and Scrum Master, managing the technical roadmap and alignment between engineering, design, and business stakeholders.
+#### Tech Lead / Product Owner | January 2025 - February 2026
+* Acted in a hybrid leadership role, managing the technical roadmap and ensuring architectural alignment between engineering, design, and business stakeholders.
 * Streamlined agile processes and eliminated technical blockers, increasing the team's delivery velocity by 30%.
 * Introduced AI-augmented workflows utilizing Claude and Cursor to accelerate API integrations and boilerplate generation, maintaining strict code quality standards.
 * Collaborated with backend teams to define API contracts, data flows, and scalable architecture solutions.
@@ -44,7 +45,7 @@ I am driven by product growth and team efficiency, having previously managed tec
 ### Alternativa Systems | Bauru, Brazil
 #### Frontend Developer | March 2021 - July 2021
 * Engineered the cloud-based web version of a desktop ERP system utilizing Next.js and SASS.
-* Integrated RabbitMQ workflows for asynchronous data processing to support over 100 enterprise clients.
+* Integrated RabbitMQ workflows for asynchronous data processing to support concurrent transactions for over 100 enterprise clients.
 * Modernized internal operational tools using Vue.js, optimizing internal workflows and product management efficiency.
 
 ### Cocreare | Bauru, Brazil
@@ -58,7 +59,7 @@ I am driven by product growth and team efficiency, having previously managed tec
 * Architected and developed a modern blog and web application utilizing Next.js (App Router) and Tailwind CSS.
 * Integrated Sanity as a headless CMS for scalable content management and implemented strict technical SEO practices, including JSON-LD structured data. Deployed via Cloudflare for optimized edge performance.
 
-**[Autoria Marginal](https://autoriamarginal.com.br/) | 2026**
+**[Autoria Marginal](https://autoriamarginal.com.br/) | July 2026**
 * Full-stack web application built to distribute an illustrated copyright guide.
 * Developed utilizing Next.js and Server Actions for backend logic without a decoupled API, managing database mutations with Supabase. Deployed via Cloudflare.
 
