@@ -1,14 +1,12 @@
 import { notFound } from 'next/navigation';
-import { getLocale, setRequestLocale } from 'next-intl/server';
-import { fetchGitHubRepo } from '@/lib/github';
-import { Link, GoToTop } from '@/components/atoms';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { Typography } from '@/components/atoms';
+import { RepositoryView } from '@/components/organisms';
 import { HorizontallyCenteredLayout } from '@/components/templates';
-import { getTranslations } from 'next-intl/server';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
+import { getProcessedRepositories, getRepositoryOverlayData } from '@/app/data/repositories';
 
-import { ProjectHeader, ProjectReadme } from '@/components/organisms';
-
-interface ProjectPageProps {
+interface LegacyRepositoryOverlayPageProps {
   params: Promise<{ locale: string; repository: string }>;
 }
 
@@ -19,51 +17,57 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, repository } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("pages.projects");
+  const t = await getTranslations('pages.projects');
 
   return {
     title: repository,
-    description: t("description"),
+    description: t('description'),
     alternates: {
-      canonical: `/${locale}/projects/${repository}`,
+      canonical: `/${locale}/repos/${repository}`,
       languages: {
-        "en": `/en/projects/${repository}`,
-        "pt-BR": `/br/projects/${repository}`,
-        "x-default": `/en/projects/${repository}`
+        en: `/en/repos/${repository}`,
+        'pt-BR': `/br/repos/${repository}`,
+        'x-default': `/en/repos/${repository}`,
       },
-    }
+    },
   };
 }
 
-export default async function ProjectDetailPage({ params }: ProjectPageProps) {
+export default async function LegacyRepositoryOverlayPage({ params }: LegacyRepositoryOverlayPageProps) {
   const { locale, repository } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('pages.projects'); 
-  const localeStr = await getLocale();
+  const t = await getTranslations('pages.projects');
 
-  const repo = await fetchGitHubRepo(repository);
+  const localeCode = locale === 'br' ? 'br' : 'en';
+  const [repositories, selectedRepository] = await Promise.all([
+    getProcessedRepositories(localeCode),
+    getRepositoryOverlayData(localeCode, repository),
+  ]);
 
-  if (!repo) notFound();
+  if (!selectedRepository) {
+    notFound();
+  }
 
-  const content = localeStr === 'br' 
-    ? (repo.readmePt || repo.readmeEn) 
-    : (repo.readmeEn || repo.readmePt);
-    
   return (
-    <HorizontallyCenteredLayout className="pb-20 mt-5">
-      <div className="w-full max-w-full flex items-center justify-center md:justify-between">
-      <Link href="/projects" variant="nav" className="text-sm text-muted-foreground">
-          ← {t('backToProjects')}
-        </Link>
-      </div>
- 
+    <HorizontallyCenteredLayout className="mb-0">
+      <Typography variant="h1" as="h2" className="animate-fade-up mt-0 mb-0">
+        {t('title')}
+      </Typography>
 
-      <ProjectHeader repo={repo} />
+      <Typography
+        variant="body"
+        className="max-w-2xl text-center animate-fade-up mb-16"
+        style={{ animationDelay: '0.1s' }}
+      >
+        {t('description')}
+      </Typography>
 
-      <ProjectReadme content={content} />
-
-      <GoToTop />
-
+      <RepositoryView
+        repositories={repositories}
+        selectedRepository={selectedRepository}
+        basePath="/projects"
+        initialDelay={0.2}
+      />
     </HorizontallyCenteredLayout>
   );
 }

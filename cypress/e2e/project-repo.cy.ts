@@ -10,16 +10,16 @@ export {};
 
 describe('Project detail page', () => {
   it('opens a repository page from the projects listing', () => {
-    cy.visit('/en/projects');
+    cy.visit('/en/repos');
 
-    cy.get('a[href*="/projects/"]').first().then(($a) => {
+    cy.get('a[href*="/repos/"]').first().then(($a) => {
       if ($a.length) {
         const href = $a.attr('href') || '';
-        const url = href.startsWith('/projects') ? `/en${href}` : href;
+        const url = href.startsWith('/repos') ? `/en${href}` : href;
         cy.visit(url);
 
-        // Expect a back-to-projects link and some heading/content
-        cy.contains(/back to projects/i).should('exist');
+        // Expect an opened overlay and some content
+        cy.contains(/close repository details/i).should('exist');
         cy.get('main').should('exist');
       } else {
         cy.log('no projects found — skipping repo detail assertions');

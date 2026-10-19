@@ -11,8 +11,12 @@
                     "href": "/connect"
                 },
                 {
-                    "label": "projetos",
-                    "href": "/projects"
+                    "label": "repos",
+                    "href": "/repos"
+                },
+                {
+                    "label": "freelance",
+                    "href": "/freelances"
                 },
                 {
                     "label": "currículo",

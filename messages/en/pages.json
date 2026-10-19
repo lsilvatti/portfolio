@@ -17,8 +17,12 @@
                         "href": "/connect"
                     },
                     {
-                        "label": "projects",
-                        "href": "/projects"
+                        "label": "repos",
+                        "href": "/repos"
+                    },
+                    {
+                        "label": "freelance",
+                        "href": "/freelances"
                     },
                     {
                         "label": "resume",
@@ -96,21 +100,42 @@
             "resumeUrl": "/Resume_Leonardo_Silvatti_Silva.pdf",
             "resumeFileName": "Resume - Leonardo Silvatti Silva.pdf"
         },
-        "projects": {
-            "title": "Projects",
-            "description": "Welcome to my GitHub playground. While my day-to-day enterprise code is private, these repositories showcase my personal experiments, ongoing studies, and open-source projects. Dive into the code and see what I've been tinkering with.",
-            "noResults": "No projects found with these filters.",
+        "freelanceProjects": {
+            "title": "Freelance Projects",
+            "description": "A curated set of client projects I designed and shipped, focused on user experience, performance and measurable business outcomes.",
+            "contactCta": "Want to turn your idea into a product and strengthen your digital presence? <link>Get in touch here</link>.",
+            "technologies": "Technologies",
+            "highlights": "Highlights",
+            "viewProject": "View project",
+            "viewRepository": "View repository",
+            "closeFreelance": "Close freelance details",
+            "backToTop": "Back to top",
+            "previousImage": "Previous image",
+            "nextImage": "Next image",
+            "noResults": "No freelance projects found with these filters.",
             "searchInput": {
-                "placeholder": "Search projects..."
+                "placeholder": "Search freelance projects..."
+            }
+        },
+        "projects": {
+            "title": "GitHub Repositories",
+            "description": "This section lists my public GitHub repositories. It includes personal experiments, continuous learning projects and open-source work that reflects my technical growth.",
+            "noResults": "No repositories found with these filters.",
+            "searchInput": {
+                "placeholder": "Search repositories..."
             },
 
             "stars": "Stars",
             "forks": "Forks",
             "lastUpdated": "Last Updated",
 
-            "backToProjects": "Back to Projects",
+            "backToProjects": "Back to Repositories",
             "languages": "Languages",
-            "technologies": "Technologies",
+            "topics": "Topics",
+            "repositoryLabel": "GitHub Repository",
+            "closeRepository": "Close repository details",
+            "backToTop": "Back to top",
+            "noReadme": "No README file found for this repository.",
             "archived": "Archived",
             "viewOnGitHub": "View on GitHub",
             "liveDemo": "Live Demo",

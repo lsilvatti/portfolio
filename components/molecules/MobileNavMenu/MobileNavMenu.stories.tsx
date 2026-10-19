@@ -9,7 +9,8 @@ const meta = {
     items: [
       { label: 'home', href: '/' },
       { label: 'connect', href: '/connect' },
-      { label: 'projects', href: '/projects' },
+      { label: 'repos', href: '/repos' },
+      { label: 'freelances', href: '/freelances' },
       { label: 'resume', href: '/resume' },
     ],
   },

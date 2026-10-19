@@ -6,7 +6,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://leonardo.silvatti.c
 const routes = [
   { path: "", priority: 1.0, changeFrequency: "monthly" as const },
   { path: "/connect", priority: 0.8, changeFrequency: "monthly" as const },
-  { path: "/projects", priority: 0.8, changeFrequency: "weekly" as const },
+  { path: "/repos", priority: 0.8, changeFrequency: "weekly" as const },
+  { path: "/freelances", priority: 0.9, changeFrequency: "monthly" as const },
   { path: "/resume", priority: 0.7, changeFrequency: "monthly" as const },
 ];
 

@@ -1,8 +1,15 @@
+import dynamic from 'next/dynamic';
 import { GoToTop, Typography } from "@/components/atoms";
-import { ResumeCard } from "@/components/organisms";
 import { HorizontallyCenteredLayout } from "@/components/templates";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+
+const ResumeCard = dynamic(
+  () => import('@/components/organisms').then((module) => module.ResumeCard),
+  {
+    loading: () => <div className="h-64 w-full max-w-3xl animate-pulse rounded-xl bg-muted/30" />,
+  }
+);
 
 export async function generateMetadata({
   params,

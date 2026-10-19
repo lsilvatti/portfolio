@@ -1,23 +1,10 @@
-import { getLocale, setRequestLocale } from 'next-intl/server';
-import { fetchGitHubRepos } from '@/lib/github'; 
-import { ProjectsView } from '@/components/organisms';
+import { setRequestLocale } from 'next-intl/server';
+import { RepositoryView } from '@/components/organisms';
 import { Typography } from '@/components/atoms';
 import { getTranslations } from 'next-intl/server';
 import { HorizontallyCenteredLayout } from '@/components/templates';
 import { Metadata } from 'next';
-
-
-export interface ProcessedProject {
-  name: string;
-  description: string | null;
-  url: string;
-  homepageUrl: string | null;
-  stargazerCount: number;
-  topics: string[];
-  languages: string[];
-  tags: string[] | null;
-  content: string | null; 
-}
+import { getProcessedRepositories } from '@/app/data/repositories';
 
 export async function generateMetadata({
   params,
@@ -32,46 +19,21 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     alternates: {
-      canonical: `/${locale}/projects`,
+      canonical: `/${locale}/repos`,
       languages: {
-        "en": "/en/projects",
-        "pt-BR": "/br/projects",
-        "x-default": "/en/projects"
+        "en": "/en/repos",
+        "pt-BR": "/br/repos",
+        "x-default": "/en/repos"
       },
     }
   };
 }
 
-export default async function ProjectsPage() {
+export default async function LegacyRepositoriesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations('pages.projects');
-
-  const locale = await getLocale(); 
-  
-  const rawRepos = await fetchGitHubRepos();
-
-  const processedProjects: ProcessedProject[] = rawRepos
-    .map((repo) => {
-      let selectedReadme = null;
-
-      if (locale === 'br') {
-        selectedReadme = repo.readmePt || repo.readmeEn;
-      } else {
-        selectedReadme = repo.readmeEn || repo.readmePt;
-      }
-
-      return {
-        name: repo.name,
-        description: repo.description,
-        url: repo.url,
-        homepageUrl: repo.homepageUrl,
-        stargazerCount: repo.stargazerCount,
-        topics: repo.topics,
-        languages: repo.languages,
-        tags: repo.tags,
-        content: selectedReadme,
-      };
-    })
-    .filter((project) => project.content !== null);
+  const repositories = await getProcessedRepositories(locale === 'br' ? 'br' : 'en');
 
   return (
     <HorizontallyCenteredLayout className='mb-0'>
@@ -83,7 +45,12 @@ export default async function ProjectsPage() {
         {t('description')}
       </Typography>
 
-      <ProjectsView projects={processedProjects} initialDelay={0.2} />
+      <RepositoryView
+        repositories={repositories}
+        selectedRepository={null}
+        basePath="/projects"
+        initialDelay={0.2}
+      />
     </HorizontallyCenteredLayout>
   );
 }

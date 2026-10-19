@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import { ConnectView } from "@/components/organisms/ConnectView";
+import dynamic from 'next/dynamic';
 import { HorizontallyCenteredLayout } from "@/components/templates";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Typography } from "@/components/atoms/Typography/Typography";
+
+const ConnectView = dynamic(
+  () => import('@/components/organisms/ConnectView').then((module) => module.ConnectView),
+  {
+    loading: () => <div className="h-80 w-full max-w-xl animate-pulse rounded-xl bg-muted/30" />,
+  }
+);
 
 export async function generateMetadata({
   params,

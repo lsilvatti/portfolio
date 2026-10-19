@@ -1,0 +1,1 @@
+export { FreelanceProjectsView } from './FreelanceProjectsView';
