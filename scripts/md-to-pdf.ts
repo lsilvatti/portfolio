@@ -2,13 +2,25 @@ import { mdToPdf } from 'md-to-pdf';
 import path from 'path';
 
 const filesToConvert = [
+  // 1. Versão Full Stack (Português)
   {
     input: 'app/data/cv-ptbr.md',
-    output: 'public/Curriculo_Leonardo_Silvatti_Silva.pdf'
+    output: 'public/CV_Leonardo_Silvatti_Full_Stack.pdf'
   },
+  // 2. Versão Full Stack (Inglês)
   {
     input: 'app/data/cv.md',
-    output: 'public/Resume_Leonardo_Silvatti_Silva.pdf'
+    output: 'public/Resume_Leonardo_Silvatti_Full_Stack.pdf'
+  },
+  // 3. Versão Product Owner (Português)
+  {
+    input: 'app/data/cv-po-ptbr.md',
+    output: 'public/CV_Leonardo_Silvatti_Product_Owner.pdf'
+  },
+  // 4. Versão Product Owner (Inglês)
+  {
+    input: 'app/data/cv-po.md',
+    output: 'public/Resume_Leonardo_Silvatti_Product_Owner.pdf'
   }
 ];
 
