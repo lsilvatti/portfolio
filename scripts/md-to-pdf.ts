@@ -21,6 +21,16 @@ const filesToConvert = [
   {
     input: 'app/data/cv-po.md',
     output: 'public/Resume_Leonardo_Silvatti_Product_Owner.pdf'
+  },
+  // 5. Versão Front End (Português)
+  {
+    input: 'app/data/cv-fe-br.md',
+    output: 'public/CV_Leonardo_Silvatti_Front_End.pdf'
+  },
+  // 6. Versão Front End (Inglês)
+  {
+    input: 'app/data/cv-fe.md',
+    output: 'public/Resume_Leonardo_Silvatti_Front_End.pdf'
   }
 ];
 
