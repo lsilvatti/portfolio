@@ -13,7 +13,7 @@ Deeply focused on user experience, I have successfully improved Core Web Vitals,
 - **UI Architecture & Styling:** Micro-frontends (Module Federation), Design Systems, Tailwind CSS, SASS, CSS Modules, Responsive Design, Pixel-Perfect Implementation.
 - **Web Performance & Quality:** Core Web Vitals (LCP, CLS, FID optimization), Technical SEO (JSON-LD), Accessibility (WCAG standards).
 - **Testing & Tooling:** Jest, Cypress, React Testing Library, Storybook, Vite, Webpack.
-- **Cloud & Integrations (Bonus):** REST APIs, GraphQL, Server Actions, GitHub Actions, Vercel, Git.
+- **Cloud & Integrations (Bonus):** Python, FastAPI, REST APIs, GraphQL, Server Actions, GitHub Actions, Vercel, Git.
 - **Leadership:** Frontend Roadmaps, Agile/Scrum, Mentoring, Code Reviews, AI-Assisted Workflows (Claude, Cursor, Copilot).
 - **Languages:** Portuguese (Native), English (C2 Proficient - EF SET), Spanish (Intermediate).
 

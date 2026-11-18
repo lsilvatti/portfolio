@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Leonardo Silvatti Silva | Frontend Engineer",
+    name: "Leonardo Silvatti Silva | Full Stack Engineer",
     short_name: "Leonardo Silvatti",
     description:
-      "Frontend Engineer specializing in React, Next.js, and TypeScript.",
+      "Full Stack Engineer specializing in React, Next.js, and TypeScript.",
     start_url: "/",
     display: "standalone",
     background_color: "#0a0a0a",

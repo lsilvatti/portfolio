@@ -12,7 +12,7 @@ Strong domain expertise in backlog management, requirements definition, agile sq
 - **Product Management:** Product Discovery, Backlog Management, Product Roadmap, Requirements Definition, User Stories (BDD/Gherkin), MVPs, KPIs, A/B Testing.
 - **Agile & Tools:** Scrum, Kanban, Agile Ceremonies (Planning, Daily, Retro, Review), Jira, Confluence, Trello.
 - **Leadership & Business:** Stakeholder Management, Squad Leadership, 1:1s & Career Planning, Conflict Resolution, Data-Driven Vision, BI Dashboards.
-- **Technical Background (Edge):** Software Architecture, REST & GraphQL APIs, Databases (SQL/Prisma), JavaScript/TypeScript Ecosystem, Cloud, CI/CD.
+- **Technical Background (Edge):** Software Architecture, Python, FastAPI, REST & GraphQL APIs, Databases (SQL/Prisma), JavaScript/TypeScript Ecosystem, Cloud, CI/CD.
 - **Languages:** Portuguese (Native), English (C2 Proficient - EF SET), Spanish (Intermediate).
 
 ## PROFESSIONAL EXPERIENCE

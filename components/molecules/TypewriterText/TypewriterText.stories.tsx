@@ -6,7 +6,7 @@ const meta = {
   component: TypewriterText,
   tags: ['autodocs'],
   args: {
-    prefix: "I'm a Frontend Engineer who builds ",
+    prefix: "I'm a Full Stack Engineer who builds ",
     words: ['scalable products.', 'fluid interfaces.', 'user-centric solutions.', 'business value.'],
   },
   argTypes: {

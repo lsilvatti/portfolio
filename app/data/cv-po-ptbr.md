@@ -12,7 +12,7 @@ Possuo forte domínio na gestão de backlogs, definição de requisitos, conduç
 - **Gestão de Produto:** Product Discovery, Gestão de Backlog, Roadmap de Produto, Definição de Requisitos, Histórias de Usuário (BDD/Gherkin), MVPs, KPIs, Testes A/B.
 - **Agilidade e Ferramentas:** Scrum, Kanban, Ritos Ágeis (Planning, Daily, Retro, Review), Jira, Confluence, Trello.
 - **Liderança e Negócios:** Gestão de Stakeholders, Liderança de Squads, 1:1s e Plano de Carreira, Resolução de Conflitos, Visão Orientada a Dados (Data-Driven), BI Dashboards.
-- **Background Técnico (Diferencial):** Arquitetura de Software, APIs REST e GraphQL, Bancos de Dados (SQL/Prisma), Ecossistema JavaScript/TypeScript, Cloud, CI/CD.
+- **Background Técnico (Diferencial):** Arquitetura de Software, Python, FastAPI, APIs REST e GraphQL, Bancos de Dados (SQL/Prisma), Ecossistema JavaScript/TypeScript, Cloud, CI/CD.
 - **Idiomas:** Português (Nativo), Inglês (Proficiente C2 - EF SET), Espanhol (Intermediário).
 
 ## EXPERIÊNCIA PROFISSIONAL

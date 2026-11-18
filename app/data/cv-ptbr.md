@@ -9,7 +9,7 @@ Engenheiro de Software Full Stack Sênior e Tech Lead com 7 anos de experiência
 Histórico comprovado de liderança em migrações de sistemas complexos, desenvolvimento de features de monetização (do banco de dados à UI) e gerenciamento de roadmaps técnicos multidisciplinares. Hábil em conectar engenharia, produto e objetivos de negócio para entregar aplicações robustas, com alta performance, tipagem estrita e excelentes taxas de conversão.
 
 ## COMPETÊNCIAS PRINCIPAIS
-- **Backend, APIs & ORMs:** Node.js, Express.js, PHP, Laravel, Java (BFF), Desenho de APIs REST, GraphQL, Prisma, Drizzle, Server Actions.
+- **Backend, APIs & ORMs:** Python, FastAPI, Node.js, Express.js, PHP, Laravel, Java (BFF), Desenho de APIs REST, GraphQL, Prisma, Drizzle, Server Actions.
 - **Frontend:** React, Next.js (App Router), TypeScript, JavaScript (ES6+), Zustand, Zod, Tailwind CSS, SASS, Core Web Vitals, Micro-frontends (Module Federation).
 - **Bancos de Dados & DevOps:** PostgreSQL, SQL, Supabase, RabbitMQ, Docker, GitHub Actions, Cloudflare, Vercel, CI/CD, Git.
 - **Liderança & Produto:** Roadmaps Técnicos, Agile/Scrum (Experiência como PO), Gestão de Stakeholders, Mentoria, Dashboards de Dados/BI, Fluxos de Trabalho Assistidos por IA (Claude, Cursor, Copilot).

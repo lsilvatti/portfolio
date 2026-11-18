@@ -20,7 +20,7 @@ Profundamente focado na experiência do usuário, melhorei com sucesso os Core W
 
 * **Testes e Ferramentas:** Jest, Cypress, React Testing Library, Storybook, Vite, Webpack.
 
-* **Cloud e Integrações (Diferencial):** APIs REST, GraphQL, Server Actions, GitHub Actions, Vercel, Git.
+* **Cloud e Integrações (Diferencial):** Python, FastAPI, APIs REST, GraphQL, Server Actions, GitHub Actions, Vercel, Git.
 
 * **Liderança:** Roadmaps Frontend, Agile/Scrum, Mentoria, Code Reviews, Fluxos Assistidos por IA (Claude, Cursor, Copilot).
 

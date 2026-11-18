@@ -19,7 +19,7 @@ jest.mock("@/components/molecules/TypewriterText/TypewriterAnimation", () => ({
   ),
 }));
 
-const words = ["Frontend Developer", "React Engineer", "TypeScript Enthusiast"];
+const words = ["Full Stack Developer", "React Engineer", "TypeScript Enthusiast"];
 
 describe("TypewriterText", () => {
   it("renders without crashing", () => {

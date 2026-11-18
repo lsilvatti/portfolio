@@ -38,16 +38,16 @@ export async function generateMetadata({
     metadataBase: new URL(siteUrl),
     title: {
       default: isEn
-        ? "Leonardo Silvatti Silva | Frontend Engineer"
-        : "Leonardo Silvatti Silva | Engenheiro Frontend",
+        ? "Leonardo Silvatti Silva | Full Stack Engineer"
+        : "Leonardo Silvatti Silva | Engenheiro Full Stack",
       template: "%s | Leonardo Silvatti Silva",
     },
     description: isEn
-      ? "Frontend Engineer specializing in React, Next.js, and TypeScript. Passionate about crafting performant and accessible web applications with a focus on clean code and best practices."
-      : "Engenheiro Frontend especializado em React, Next.js e TypeScript. Apaixonado por criar aplicações web performáticas e acessíveis com foco em código limpo e boas práticas.",
+      ? "Full Stack Engineer specializing in React, Next.js, TypeScript, Node.js, Python, and FastAPI. Passionate about crafting robust and scalable web applications."
+      : "Engenheiro Full Stack especializado em React, Next.js, TypeScript, Node.js, Python e FastAPI. Apaixonado por criar aplicações web robustas e escaláveis.",
     keywords: isEn
       ? [
-          "Frontend Engineer",
+          "Full Stack Engineer",
           "React",
           "Next.js",
           "TypeScript",
@@ -57,7 +57,7 @@ export async function generateMetadata({
           "UI/UX",
         ]
       : [
-          "Engenheiro Frontend",
+          "Engenheiro Full Stack",
           "React",
           "Next.js",
           "TypeScript",
@@ -74,30 +74,30 @@ export async function generateMetadata({
       url: siteUrl,
       siteName: "Leonardo Silvatti Silva",
       title: isEn
-        ? "Leonardo Silvatti Silva | Frontend Engineer"
-        : "Leonardo Silvatti Silva | Engenheiro Frontend",
+        ? "Leonardo Silvatti Silva | Full Stack Engineer"
+        : "Leonardo Silvatti Silva | Engenheiro Full Stack",
       description: isEn
-        ? "Frontend Engineer specializing in React, Next.js, and TypeScript. Passionate about crafting performant and accessible web applications."
-        : "Engenheiro Frontend especializado em React, Next.js e TypeScript. Apaixonado por criar aplicações web performáticas e acessíveis.",
+        ? "Full Stack Engineer specializing in React, Next.js, TypeScript, Node.js, Python, and FastAPI."
+        : "Engenheiro Full Stack especializado em React, Next.js, TypeScript, Node.js, Python e FastAPI.",
       images: [
         {
           url: "/opengraph-image.png",
           width: 1200,
           height: 630,
           alt: isEn
-            ? "Leonardo Silvatti Silva - Frontend Engineer"
-            : "Leonardo Silvatti Silva - Engenheiro Frontend",
+            ? "Leonardo Silvatti Silva - Full Stack Engineer"
+            : "Leonardo Silvatti Silva - Engenheiro Full Stack",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
       title: isEn
-        ? "Leonardo Silvatti Silva | Frontend Engineer"
-        : "Leonardo Silvatti Silva | Engenheiro Frontend",
+        ? "Leonardo Silvatti Silva | Full Stack Engineer"
+        : "Leonardo Silvatti Silva | Engenheiro Full Stack",
       description: isEn
-        ? "Frontend Engineer specializing in React, Next.js, and TypeScript. Passionate about crafting performant and accessible web applications."
-        : "Engenheiro Frontend especializado em React, Next.js e TypeScript. Apaixonado por criar aplicações web performáticas e acessíveis.",
+        ? "Full Stack Engineer specializing in React, Next.js, TypeScript, Node.js, Python, and FastAPI."
+        : "Engenheiro Full Stack especializado em React, Next.js, TypeScript, Node.js, Python e FastAPI.",
       images: ["/opengraph-image.png"],
     },
     robots: {
@@ -166,7 +166,7 @@ return (
               "@type": "Person",
               name: "Leonardo Silvatti Silva",
               url: siteUrl,
-              jobTitle: locale === "en" ? "Frontend Engineer" : "Engenheiro Frontend",
+              jobTitle: locale === "en" ? "Full Stack Engineer" : "Engenheiro Full Stack",
               sameAs: [
                 "https://linkedin.com/in/lsilvatti",
                 "https://github.com/lsilvatti",

@@ -9,7 +9,7 @@ Senior Full Stack Engineer and Tech Lead with 7 years of experience building sca
 Track record of leading complex system migrations, driving product monetization features from database to UI, and managing cross-functional technical roadmaps. Adept at bridging the gap between engineering, product, and business goals to deliver robust applications with high performance, strict type safety, and conversion rates.
 
 ## CORE COMPETENCIES
-- **Backend, APIs & ORMs:** Node.js, Express.js, PHP, Laravel, Java (BFF), REST API Design, GraphQL, Prisma, Drizzle, Server Actions.
+- **Backend, APIs & ORMs:** Python, FastAPI, Node.js, Express.js, PHP, Laravel, Java (BFF), REST API Design, GraphQL, Prisma, Drizzle, Server Actions.
 - **Frontend:** React, Next.js (App Router), TypeScript, JavaScript (ES6+), Zustand, Zod, Tailwind CSS, SASS, Core Web Vitals, Micro-frontends (Module Federation).
 - **Databases & DevOps:** PostgreSQL, SQL, Supabase, RabbitMQ, Docker, GitHub Actions, Cloudflare, Vercel, CI/CD, Git.
 - **Leadership & Product:** Technical Roadmaps, Agile/Scrum (PO experience), Stakeholder Management, Mentoring, Data/BI Dashboards, AI-Assisted Workflows (Claude, Cursor, Copilot).
