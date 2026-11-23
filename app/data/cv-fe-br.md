@@ -6,10 +6,10 @@ LinkedIn: [linkedin.com/in/lsilvatti](https://linkedin.com/in/lsilvatti) • Git
 ## RESUMO PROFISSIONAL
 Engenheiro Frontend Sênior e Tech Lead com 7 anos de experiência construindo aplicações web de alto tráfego com React, Next.js e TypeScript. Participou da migração de uma rede social com 26M de usuários de PHP legado para React, construiu o frontend de uma feature de monetização que aumentou a receita mensal em 20% e melhorou os Core Web Vitals do checkout de um gateway que processa mais de 1,3 bilhão de operações mensais.
 
-Foco em performance, acessibilidade e arquitetura de UI sustentável: micro-frontends, bibliotecas de componentes compartilhadas, SEO técnico e testes automatizados. Atua também no restante da stack (Node.js, REST/GraphQL, AWS/GCP) e tem experiência liderando um time de 6 engenheiros.
+Foco em performance, acessibilidade e arquitetura de UI: micro-frontends, bibliotecas de componentes, SEO técnico e testes automatizados, com vivência em Node.js, REST/GraphQL e AWS/GCP.
 
 ## COMPETÊNCIAS PRINCIPAIS
-- **Frontend Core:** React, Next.js (App Router), TypeScript, JavaScript (ES6+), Zustand, React Query.
+- **Frontend Core:** React, Next.js (App Router), TypeScript, JavaScript (ES6+), Zustand, TanStack Query, Electron.
 - **Arquitetura de UI e Estilização:** Micro-frontends (Module Federation), Design Systems, Bibliotecas de Componentes, Tailwind CSS, SASS, CSS Modules, Design Responsivo.
 - **Performance Web e Qualidade:** Core Web Vitals (LCP, CLS, INP), SEO Técnico (JSON-LD), Acessibilidade (WCAG).
 - **Testes e Ferramentas:** Jest, Cypress, React Testing Library, Storybook, Vite, Webpack.
@@ -46,15 +46,17 @@ Foco em performance, acessibilidade e arquitetura de UI sustentável: micro-fron
 **Desenvolvedor Full Stack (Foco em Frontend)** | Janeiro 2020 - Março 2021
 - Desenvolveu e publicou aplicações web e mobile responsivas com React, React Native, Vue, Angular e Ionic, entregando mais de 10 projetos para clientes no prazo.
 - Trabalhou próximo de designers de UX/UI, transformando protótipos do Figma e Adobe XD em código frontend pronto para produção.
-- Construiu o frontend do "Bombarco", plataforma de feira virtual de barcos lançada durante o lockdown de 2020, que alcançou mais de 30.000 visualizações.
+- Construiu o frontend do "Bombarco", feira virtual de barcos do lockdown de 2020, com mais de 30.000 visualizações.
 
 ## PROJETOS SELECIONADOS
 
-**Autoria Marginal (autoriamarginal.com.br)** | Julho 2026
-- Aplicação web para distribuição de um guia ilustrado de direitos autorais, construída com Next.js (App Router), TypeScript e Tailwind CSS, com interface responsiva e acessível.
+**BakaSub (bakasub.silvatti.com.br)** | 2026 - Atual
+- Aplicativo desktop open source (Electron, React, TypeScript) que extrai, traduz com IA e reinsere legendas em vídeos .mkv. Publicado até a v1.0.6, com atualização automática e instaladores para Windows e Linux.
+- Construiu a interface em React (TanStack Query e Router, Tailwind CSS, i18n EN/PT-BR) sobre um backend Node.js, com contrato de IPC tipado e seguro.
+- Parsing de legendas baseado em AST, saída do LLM validada com Zod, cache local em SQLite e estimativa de custo prévia; mais de 140 arquivos de teste (Vitest).
 
-**Jornada da Psique (ajornadadapsique.com.br)** | 2026
-- Plataforma de conteúdo e blog com Next.js, Tailwind CSS e CMS headless, com dados estruturados dinâmicos (JSON-LD) para SEO técnico.
+**Autoria Marginal (autoriamarginal.com.br)** | Julho 2026
+- Guia ilustrado de direitos autorais com Next.js (App Router), TypeScript e Tailwind CSS, com interface responsiva e acessível.
 
 ## FORMAÇÃO ACADÊMICA
 **Bacharelado em Ciência da Computação** | Universidade Estadual Paulista (UNESP)  

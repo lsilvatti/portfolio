@@ -9,7 +9,7 @@ Senior Frontend Engineer and Tech Lead with 7 years of experience building high-
 Focused on performance, accessibility and maintainable UI architecture: micro-frontends, shared component libraries, technical SEO and automated testing. Comfortable across the stack (Node.js, REST/GraphQL, AWS/GCP) and experienced leading a team of 6 engineers.
 
 ## CORE COMPETENCIES
-- **Frontend Core:** React, Next.js (App Router), TypeScript, JavaScript (ES6+), Zustand, React Query.
+- **Frontend Core:** React, Next.js (App Router), TypeScript, JavaScript (ES6+), Zustand, TanStack Query, Electron.
 - **UI Architecture & Styling:** Micro-frontends (Module Federation), Design Systems, Component Libraries, Tailwind CSS, SASS, CSS Modules, Responsive Design.
 - **Web Performance & Quality:** Core Web Vitals (LCP, CLS, INP), Technical SEO (JSON-LD), Accessibility (WCAG).
 - **Testing & Tooling:** Jest, Cypress, React Testing Library, Storybook, Vite, Webpack.
@@ -49,6 +49,11 @@ Focused on performance, accessibility and maintainable UI architecture: micro-fr
 - Built the frontend of "Bombarco," a virtual boat fair platform released during the 2020 lockdown that reached 30,000+ views.
 
 ## SELECTED PROJECTS
+
+**BakaSub (bakasub.silvatti.com.br)** | 2026 - Present
+- Open-source desktop app (Electron, React, TypeScript) that extracts, AI-translates and re-muxes .mkv subtitles. Shipped through v1.0.6 with auto-updates and Windows/Linux installers.
+- Built the React UI (TanStack Query and Router, Tailwind CSS, EN/PT-BR i18n) on top of a Node.js backend through a secure, typed IPC contract.
+- AST-based subtitle parsing, Zod-validated LLM output, a local SQLite cache and a preflight cost estimate; 140+ test files (Vitest).
 
 **Autoria Marginal (autoriamarginal.com.br)** | July 2026
 - Web application distributing an illustrated copyright guide, built with Next.js (App Router), TypeScript and Tailwind CSS, with a responsive and accessible interface.

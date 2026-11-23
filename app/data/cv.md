@@ -10,8 +10,8 @@ Comfortable owning features from database to UI: REST and GraphQL API design, Po
 
 ## CORE COMPETENCIES
 - **Frontend:** React, Next.js (App Router, Server Actions), TypeScript, JavaScript (ES6+), Zustand, Zod, Tailwind CSS, SASS, Micro-frontends (Module Federation), Core Web Vitals.
-- **Backend & APIs:** Node.js, Express.js, REST API Design, GraphQL, Java (BFF), PHP, Laravel, Prisma, Drizzle, Python, FastAPI.
-- **Cloud, Data & DevOps:** AWS, GCP, Oracle Cloud (OCI), PostgreSQL, SQL, Supabase, RabbitMQ, Docker, GitHub Actions, CI/CD, Cloudflare, Vercel, Git.
+- **Backend & APIs:** Node.js, Express.js, REST API Design, GraphQL, Java (BFF), PHP, Laravel, Prisma, Drizzle, LLM APIs (OpenRouter), Electron, Python, FastAPI.
+- **Cloud, Data & DevOps:** AWS, GCP, Oracle Cloud (OCI), PostgreSQL, SQL, SQLite, Supabase, RabbitMQ, Docker, GitHub Actions, CI/CD, Cloudflare, Vercel, Git.
 - **Testing:** Jest, Cypress, React Testing Library, Storybook.
 - **Leadership & Product:** Technical Roadmaps, Agile/Scrum (PO experience), Stakeholder Management, Mentoring, Data/BI Dashboards, AI-Assisted Workflows (Claude, Cursor, Copilot).
 - **Languages:** Portuguese (Native), English (C2 Proficient - EF SET), Spanish (Intermediate).
@@ -48,11 +48,12 @@ Comfortable owning features from database to UI: REST and GraphQL API design, Po
 
 ## SELECTED PROJECTS
 
+**BakaSub (bakasub.silvatti.com.br)** | 2026 - Present
+- Open-source desktop app (Electron, React, TypeScript, Node.js) that extracts, AI-translates and re-muxes .mkv subtitles. Shipped through v1.0.6 with auto-updates and Windows/Linux installers.
+- AST-based subtitle parsers send only text to the LLM, with Zod-validated output and retries, a SQLite (Drizzle) translation cache, a job queue with safe child-process shutdown, and 140+ test files (Vitest).
+
 **Autoria Marginal (autoriamarginal.com.br)** | July 2026
 - Full-stack web application distributing an illustrated copyright guide. Built with Next.js (App Router), TypeScript and Server Actions, with end-to-end type safety and Zod schema validation; database and analytics on Supabase (PostgreSQL).
-
-**Jornada da Psique (ajornadadapsique.com.br)** | 2026
-- Content platform built with Next.js and Sanity headless CMS, with dynamic JSON-LD structured data for technical SEO.
 
 ## EDUCATION
 **Bachelor of Computer Science** | São Paulo State University (UNESP)  

@@ -46,6 +46,10 @@ Experiência em gestão de backlog, definição de requisitos, cerimônias ágei
 
 ## PROJETOS SELECIONADOS
 
+**BakaSub (bakasub.silvatti.com.br)** | 2026 - Atual
+- Idealizou, construiu e lançou um aplicativo desktop open source que traduz legendas de vídeo com IA, publicado até a v1.0.6 com atualização automática, site público e guia do usuário.
+- Decisões de produto centradas em custo e confiança do usuário: estimativa de custo antes de cada job, cache local que torna o reprocessamento quase gratuito, e nenhuma conta ou telemetria.
+
 **Autoria Marginal (autoriamarginal.com.br)** | Julho 2026
 - Idealizou e gerenciou o ciclo de vida completo de uma plataforma digital para artistas independentes, definindo escopo do MVP, estratégia go-to-market e roadmap de execução.
 

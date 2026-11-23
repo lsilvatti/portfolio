@@ -6,12 +6,12 @@ LinkedIn: [linkedin.com/in/lsilvatti](https://linkedin.com/in/lsilvatti) • Git
 ## RESUMO PROFISSIONAL
 Engenheiro de Software Full Stack Sênior e Tech Lead com 7 anos de experiência construindo plataformas web de alto tráfego com React, Next.js, TypeScript e Node.js, com deploy em AWS e GCP. Participou da migração de uma plataforma com 26M de usuários de um monólito PHP para React com novas APIs backend, entregou de ponta a ponta uma feature de monetização que aumentou a receita mensal em 20% e liderou um time de 6 engenheiros como Tech Lead e Product Owner.
 
-Atua do banco de dados à UI: desenho de APIs REST e GraphQL, PostgreSQL, micro-frontends, Core Web Vitals e CI/CD. Trabalha próximo de produto e negócio para transformar objetivos em roadmaps técnicos.
+Atua do banco de dados à UI (APIs REST e GraphQL, PostgreSQL, micro-frontends, Core Web Vitals, CI/CD), em parceria próxima com produto e negócio.
 
 ## COMPETÊNCIAS PRINCIPAIS
 - **Frontend:** React, Next.js (App Router, Server Actions), TypeScript, JavaScript (ES6+), Zustand, Zod, Tailwind CSS, SASS, Micro-frontends (Module Federation), Core Web Vitals.
-- **Backend & APIs:** Node.js, Express.js, Desenho de APIs REST, GraphQL, Java (BFF), PHP, Laravel, Prisma, Drizzle, Python, FastAPI.
-- **Cloud, Dados & DevOps:** AWS, GCP, Oracle Cloud (OCI), PostgreSQL, SQL, Supabase, RabbitMQ, Docker, GitHub Actions, CI/CD, Cloudflare, Vercel, Git.
+- **Backend & APIs:** Node.js, Express.js, Desenho de APIs REST, GraphQL, Java (BFF), PHP, Laravel, Prisma, Drizzle, APIs de LLM (OpenRouter), Electron, Python, FastAPI.
+- **Cloud, Dados & DevOps:** AWS, GCP, Oracle Cloud (OCI), PostgreSQL, SQL, SQLite, Supabase, RabbitMQ, Docker, GitHub Actions, CI/CD, Cloudflare, Vercel, Git.
 - **Testes:** Jest, Cypress, React Testing Library, Storybook.
 - **Liderança & Produto:** Roadmaps Técnicos, Agile/Scrum (Experiência como PO), Gestão de Stakeholders, Mentoria, Dashboards de Dados/BI, Fluxos de Trabalho Assistidos por IA (Claude, Cursor, Copilot).
 - **Idiomas:** Português (Nativo), Inglês (Proficiente C2 - EF SET), Espanhol (Intermediário).
@@ -48,11 +48,12 @@ Atua do banco de dados à UI: desenho de APIs REST e GraphQL, PostgreSQL, micro-
 
 ## PROJETOS SELECIONADOS
 
-**Autoria Marginal (autoriamarginal.com.br)** | Julho 2026
-- Aplicação web full stack para distribuição de um guia ilustrado de direitos autorais. Construída com Next.js (App Router), TypeScript e Server Actions, com tipagem end-to-end e validação de schemas com Zod; banco de dados e analytics no Supabase (PostgreSQL).
+**BakaSub (bakasub.silvatti.com.br)** | 2026 - Atual
+- App desktop open source (Electron, React, TypeScript, Node.js) que extrai, traduz com IA e reinsere legendas em vídeos .mkv; publicado até a v1.0.6 para Windows e Linux.
+- Parsers de legenda baseados em AST enviam só o texto ao LLM, com saída validada por Zod e retentativas, cache de traduções em SQLite (Drizzle), fila de jobs com encerramento seguro de processos e mais de 140 arquivos de teste (Vitest).
 
-**Jornada da Psique (ajornadadapsique.com.br)** | 2026
-- Plataforma de conteúdo com Next.js e Sanity (headless CMS), com dados estruturados dinâmicos (JSON-LD) para SEO técnico.
+**Autoria Marginal (autoriamarginal.com.br)** | Julho 2026
+- Guia ilustrado de direitos autorais com Next.js (App Router), Server Actions, Zod e Supabase (PostgreSQL).
 
 ## FORMAÇÃO ACADÊMICA
 **Bacharelado em Ciência da Computação** | Universidade Estadual Paulista (UNESP)  

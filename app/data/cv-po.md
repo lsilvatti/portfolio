@@ -46,6 +46,10 @@ Experienced in backlog management, requirements definition, agile ceremonies and
 
 ## SELECTED PROJECTS
 
+**BakaSub (bakasub.silvatti.com.br)** | 2026 - Present
+- Conceived, built and launched an open-source desktop app that translates video subtitles with AI, shipped through v1.0.6 with auto-updates, a public website and a user guide.
+- Product decisions centered on user cost and trust: a cost estimate before every job, a local translation cache that makes reprocessing nearly free, and no account or telemetry.
+
 **Autoria Marginal (autoriamarginal.com.br)** | July 2026
 - Conceived and managed the full product lifecycle of a digital platform for independent artists, defining MVP scope, go-to-market strategy and execution roadmap.
 
