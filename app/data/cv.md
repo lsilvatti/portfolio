@@ -1,58 +1,59 @@
 # Leonardo Silvatti Silva
-**Senior Full Stack Engineer | Tech Lead**
-Location: Bauru, SP, Brazil (GMT-3) • Phone: +55 14 99678-3741 • Email: leonardo@silvatti.com.br
+**Senior Full Stack Engineer | Tech Lead**  
+Location: Bauru, SP, Brazil (GMT-3) • Open to Remote • Email: leonardo@silvatti.com.br  
 LinkedIn: [linkedin.com/in/lsilvatti](https://linkedin.com/in/lsilvatti) • GitHub: [github.com/lsilvatti](https://github.com/lsilvatti) • Portfolio: [leonardo.silvatti.com.br](https://leonardo.silvatti.com.br)
 
 ## PROFESSIONAL SUMMARY
-Senior Full Stack Engineer and Tech Lead with 7 years of experience building scalable, high-traffic web platforms and designing end-to-end architectures. Proficient across the stack, combining deep expertise in the React ecosystem (Next.js, TypeScript) with solid backend experience designing RESTful and GraphQL APIs using Node.js, Express, PHP, and Java BFFs.
+Senior Full Stack Engineer and Tech Lead with 7 years of experience building high-traffic web platforms with React, Next.js, TypeScript and Node.js, deployed on AWS and GCP. Helped migrate a 26M-user platform from a PHP monolith to React with new backend APIs, shipped a monetization feature end-to-end that grew monthly revenue by 20%, and led a team of 6 engineers as Tech Lead & Product Owner.
 
-Track record of leading complex system migrations, driving product monetization features from database to UI, and managing cross-functional technical roadmaps. Adept at bridging the gap between engineering, product, and business goals to deliver robust applications with high performance, strict type safety, and conversion rates.
+Comfortable owning features from database to UI: REST and GraphQL API design, PostgreSQL, micro-frontends, Core Web Vitals and CI/CD. Works closely with product and business stakeholders to turn goals into technical roadmaps.
 
 ## CORE COMPETENCIES
-- **Backend, APIs & ORMs:** Python, FastAPI, Node.js, Express.js, PHP, Laravel, Java (BFF), REST API Design, GraphQL, Prisma, Drizzle, Server Actions.
-- **Frontend:** React, Next.js (App Router), TypeScript, JavaScript (ES6+), Zustand, Zod, Tailwind CSS, SASS, Core Web Vitals, Micro-frontends (Module Federation).
-- **Databases & DevOps:** PostgreSQL, SQL, Supabase, RabbitMQ, Docker, GitHub Actions, Cloudflare, Vercel, CI/CD, Git.
+- **Frontend:** React, Next.js (App Router, Server Actions), TypeScript, JavaScript (ES6+), Zustand, Zod, Tailwind CSS, SASS, Micro-frontends (Module Federation), Core Web Vitals.
+- **Backend & APIs:** Node.js, Express.js, REST API Design, GraphQL, Java (BFF), PHP, Laravel, Prisma, Drizzle, Python, FastAPI.
+- **Cloud, Data & DevOps:** AWS, GCP, Oracle Cloud (OCI), PostgreSQL, SQL, Supabase, RabbitMQ, Docker, GitHub Actions, CI/CD, Cloudflare, Vercel, Git.
+- **Testing:** Jest, Cypress, React Testing Library, Storybook.
 - **Leadership & Product:** Technical Roadmaps, Agile/Scrum (PO experience), Stakeholder Management, Mentoring, Data/BI Dashboards, AI-Assisted Workflows (Claude, Cursor, Copilot).
 - **Languages:** Portuguese (Native), English (C2 Proficient - EF SET), Spanish (Intermediate).
 
 ## PROFESSIONAL EXPERIENCE
 
-**Trustly** | Remote / Brazil
+**Trustly** | Remote / Brazil  
 **Senior Software Engineer (Full Stack)** | May 2026 - September 2026
-- Engineered the core B2B2C payment gateway using React and a Java Backend-for-Frontend (BFF), operating across the full stack to support transaction flows processing over 1.3 billion monthly operations.
-- Collaborated directly with Product Owners, Risk teams, and Core Backend engineers to architect and implement a new product layout, migrating existing screens to modern technologies to boost user conversion and retention.
-- Improved checkout flow performance and Core Web Vitals (LCP and CLS) by 15%, ensuring stability across 9,000+ merchant partners.
+- Built and shipped features on the core B2B2C payment gateway using React and a Java Backend-for-Frontend (BFF), working across the full stack on transaction flows that process 1.3B+ operations per month.
+- Partnered with Product Owners, Risk and Core Backend teams to implement a new product layout, migrating existing screens to a modern stack to improve user conversion and retention.
+- Improved checkout flow performance, raising Core Web Vitals (LCP and CLS) by 15% for an experience used across 9,000+ merchant partners.
 - Set up automated testing pipelines (GitHub Actions, Jest, Cypress), catching critical regressions in financial flows before production.
 
-**eSapiens Technology** | Remote / Brazil
+**eSapiens Tecnologia** | Remote / Brazil  
 **Tech Lead & Product Owner** | January 2025 - February 2026
-- Led a cross-functional team of 6 engineers, managing the technical roadmap, backlog planning, dailies, and 1:1s. 
-- Acted as PO and Tech Lead, building BI dashboards for data-driven product decisions and reporting directly to stakeholders while maintaining hands-on coding duties.
-- Introduced AI-assisted development tools (Claude and Cursor), cutting down repetitive tasks and increasing the team's delivery velocity by 15%.
+- Led a cross-functional team of 6 engineers, owning the technical roadmap, backlog planning, dailies and 1:1s.
+- Combined PO and Tech Lead duties, building BI dashboards for data-driven product decisions and reporting directly to stakeholders while staying hands-on in the codebase.
+- Introduced AI-assisted development tools (Claude and Cursor), reducing repetitive work and increasing the team's delivery velocity by 15%.
 
 **Senior Full Stack Engineer** | July 2021 - January 2025
-- Architected and developed a core monetization feature (One-Time Sale) end-to-end, writing the React frontend, building the backend API, and creating the administrative panel for dynamic content. This initiative directly increased monthly revenue by 20%.
-- Played a key role in migrating a massive platform (serving 26M+ users) from a legacy PHP monolith to a modern React stack by actively planning the architecture and building the new backend APIs.
-- Migrated a major lifestyle platform (15k+ MAU) from PHP to React and Next.js. Engineered the bridge between the React app and Next.js SEO pages using Module Federation, and built a shared UI component library to ensure visual consistency.
+- Designed and built a core monetization feature (One-Time Sale) end-to-end: React frontend, backend API and an admin panel for dynamic content. The feature increased monthly revenue by 20%.
+- Helped plan and execute the migration of a 26M+ user platform from a legacy PHP monolith to React, building the new backend APIs deployed on Google Cloud Platform (GCP).
+- Migrated a lifestyle platform (15k+ MAU) from PHP to React and Next.js, bridging the React app and Next.js SEO pages with Module Federation, and built a shared UI component library used across products.
 
-**Alternativa Systems** | Bauru, Brazil
+**Alternativa Sistemas** | Bauru, Brazil  
 **Software Engineer** | March 2021 - July 2021
-- Built the cloud-based MVP of a desktop ERP system using React, transforming a legacy Vue prototype into a scalable web product that streamlined workflows for 100+ enterprise clients.
-- Designed the REST API data contracts and integrated RabbitMQ messaging queues, ensuring asynchronous data processing with zero data loss.
+- Built the cloud-based MVP of a desktop ERP system in React, turning a legacy Vue prototype into a web product deployed on AWS that serves 100+ enterprise clients.
+- Designed the REST API data contracts and integrated RabbitMQ message queues for reliable asynchronous processing.
 
-**Cocreare** | Bauru, Brazil
+**Cocreare** | Bauru, Brazil  
 **Full Stack Developer** | January 2020 - March 2021
-- Developed and deployed responsive applications across the full stack using Laravel, Node.js, Express.js, and React, delivering 10+ high-impact client projects on schedule.
-- Built and launched "Bombarco," a virtual boat fair platform deployed during the lockdown, successfully handling 30,000+ views and securing digital sales in a new market segment.
+- Developed and deployed responsive applications across the full stack with Laravel, Node.js, Express.js and React, delivering 10+ client projects on schedule.
+- Built and launched "Bombarco," a virtual boat fair platform released during the 2020 lockdown, which reached 30,000+ views and enabled digital sales in a new market segment.
 
 ## SELECTED PROJECTS
 
 **Autoria Marginal (autoriamarginal.com.br)** | July 2026
-- Full-stack web application distributing an illustrated copyright guide. Built with Next.js (App Router), TypeScript, and Server Actions for backend logic. Implemented end-to-end type safety and schema validation with Zod, handling database operations and analytics with Supabase.
+- Full-stack web application distributing an illustrated copyright guide. Built with Next.js (App Router), TypeScript and Server Actions, with end-to-end type safety and Zod schema validation; database and analytics on Supabase (PostgreSQL).
 
 **Jornada da Psique (ajornadadapsique.com.br)** | 2026
-- Content platform with Next.js and Sanity headless CMS. Implemented dynamic JSON-LD structured data for technical SEO.
+- Content platform built with Next.js and Sanity headless CMS, with dynamic JSON-LD structured data for technical SEO.
 
 ## EDUCATION
-**Bachelor of Computer Science** | São Paulo State University (UNESP)
-Bauru, Brazil | Graduated: 2022
+**Bachelor of Computer Science** | São Paulo State University (UNESP)  
+Bauru, Brazil | 2016 - 2022
