@@ -9,7 +9,7 @@ Engenheiro de Software Full Stack Sênior e Tech Lead com 7 anos de experiência
 Atua do banco de dados à UI (APIs REST e GraphQL, PostgreSQL, micro-frontends, Core Web Vitals, CI/CD), em parceria próxima com produto e negócio.
 
 ## COMPETÊNCIAS PRINCIPAIS
-- **Frontend:** React, Next.js (App Router, Server Actions), TypeScript, JavaScript (ES6+), Zustand, Zod, Tailwind CSS, SASS, Micro-frontends (Module Federation), Core Web Vitals.
+- **Frontend & Mobile:** React, Next.js (App Router, Server Actions), React Native (Expo), TypeScript, JavaScript (ES6+), Zustand, Zod, Tailwind CSS, SASS, Micro-frontends (Module Federation), Core Web Vitals.
 - **Backend & APIs:** Node.js, Express.js, Desenho de APIs REST, GraphQL, Java (BFF), PHP, Laravel, Prisma, Drizzle, APIs de LLM (OpenRouter), Electron, Python, FastAPI.
 - **Cloud, Dados & DevOps:** AWS, GCP, Oracle Cloud (OCI), PostgreSQL, SQL, SQLite, Supabase, RabbitMQ, Docker, GitHub Actions, CI/CD, Cloudflare, Vercel, Git.
 - **Testes:** Jest, Cypress, React Testing Library, Storybook.
@@ -32,9 +32,10 @@ Atua do banco de dados à UI (APIs REST e GraphQL, PostgreSQL, micro-frontends, 
 - Introduziu ferramentas de desenvolvimento assistidas por IA (Claude e Cursor), reduzindo trabalho repetitivo e aumentando a velocidade de entrega do time em 15%.
 
 **Engenheiro de Software Full Stack Sênior** | Julho 2021 - Janeiro 2025
-- Desenhou e construiu de ponta a ponta uma feature core de monetização (One-Time Sale): frontend em React, API backend e painel administrativo para conteúdo dinâmico. A feature aumentou a receita mensal em 20%.
+- Criou do zero, com design e produto, uma nova fonte de receita: venda avulsa de guias (One-Time Sale) ao lado do modelo de assinatura. Entregou o frontend em React e o painel administrativo, e construiu a API em Go junto ao time de backend. A receita mensal cresceu 20%.
 - Ajudou a planejar e executar a migração de uma plataforma com mais de 26M de usuários de um monólito legado em PHP para React, construindo as novas APIs backend com deploy no Google Cloud Platform (GCP).
-- Migrou uma plataforma de lifestyle (15k+ MAU) de PHP para React e Next.js, conectando a aplicação React às páginas SEO em Next.js com Module Federation, e construiu uma biblioteca de componentes UI compartilhada entre produtos.
+- Migrou uma plataforma de lifestyle (15k+ MAU) de PHP para React e Next.js com Module Federation, e construiu uma biblioteca de componentes UI compartilhada entre produtos.
+- Atuou no app em React Native (Expo), que combinava telas nativas e wrappers em WebView, entregando notificações push nativas e deep links que abrem o conteúdo direto no app.
 
 **Alternativa Sistemas** | Bauru, Brasil  
 **Engenheiro de Software** | Março 2021 - Julho 2021
@@ -56,5 +57,4 @@ Atua do banco de dados à UI (APIs REST e GraphQL, PostgreSQL, micro-frontends, 
 - Guia ilustrado de direitos autorais com Next.js (App Router), Server Actions, Zod e Supabase (PostgreSQL).
 
 ## FORMAÇÃO ACADÊMICA
-**Bacharelado em Ciência da Computação** | Universidade Estadual Paulista (UNESP)  
-Bauru, SP, Brasil | 2016 - 2022
+**Bacharelado em Ciência da Computação** | Universidade Estadual Paulista (UNESP), Bauru | 2016 - 2022

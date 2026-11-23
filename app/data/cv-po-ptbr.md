@@ -12,7 +12,7 @@ Experiência em gestão de backlog, definição de requisitos, cerimônias ágei
 - **Gestão de Produto:** Product Discovery, Gestão de Backlog, Roadmap de Produto, Definição de Requisitos, Histórias de Usuário (BDD/Gherkin), MVPs, KPIs, Testes A/B.
 - **Agilidade e Ferramentas:** Scrum, Kanban, Ritos Ágeis (Planning, Daily, Retro, Review), Jira, Confluence, Trello.
 - **Liderança e Negócios:** Gestão de Stakeholders, Liderança de Squads, 1:1s e Plano de Carreira, Resolução de Conflitos, Decisões Orientadas a Dados, Dashboards de BI.
-- **Background Técnico:** Arquitetura de Software, React/Next.js, TypeScript, Node.js, APIs REST e GraphQL, SQL/PostgreSQL, AWS, GCP, CI/CD.
+- **Background Técnico:** Arquitetura de Software, React/Next.js, React Native, TypeScript, Node.js, APIs REST e GraphQL, SQL/PostgreSQL, AWS, GCP, CI/CD.
 - **Idiomas:** Português (Nativo), Inglês (Proficiente C2 - EF SET), Espanhol (Intermediário).
 
 ## EXPERIÊNCIA PROFISSIONAL
@@ -31,7 +31,7 @@ Experiência em gestão de backlog, definição de requisitos, cerimônias ágei
 - Introduziu ferramentas de IA no fluxo de trabalho (Claude e Cursor), aumentando a velocidade de entrega do time em 15%.
 
 **Engenheiro de Software Full Stack Sênior (Foco em Produto)** | Julho 2021 - Janeiro 2025
-- Idealizou e liderou de ponta a ponta o desenvolvimento de uma feature core de monetização (One-Time Sale), alinhando estratégia de negócio e engenharia, com aumento de 20% na receita mensal.
+- Criou com design e produto uma nova fonte de receita: venda avulsa de guias (One-Time Sale) ao lado do modelo de assinatura. Conduziu a entrega da descoberta ao lançamento, entre frontend e o time de backend em Go; a receita mensal cresceu 20%.
 - Ajudou a planejar e executar a migração de uma rede social (26M+ usuários) e da plataforma Astrolink (15k+ MAU) para uma stack moderna, com foco em retenção de usuários, SEO e Core Web Vitals.
 
 **Alternativa Sistemas** | Bauru, Brasil  
@@ -57,5 +57,4 @@ Experiência em gestão de backlog, definição de requisitos, cerimônias ágei
 - Construiu uma plataforma de conteúdo focada em aquisição orgânica, com CMS headless e SEO técnico, e definiu métricas base de engajamento e retenção.
 
 ## FORMAÇÃO ACADÊMICA
-**Bacharelado em Ciência da Computação** | Universidade Estadual Paulista (UNESP)  
-Bauru, SP, Brasil | 2016 - 2022
+**Bacharelado em Ciência da Computação** | Universidade Estadual Paulista (UNESP), Bauru | 2016 - 2022

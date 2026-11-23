@@ -9,7 +9,7 @@ Senior Frontend Engineer and Tech Lead with 7 years of experience building high-
 Focused on performance, accessibility and maintainable UI architecture: micro-frontends, shared component libraries, technical SEO and automated testing. Comfortable across the stack (Node.js, REST/GraphQL, AWS/GCP) and experienced leading a team of 6 engineers.
 
 ## CORE COMPETENCIES
-- **Frontend Core:** React, Next.js (App Router), TypeScript, JavaScript (ES6+), Zustand, TanStack Query, Electron.
+- **Frontend Core:** React, Next.js (App Router), React Native (Expo), TypeScript, JavaScript (ES6+), Zustand, TanStack Query, Electron.
 - **UI Architecture & Styling:** Micro-frontends (Module Federation), Design Systems, Component Libraries, Tailwind CSS, SASS, CSS Modules, Responsive Design.
 - **Web Performance & Quality:** Core Web Vitals (LCP, CLS, INP), Technical SEO (JSON-LD), Accessibility (WCAG).
 - **Testing & Tooling:** Jest, Cypress, React Testing Library, Storybook, Vite, Webpack.
@@ -35,7 +35,8 @@ Focused on performance, accessibility and maintainable UI architecture: micro-fr
 - Helped migrate a social network platform (26M+ users) from a legacy PHP architecture to React, handling heavy media rendering and UI performance under high traffic.
 - Migrated the Astrolink platform (15k+ MAU) to React and Next.js, bridging the client-side React app and Next.js SEO pages with Webpack Module Federation.
 - Created and maintained a reusable, accessible UI component library with TypeScript and SASS, standardizing the design system across multiple company products.
-- Built the frontend architecture of a core monetization feature (One-Time Sale) from concept to launch, contributing to a 20% increase in monthly revenue.
+- Built from scratch, with design and product, the frontend and admin panel of a new revenue stream (one-time sales of guides alongside subscriptions), integrating a Go API co-built with the backend team. Monthly revenue grew 20%.
+- Worked on the React Native (Expo) app, combining native screens with WebView wrappers, and delivered native push notifications and deep links into the app.
 
 **Alternativa Sistemas** | Bauru, Brazil  
 **Software Engineer (Frontend)** | March 2021 - July 2021
@@ -58,9 +59,5 @@ Focused on performance, accessibility and maintainable UI architecture: micro-fr
 **Autoria Marginal (autoriamarginal.com.br)** | July 2026
 - Web application distributing an illustrated copyright guide, built with Next.js (App Router), TypeScript and Tailwind CSS, with a responsive and accessible interface.
 
-**Jornada da Psique (ajornadadapsique.com.br)** | 2026
-- Content platform and blog built with Next.js, Tailwind CSS and a headless CMS, with dynamic JSON-LD structured data for technical SEO.
-
 ## EDUCATION
-**Bachelor of Computer Science** | São Paulo State University (UNESP)  
-Bauru, Brazil | 2016 - 2022
+**Bachelor of Computer Science** | São Paulo State University (UNESP), Bauru | 2016 - 2022

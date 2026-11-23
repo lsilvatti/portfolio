@@ -12,7 +12,7 @@ Experienced in backlog management, requirements definition, agile ceremonies and
 - **Product Management:** Product Discovery, Backlog Management, Product Roadmap, Requirements Definition, User Stories (BDD/Gherkin), MVPs, KPIs, A/B Testing.
 - **Agile & Tools:** Scrum, Kanban, Agile Ceremonies (Planning, Daily, Retro, Review), Jira, Confluence, Trello.
 - **Leadership & Business:** Stakeholder Management, Squad Leadership, 1:1s & Career Planning, Conflict Resolution, Data-Driven Decisions, BI Dashboards.
-- **Technical Background:** Software Architecture, React/Next.js, TypeScript, Node.js, REST & GraphQL APIs, SQL/PostgreSQL, AWS, GCP, CI/CD.
+- **Technical Background:** Software Architecture, React/Next.js, React Native, TypeScript, Node.js, REST & GraphQL APIs, SQL/PostgreSQL, AWS, GCP, CI/CD.
 - **Languages:** Portuguese (Native), English (C2 Proficient - EF SET), Spanish (Intermediate).
 
 ## PROFESSIONAL EXPERIENCE
@@ -31,7 +31,7 @@ Experienced in backlog management, requirements definition, agile ceremonies and
 - Introduced AI-assisted tools (Claude and Cursor), streamlining workflows and increasing the squad's delivery velocity by 15%.
 
 **Senior Full Stack Engineer (Product Focus)** | July 2021 - January 2025
-- Conceived and led the end-to-end development of a core monetization feature (One-Time Sale), aligning business strategy and engineering execution, resulting in a 20% increase in monthly revenue.
+- Created with design and product a new revenue stream: one-time sales of guides (One-Time Sale) alongside the subscription model. Led delivery from discovery to launch across frontend and the Go backend team; monthly revenue grew 20%.
 - Helped plan and execute the migration of a social network (26M+ users) and the Astrolink platform (15k+ MAU) to a modern stack, focusing on user retention, SEO and Core Web Vitals.
 
 **Alternativa Sistemas** | Bauru, Brazil  
@@ -57,5 +57,4 @@ Experienced in backlog management, requirements definition, agile ceremonies and
 - Built a content platform focused on organic acquisition, with a headless CMS and technical SEO, and set baseline metrics for engagement and retention.
 
 ## EDUCATION
-**Bachelor of Computer Science** | São Paulo State University (UNESP)  
-Bauru, SP, Brazil | 2016 - 2022
+**Bachelor of Computer Science** | São Paulo State University (UNESP), Bauru | 2016 - 2022

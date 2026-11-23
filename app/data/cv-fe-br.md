@@ -9,7 +9,7 @@ Engenheiro Frontend Sênior e Tech Lead com 7 anos de experiência construindo a
 Foco em performance, acessibilidade e arquitetura de UI: micro-frontends, bibliotecas de componentes, SEO técnico e testes automatizados, com vivência em Node.js, REST/GraphQL e AWS/GCP.
 
 ## COMPETÊNCIAS PRINCIPAIS
-- **Frontend Core:** React, Next.js (App Router), TypeScript, JavaScript (ES6+), Zustand, TanStack Query, Electron.
+- **Frontend Core:** React, Next.js (App Router), React Native (Expo), TypeScript, JavaScript (ES6+), Zustand, TanStack Query, Electron.
 - **Arquitetura de UI e Estilização:** Micro-frontends (Module Federation), Design Systems, Bibliotecas de Componentes, Tailwind CSS, SASS, CSS Modules, Design Responsivo.
 - **Performance Web e Qualidade:** Core Web Vitals (LCP, CLS, INP), SEO Técnico (JSON-LD), Acessibilidade (WCAG).
 - **Testes e Ferramentas:** Jest, Cypress, React Testing Library, Storybook, Vite, Webpack.
@@ -35,7 +35,8 @@ Foco em performance, acessibilidade e arquitetura de UI: micro-frontends, biblio
 - Participou da migração de uma rede social (+26M de usuários) de uma arquitetura legada em PHP para React, lidando com renderização de mídia pesada e performance de UI sob alto tráfego.
 - Migrou a plataforma Astrolink (+15k usuários ativos mensais) para React e Next.js, conectando a aplicação React (client-side) às páginas de SEO em Next.js com Webpack Module Federation.
 - Criou e manteve uma biblioteca de componentes UI reutilizável e acessível com TypeScript e SASS, padronizando o design system em vários produtos da empresa.
-- Construiu a arquitetura frontend de uma feature core de monetização (One-Time Sale) do conceito ao lançamento, contribuindo para um aumento de 20% na receita mensal.
+- Construiu do zero, com design e produto, o frontend e o painel administrativo de uma nova fonte de receita (venda avulsa de guias ao lado da assinatura), integrando uma API em Go feita junto ao time de backend. A receita mensal cresceu 20%.
+- Atuou no app em React Native (Expo), com telas nativas e wrappers em WebView, entregando notificações push nativas e deep links para o app.
 
 **Alternativa Sistemas** | Bauru, Brasil  
 **Engenheiro de Software (Frontend)** | Março 2021 - Julho 2021
@@ -59,5 +60,4 @@ Foco em performance, acessibilidade e arquitetura de UI: micro-frontends, biblio
 - Guia ilustrado de direitos autorais com Next.js (App Router), TypeScript e Tailwind CSS, com interface responsiva e acessível.
 
 ## FORMAÇÃO ACADÊMICA
-**Bacharelado em Ciência da Computação** | Universidade Estadual Paulista (UNESP)  
-Bauru, SP, Brasil | 2016 - 2022
+**Bacharelado em Ciência da Computação** | Universidade Estadual Paulista (UNESP), Bauru | 2016 - 2022
