@@ -10,10 +10,10 @@ Comfortable owning features from database to UI: REST and GraphQL API design, Po
 
 ## CORE COMPETENCIES
 - **Frontend & Mobile:** React, Next.js (App Router, Server Actions), React Native (Expo), TypeScript, JavaScript (ES6+), Zustand, Zod, Tailwind CSS, SASS, Micro-frontends (Module Federation), Core Web Vitals.
-- **Backend & APIs:** Node.js, Express.js, REST API Design, GraphQL, Java (BFF), PHP, Laravel, Prisma, Drizzle, LLM APIs (OpenRouter), Electron, Python, FastAPI.
+- **Backend & APIs:** Node.js, Express.js, REST API Design, GraphQL, Authentication (OAuth, JWT), RBAC, Java (BFF), PHP, Laravel, Prisma, Drizzle, LLM APIs (OpenRouter), Electron, Python, FastAPI.
 - **Cloud, Data & DevOps:** AWS, GCP, Oracle Cloud (OCI), PostgreSQL, SQL, SQLite, Supabase, RabbitMQ, Docker, GitHub Actions, CI/CD, Cloudflare, Vercel, Git.
 - **Testing:** Jest, Cypress, React Testing Library, Storybook.
-- **Leadership & Product:** Technical Roadmaps, Agile/Scrum (PO experience), Stakeholder Management, Mentoring, Data/BI Dashboards, AI-Assisted Workflows (Claude, Cursor, Copilot).
+- **Leadership & Product:** Technical Roadmaps, Agile/Scrum (PO experience), Stakeholder Management, Mentoring, Data/BI Dashboards, Feature Flags & A/B Testing, AI-Assisted Workflows (Claude, Cursor, Copilot).
 - **Languages:** Portuguese (Native), English (C2 Proficient - EF SET), Spanish (Intermediate).
 
 ## PROFESSIONAL EXPERIENCE
@@ -29,11 +29,13 @@ Comfortable owning features from database to UI: REST and GraphQL API design, Po
 **Tech Lead & Product Owner** | January 2025 - February 2026
 - Led a cross-functional team of 6 engineers, owning the technical roadmap, backlog planning, dailies and 1:1s.
 - Combined PO and Tech Lead duties, building BI dashboards for data-driven product decisions and reporting directly to stakeholders while staying hands-on in the codebase.
+- Ran releases and A/B tests through an in-house feature flag system, documenting specs and decisions in Confluence.
 - Introduced AI-assisted development tools (Claude and Cursor), reducing repetitive work and increasing the team's delivery velocity by 15%.
 
 **Senior Full Stack Engineer** | July 2021 - January 2025
-- Built a new revenue stream from scratch with design and product: one-time sales of guides (One-Time Sale) alongside the subscription model. Delivered the React frontend and admin panel and co-built the backend API in Go with the backend team. Monthly revenue grew 20%.
+- Built a new revenue stream from scratch with design and product: one-time sales of guides (One-Time Sale) alongside the subscription model. Delivered the React frontend and an admin panel with role-based access control, and co-built the backend API in Go with the backend team. Monthly revenue grew 20%.
 - Helped plan and execute the migration of a 26M+ user platform from a legacy PHP monolith to React, building the new backend APIs deployed on Google Cloud Platform (GCP).
+- Rebuilt that platform's login page and full authentication flow (OAuth, JWT), profiling and debugging performance and SEO issues to fix bottlenecks.
 - Migrated a lifestyle platform (15k+ MAU) from PHP to React and Next.js using Module Federation, and built a shared UI component library used across products.
 - Worked on the React Native (Expo) app, which combined native screens with WebView wrappers, delivering native push notifications and deep links that open content directly in the app.
 
@@ -52,9 +54,6 @@ Comfortable owning features from database to UI: REST and GraphQL API design, Po
 **BakaSub (bakasub.silvatti.com.br)** | 2026 - Present
 - Open-source desktop app (Electron, React, TypeScript, Node.js) that extracts, AI-translates and re-muxes .mkv subtitles. Shipped through v1.0.6 with auto-updates and Windows/Linux installers.
 - AST-based subtitle parsers send only text to the LLM, with Zod-validated output and retries, a SQLite (Drizzle) translation cache, a job queue with safe child-process shutdown, and 140+ test files (Vitest).
-
-**Autoria Marginal (autoriamarginal.com.br)** | July 2026
-- Full-stack web application distributing an illustrated copyright guide. Built with Next.js (App Router), TypeScript and Server Actions, with end-to-end type safety and Zod schema validation; database and analytics on Supabase (PostgreSQL).
 
 ## EDUCATION
 **Bachelor of Computer Science** | São Paulo State University (UNESP), Bauru | 2016 - 2022

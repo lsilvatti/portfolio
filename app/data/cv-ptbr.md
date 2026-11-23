@@ -10,10 +10,10 @@ Atua do banco de dados à UI (APIs REST e GraphQL, PostgreSQL, micro-frontends, 
 
 ## COMPETÊNCIAS PRINCIPAIS
 - **Frontend & Mobile:** React, Next.js (App Router, Server Actions), React Native (Expo), TypeScript, JavaScript (ES6+), Zustand, Zod, Tailwind CSS, SASS, Micro-frontends (Module Federation), Core Web Vitals.
-- **Backend & APIs:** Node.js, Express.js, Desenho de APIs REST, GraphQL, Java (BFF), PHP, Laravel, Prisma, Drizzle, APIs de LLM (OpenRouter), Electron, Python, FastAPI.
+- **Backend & APIs:** Node.js, Express.js, Desenho de APIs REST, GraphQL, Autenticação (OAuth, JWT), RBAC, Java (BFF), PHP, Laravel, Prisma, Drizzle, APIs de LLM (OpenRouter), Electron, Python, FastAPI.
 - **Cloud, Dados & DevOps:** AWS, GCP, Oracle Cloud (OCI), PostgreSQL, SQL, SQLite, Supabase, RabbitMQ, Docker, GitHub Actions, CI/CD, Cloudflare, Vercel, Git.
 - **Testes:** Jest, Cypress, React Testing Library, Storybook.
-- **Liderança & Produto:** Roadmaps Técnicos, Agile/Scrum (Experiência como PO), Gestão de Stakeholders, Mentoria, Dashboards de Dados/BI, Fluxos de Trabalho Assistidos por IA (Claude, Cursor, Copilot).
+- **Liderança & Produto:** Roadmaps Técnicos, Agile/Scrum (Experiência como PO), Gestão de Stakeholders, Mentoria, Dashboards de Dados/BI, Feature Flags e Testes A/B, Fluxos de Trabalho Assistidos por IA (Claude, Cursor, Copilot).
 - **Idiomas:** Português (Nativo), Inglês (Proficiente C2 - EF SET), Espanhol (Intermediário).
 
 ## EXPERIÊNCIA PROFISSIONAL
@@ -28,12 +28,14 @@ Atua do banco de dados à UI (APIs REST e GraphQL, PostgreSQL, micro-frontends, 
 **eSapiens Tecnologia** | Remoto / Brasil  
 **Tech Lead & Product Owner** | Janeiro 2025 - Fevereiro 2026
 - Liderou um time multidisciplinar de 6 engenheiros, responsável pelo roadmap técnico, planejamento de backlog, dailies e 1:1s.
-- Acumulou as funções de PO e Tech Lead, construindo dashboards de BI para decisões de produto baseadas em dados e reportando diretamente aos stakeholders, sem deixar de programar.
+- Acumulou PO e Tech Lead: dashboards de BI para decisões de produto e reporte direto aos stakeholders, sem deixar de programar.
+- Conduziu lançamentos e testes A/B com um sistema próprio de feature flags, documentando especificações e decisões no Confluence.
 - Introduziu ferramentas de desenvolvimento assistidas por IA (Claude e Cursor), reduzindo trabalho repetitivo e aumentando a velocidade de entrega do time em 15%.
 
 **Engenheiro de Software Full Stack Sênior** | Julho 2021 - Janeiro 2025
-- Criou do zero, com design e produto, uma nova fonte de receita: venda avulsa de guias (One-Time Sale) ao lado do modelo de assinatura. Entregou o frontend em React e o painel administrativo, e construiu a API em Go junto ao time de backend. A receita mensal cresceu 20%.
-- Ajudou a planejar e executar a migração de uma plataforma com mais de 26M de usuários de um monólito legado em PHP para React, construindo as novas APIs backend com deploy no Google Cloud Platform (GCP).
+- Criou do zero, com design e produto, uma nova fonte de receita: venda avulsa de guias (One-Time Sale) ao lado do modelo de assinatura. Entregou o frontend em React e um painel administrativo com controle de acesso por perfil (RBAC), e construiu a API em Go junto ao time de backend. A receita mensal cresceu 20%.
+- Ajudou a planejar e executar a migração de uma plataforma com mais de 26M de usuários de um monólito PHP para React, construindo as novas APIs backend no Google Cloud (GCP).
+- Refez a página de login e a autenticação (OAuth, JWT) dessa plataforma, corrigindo gargalos de performance e SEO.
 - Migrou uma plataforma de lifestyle (15k+ MAU) de PHP para React e Next.js com Module Federation, e construiu uma biblioteca de componentes UI compartilhada entre produtos.
 - Atuou no app em React Native (Expo), que combinava telas nativas e wrappers em WebView, entregando notificações push nativas e deep links que abrem o conteúdo direto no app.
 
@@ -45,16 +47,13 @@ Atua do banco de dados à UI (APIs REST e GraphQL, PostgreSQL, micro-frontends, 
 **Cocreare** | Bauru, Brasil  
 **Desenvolvedor Full Stack** | Janeiro 2020 - Março 2021
 - Desenvolveu e publicou aplicações responsivas em toda a stack com Laravel, Node.js, Express.js e React, entregando mais de 10 projetos para clientes no prazo.
-- Construiu e lançou o "Bombarco", plataforma de feira virtual de barcos lançada durante o lockdown de 2020, que alcançou mais de 30.000 visualizações e viabilizou vendas digitais em um novo segmento.
+- Construiu e lançou o "Bombarco", feira virtual de barcos do lockdown de 2020, com mais de 30.000 visualizações e vendas digitais num novo segmento.
 
 ## PROJETOS SELECIONADOS
 
 **BakaSub (bakasub.silvatti.com.br)** | 2026 - Atual
 - App desktop open source (Electron, React, TypeScript, Node.js) que extrai, traduz com IA e reinsere legendas em vídeos .mkv; publicado até a v1.0.6 para Windows e Linux.
 - Parsers de legenda baseados em AST enviam só o texto ao LLM, com saída validada por Zod e retentativas, cache de traduções em SQLite (Drizzle), fila de jobs com encerramento seguro de processos e mais de 140 arquivos de teste (Vitest).
-
-**Autoria Marginal (autoriamarginal.com.br)** | Julho 2026
-- Guia ilustrado de direitos autorais com Next.js (App Router), Server Actions, Zod e Supabase (PostgreSQL).
 
 ## FORMAÇÃO ACADÊMICA
 **Bacharelado em Ciência da Computação** | Universidade Estadual Paulista (UNESP), Bauru | 2016 - 2022

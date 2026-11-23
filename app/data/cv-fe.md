@@ -13,7 +13,7 @@ Focused on performance, accessibility and maintainable UI architecture: micro-fr
 - **UI Architecture & Styling:** Micro-frontends (Module Federation), Design Systems, Component Libraries, Tailwind CSS, SASS, CSS Modules, Responsive Design.
 - **Web Performance & Quality:** Core Web Vitals (LCP, CLS, INP), Technical SEO (JSON-LD), Accessibility (WCAG).
 - **Testing & Tooling:** Jest, Cypress, React Testing Library, Storybook, Vite, Webpack.
-- **Backend & Cloud:** Node.js, REST APIs, GraphQL, Server Actions, AWS, GCP, GitHub Actions, CI/CD, Vercel, Git.
+- **Backend & Cloud:** Authentication (OAuth, JWT), RBAC, Feature Flags, Node.js, REST APIs, GraphQL, Server Actions, AWS, GCP, GitHub Actions, CI/CD, Vercel, Git.
 - **Leadership:** Frontend Roadmaps, Agile/Scrum, Mentoring, Code Reviews, AI-Assisted Workflows (Claude, Cursor, Copilot).
 - **Languages:** Portuguese (Native), English (C2 Proficient - EF SET), Spanish (Intermediate).
 
@@ -30,12 +30,14 @@ Focused on performance, accessibility and maintainable UI architecture: micro-fr
 - Owned the frontend technical roadmap for a cross-functional team of 6 engineers, aligning UI architecture decisions with engineering, design and product stakeholders.
 - Mentored frontend developers through pair programming and code reviews, establishing React best practices and reducing production bugs.
 - Introduced AI-assisted development tools (Claude and Cursor), reducing boilerplate work and increasing the team's delivery velocity by 15%.
+- Shipped releases and A/B tests behind an in-house feature flag system, documenting specs and decisions in Confluence.
 
 **Senior Full Stack Engineer (Frontend Focus)** | July 2021 - January 2025
 - Helped migrate a social network platform (26M+ users) from a legacy PHP architecture to React, handling heavy media rendering and UI performance under high traffic.
+- Rebuilt that platform's login page and full authentication flow (OAuth, JWT), profiling and debugging performance and SEO issues to fix bottlenecks.
 - Migrated the Astrolink platform (15k+ MAU) to React and Next.js, bridging the client-side React app and Next.js SEO pages with Webpack Module Federation.
 - Created and maintained a reusable, accessible UI component library with TypeScript and SASS, standardizing the design system across multiple company products.
-- Built from scratch, with design and product, the frontend and admin panel of a new revenue stream (one-time sales of guides alongside subscriptions), integrating a Go API co-built with the backend team. Monthly revenue grew 20%.
+- Built from scratch, with design and product, the frontend and a role-based admin panel of a new revenue stream (one-time sales of guides alongside subscriptions), integrating a Go API co-built with the backend team. Monthly revenue grew 20%.
 - Worked on the React Native (Expo) app, combining native screens with WebView wrappers, and delivered native push notifications and deep links into the app.
 
 **Alternativa Sistemas** | Bauru, Brazil  
@@ -47,17 +49,12 @@ Focused on performance, accessibility and maintainable UI architecture: micro-fr
 **Full Stack Developer (Frontend Focus)** | January 2020 - March 2021
 - Developed and deployed responsive web and mobile applications with React, React Native, Vue, Angular and Ionic, delivering 10+ client projects on schedule.
 - Worked closely with UX/UI designers to translate Figma and Adobe XD prototypes into production-ready frontend code.
-- Built the frontend of "Bombarco," a virtual boat fair platform released during the 2020 lockdown that reached 30,000+ views.
 
 ## SELECTED PROJECTS
 
 **BakaSub (bakasub.silvatti.com.br)** | 2026 - Present
 - Open-source desktop app (Electron, React, TypeScript) that extracts, AI-translates and re-muxes .mkv subtitles. Shipped through v1.0.6 with auto-updates and Windows/Linux installers.
-- Built the React UI (TanStack Query and Router, Tailwind CSS, EN/PT-BR i18n) on top of a Node.js backend through a secure, typed IPC contract.
-- AST-based subtitle parsing, Zod-validated LLM output, a local SQLite cache and a preflight cost estimate; 140+ test files (Vitest).
-
-**Autoria Marginal (autoriamarginal.com.br)** | July 2026
-- Web application distributing an illustrated copyright guide, built with Next.js (App Router), TypeScript and Tailwind CSS, with a responsive and accessible interface.
+- React UI (TanStack Query, Tailwind CSS, i18n) over a Node.js backend via typed IPC; AST-based parsing, Zod-validated LLM output, SQLite cache and 140+ test files (Vitest).
 
 ## EDUCATION
 **Bachelor of Computer Science** | São Paulo State University (UNESP), Bauru | 2016 - 2022

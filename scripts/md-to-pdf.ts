@@ -36,9 +36,16 @@ const filesToConvert = [
 
 async function generatePDFs(): Promise<void> {
   try {
-    for (const file of filesToConvert) {
-      const mdPath = path.join(process.cwd(), file.input);
-      const pdfPath = path.join(process.cwd(), file.output);
+    // Uso: `npm run generate:pdf` gera todos os CVs da lista acima;
+    // `npm run generate:pdf -- <entrada.md> <saida.pdf>` gera um arquivo avulso.
+    const [inputArg, outputArg] = process.argv.slice(2);
+    const files = inputArg && outputArg
+      ? [{ input: inputArg, output: outputArg }]
+      : filesToConvert;
+
+    for (const file of files) {
+      const mdPath = path.resolve(process.cwd(), file.input);
+      const pdfPath = path.resolve(process.cwd(), file.output);
 
       console.log(`Gerando ${file.output}...`);
 

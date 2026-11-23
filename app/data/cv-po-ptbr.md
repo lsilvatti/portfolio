@@ -9,10 +9,10 @@ Product Owner e Tech Lead com 7 anos em produtos digitais de alto tráfego. Lide
 Experiência em gestão de backlog, definição de requisitos, cerimônias ágeis e decisões baseadas em dados (dashboards de BI, testes A/B, métricas de conversão e retenção). A base como Engenheiro de Software Full Stack Sênior facilita a comunicação com desenvolvedores, a avaliação de trade-offs de arquitetura e a remoção de gargalos de entrega.
 
 ## COMPETÊNCIAS PRINCIPAIS
-- **Gestão de Produto:** Product Discovery, Gestão de Backlog, Roadmap de Produto, Definição de Requisitos, Histórias de Usuário (BDD/Gherkin), MVPs, KPIs, Testes A/B.
+- **Gestão de Produto:** Product Discovery, Gestão de Backlog, Roadmap de Produto, Definição de Requisitos, Histórias de Usuário (BDD/Gherkin), MVPs, KPIs, Testes A/B, Feature Flags.
 - **Agilidade e Ferramentas:** Scrum, Kanban, Ritos Ágeis (Planning, Daily, Retro, Review), Jira, Confluence, Trello.
 - **Liderança e Negócios:** Gestão de Stakeholders, Liderança de Squads, 1:1s e Plano de Carreira, Resolução de Conflitos, Decisões Orientadas a Dados, Dashboards de BI.
-- **Background Técnico:** Arquitetura de Software, React/Next.js, React Native, TypeScript, Node.js, APIs REST e GraphQL, SQL/PostgreSQL, AWS, GCP, CI/CD.
+- **Background Técnico:** Arquitetura de Software, React/Next.js, React Native, TypeScript, Node.js, APIs REST e GraphQL, Autenticação (OAuth, JWT), RBAC, SQL/PostgreSQL, AWS, GCP, CI/CD.
 - **Idiomas:** Português (Nativo), Inglês (Proficiente C2 - EF SET), Espanhol (Intermediário).
 
 ## EXPERIÊNCIA PROFISSIONAL
@@ -26,12 +26,12 @@ Experiência em gestão de backlog, definição de requisitos, cerimônias ágei
 **Product Owner & Tech Lead** | Janeiro 2025 - Fevereiro 2026 *(Atuação híbrida desde meados de 2024)*
 - Liderou um squad multidisciplinar de 6 engenheiros com Jira e Confluence, responsável pelo roadmap técnico, priorização de backlog e alinhamento contínuo com stakeholders C-level.
 - Conduziu cerimônias ágeis (Planning, Daily, Retrospectiva) e escreveu histórias de usuário (BDD/Gherkin), traduzindo necessidades de negócio em tarefas acionáveis de engenharia.
-- Construiu dashboards de BI para acompanhar KPIs de produto em tempo real, apoiando decisões baseadas em dados e ciclos de testes A/B.
+- Construiu dashboards de BI para acompanhar KPIs em tempo real e conduziu lançamentos e testes A/B com um sistema próprio de feature flags, documentado no Confluence.
 - Fez gestão de pessoas com 1:1s, acompanhamento de performance e planos de carreira.
 - Introduziu ferramentas de IA no fluxo de trabalho (Claude e Cursor), aumentando a velocidade de entrega do time em 15%.
 
 **Engenheiro de Software Full Stack Sênior (Foco em Produto)** | Julho 2021 - Janeiro 2025
-- Criou com design e produto uma nova fonte de receita: venda avulsa de guias (One-Time Sale) ao lado do modelo de assinatura. Conduziu a entrega da descoberta ao lançamento, entre frontend e o time de backend em Go; a receita mensal cresceu 20%.
+- Criou com design e produto uma nova fonte de receita: venda avulsa de guias (One-Time Sale) ao lado do modelo de assinatura, com acesso controlado por nível de usuário. Conduziu a entrega da descoberta ao lançamento, entre frontend e o time de backend em Go; a receita mensal cresceu 20%.
 - Ajudou a planejar e executar a migração de uma rede social (26M+ usuários) e da plataforma Astrolink (15k+ MAU) para uma stack moderna, com foco em retenção de usuários, SEO e Core Web Vitals.
 
 **Alternativa Sistemas** | Bauru, Brasil  

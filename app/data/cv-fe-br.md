@@ -13,7 +13,7 @@ Foco em performance, acessibilidade e arquitetura de UI: micro-frontends, biblio
 - **Arquitetura de UI e Estilização:** Micro-frontends (Module Federation), Design Systems, Bibliotecas de Componentes, Tailwind CSS, SASS, CSS Modules, Design Responsivo.
 - **Performance Web e Qualidade:** Core Web Vitals (LCP, CLS, INP), SEO Técnico (JSON-LD), Acessibilidade (WCAG).
 - **Testes e Ferramentas:** Jest, Cypress, React Testing Library, Storybook, Vite, Webpack.
-- **Backend e Cloud:** Node.js, APIs REST, GraphQL, Server Actions, AWS, GCP, GitHub Actions, CI/CD, Vercel, Git.
+- **Backend e Cloud:** Autenticação (OAuth, JWT), RBAC, Feature Flags, Node.js, APIs REST, GraphQL, Server Actions, AWS, GCP, GitHub Actions, CI/CD, Vercel, Git.
 - **Liderança:** Roadmaps Frontend, Agile/Scrum, Mentoria, Code Reviews, Fluxos Assistidos por IA (Claude, Cursor, Copilot).
 - **Idiomas:** Português (Nativo), Inglês (Proficiente C2 - EF SET), Espanhol (Intermediário).
 
@@ -30,34 +30,31 @@ Foco em performance, acessibilidade e arquitetura de UI: micro-frontends, biblio
 - Responsável pelo roadmap técnico de frontend de um time multidisciplinar de 6 engenheiros, alinhando decisões de arquitetura de UI com engenharia, design e produto.
 - Mentorou desenvolvedores frontend com pair programming e code reviews, estabelecendo boas práticas de React e reduzindo bugs em produção.
 - Introduziu ferramentas de desenvolvimento assistidas por IA (Claude e Cursor), reduzindo código repetitivo e aumentando a velocidade de entrega do time em 15%.
+- Entregou lançamentos e testes A/B com um sistema próprio de feature flags, documentando especificações e decisões no Confluence.
 
 **Engenheiro de Software Full Stack Sênior (Foco em Frontend)** | Julho 2021 - Janeiro 2025
 - Participou da migração de uma rede social (+26M de usuários) de uma arquitetura legada em PHP para React, lidando com renderização de mídia pesada e performance de UI sob alto tráfego.
+- Refez a página de login e todo o fluxo de autenticação (OAuth, JWT) dessa plataforma, investigando e corrigindo gargalos de performance e SEO.
 - Migrou a plataforma Astrolink (+15k usuários ativos mensais) para React e Next.js, conectando a aplicação React (client-side) às páginas de SEO em Next.js com Webpack Module Federation.
 - Criou e manteve uma biblioteca de componentes UI reutilizável e acessível com TypeScript e SASS, padronizando o design system em vários produtos da empresa.
-- Construiu do zero, com design e produto, o frontend e o painel administrativo de uma nova fonte de receita (venda avulsa de guias ao lado da assinatura), integrando uma API em Go feita junto ao time de backend. A receita mensal cresceu 20%.
+- Construiu do zero, com design e produto, o frontend e o painel administrativo com controle de acesso por perfil (RBAC) de uma nova fonte de receita (venda avulsa de guias ao lado da assinatura), integrando uma API em Go feita junto ao time de backend. A receita mensal cresceu 20%.
 - Atuou no app em React Native (Expo), com telas nativas e wrappers em WebView, entregando notificações push nativas e deep links para o app.
 
 **Alternativa Sistemas** | Bauru, Brasil  
 **Engenheiro de Software (Frontend)** | Março 2021 - Julho 2021
 - Construiu a interface web da versão em nuvem de um ERP desktop com Next.js, React e SASS, com deploy na AWS, transformando fluxos operacionais complexos em módulos web acessíveis.
-- Modernizou ferramentas internas com SPAs em Vue.js, simplificando os fluxos diários do time de gestão de produto.
 
 **Cocreare** | Bauru, Brasil  
 **Desenvolvedor Full Stack (Foco em Frontend)** | Janeiro 2020 - Março 2021
 - Desenvolveu e publicou aplicações web e mobile responsivas com React, React Native, Vue, Angular e Ionic, entregando mais de 10 projetos para clientes no prazo.
 - Trabalhou próximo de designers de UX/UI, transformando protótipos do Figma e Adobe XD em código frontend pronto para produção.
-- Construiu o frontend do "Bombarco", feira virtual de barcos do lockdown de 2020, com mais de 30.000 visualizações.
 
 ## PROJETOS SELECIONADOS
 
 **BakaSub (bakasub.silvatti.com.br)** | 2026 - Atual
-- Aplicativo desktop open source (Electron, React, TypeScript) que extrai, traduz com IA e reinsere legendas em vídeos .mkv. Publicado até a v1.0.6, com atualização automática e instaladores para Windows e Linux.
+- App desktop open source (Electron, React, TypeScript) que extrai, traduz com IA e reinsere legendas em vídeos .mkv; publicado até a v1.0.6 para Windows e Linux.
 - Construiu a interface em React (TanStack Query e Router, Tailwind CSS, i18n EN/PT-BR) sobre um backend Node.js, com contrato de IPC tipado e seguro.
 - Parsing de legendas baseado em AST, saída do LLM validada com Zod, cache local em SQLite e estimativa de custo prévia; mais de 140 arquivos de teste (Vitest).
-
-**Autoria Marginal (autoriamarginal.com.br)** | Julho 2026
-- Guia ilustrado de direitos autorais com Next.js (App Router), TypeScript e Tailwind CSS, com interface responsiva e acessível.
 
 ## FORMAÇÃO ACADÊMICA
 **Bacharelado em Ciência da Computação** | Universidade Estadual Paulista (UNESP), Bauru | 2016 - 2022

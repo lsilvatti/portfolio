@@ -9,10 +9,10 @@ Product Owner and Tech Lead with 7 years in high-traffic digital products. Led a
 Experienced in backlog management, requirements definition, agile ceremonies and data-driven decisions (BI dashboards, A/B testing, conversion and retention metrics). A background as a Senior Full Stack Engineer makes it easier to talk with developers, weigh architectural trade-offs and remove delivery bottlenecks.
 
 ## CORE COMPETENCIES
-- **Product Management:** Product Discovery, Backlog Management, Product Roadmap, Requirements Definition, User Stories (BDD/Gherkin), MVPs, KPIs, A/B Testing.
+- **Product Management:** Product Discovery, Backlog Management, Product Roadmap, Requirements Definition, User Stories (BDD/Gherkin), MVPs, KPIs, A/B Testing, Feature Flags.
 - **Agile & Tools:** Scrum, Kanban, Agile Ceremonies (Planning, Daily, Retro, Review), Jira, Confluence, Trello.
 - **Leadership & Business:** Stakeholder Management, Squad Leadership, 1:1s & Career Planning, Conflict Resolution, Data-Driven Decisions, BI Dashboards.
-- **Technical Background:** Software Architecture, React/Next.js, React Native, TypeScript, Node.js, REST & GraphQL APIs, SQL/PostgreSQL, AWS, GCP, CI/CD.
+- **Technical Background:** Software Architecture, React/Next.js, React Native, TypeScript, Node.js, REST & GraphQL APIs, Authentication (OAuth, JWT), RBAC, SQL/PostgreSQL, AWS, GCP, CI/CD.
 - **Languages:** Portuguese (Native), English (C2 Proficient - EF SET), Spanish (Intermediate).
 
 ## PROFESSIONAL EXPERIENCE
@@ -26,12 +26,12 @@ Experienced in backlog management, requirements definition, agile ceremonies and
 **Product Owner & Tech Lead** | January 2025 - February 2026 *(Hybrid role since mid-2024)*
 - Led a cross-functional squad of 6 engineers using Jira and Confluence, owning the technical roadmap, backlog prioritization and ongoing alignment with C-level stakeholders.
 - Facilitated agile ceremonies (Planning, Daily, Retrospective) and wrote user stories (BDD/Gherkin), translating business needs into actionable engineering tasks.
-- Built BI dashboards to track product KPIs in real time, supporting data-driven decisions and A/B testing cycles.
+- Built BI dashboards to track product KPIs in real time and ran releases and A/B tests through an in-house feature flag system, documented in Confluence.
 - Managed people through 1:1s, performance tracking and career development planning.
 - Introduced AI-assisted tools (Claude and Cursor), streamlining workflows and increasing the squad's delivery velocity by 15%.
 
 **Senior Full Stack Engineer (Product Focus)** | July 2021 - January 2025
-- Created with design and product a new revenue stream: one-time sales of guides (One-Time Sale) alongside the subscription model. Led delivery from discovery to launch across frontend and the Go backend team; monthly revenue grew 20%.
+- Created with design and product a new revenue stream: one-time sales of guides (One-Time Sale) alongside the subscription model, with role-based access by user level. Led delivery from discovery to launch across frontend and the Go backend team; monthly revenue grew 20%.
 - Helped plan and execute the migration of a social network (26M+ users) and the Astrolink platform (15k+ MAU) to a modern stack, focusing on user retention, SEO and Core Web Vitals.
 
 **Alternativa Sistemas** | Bauru, Brazil  
