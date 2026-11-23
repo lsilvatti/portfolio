@@ -177,7 +177,8 @@ return (
                 "Next.js",
                 "TypeScript",
                 "JavaScript",
-                "Frontend Development",
+                "Node.js",
+                "Full Stack Development",
               ],
             }),
           }}
