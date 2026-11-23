@@ -171,7 +171,7 @@ return (
                 "https://linkedin.com/in/lsilvatti",
                 "https://github.com/lsilvatti",
               ],
-              email: "leonardo@silvatti.com.br",
+              email: "leosilvatti0@gmail.com",
               knowsAbout: [
                 "React",
                 "Next.js",

@@ -1,6 +1,6 @@
 # Leonardo Silvatti Silva
 **Product Owner | Technical Product Manager | Tech Lead**  
-Localização: Bauru, SP, Brasil (GMT-3) • Disponível para Remoto • Email: leonardo@silvatti.com.br  
+Localização: Bauru, SP, Brasil (GMT-3) • Disponível para Remoto • Email: leosilvatti0@gmail.com  
 LinkedIn: [linkedin.com/in/lsilvatti](https://linkedin.com/in/lsilvatti) • GitHub: [github.com/lsilvatti](https://github.com/lsilvatti) • Portfólio: [leonardo.silvatti.com.br](https://leonardo.silvatti.com.br)
 
 ## RESUMO PROFISSIONAL

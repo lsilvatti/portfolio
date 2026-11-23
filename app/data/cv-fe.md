@@ -1,6 +1,6 @@
 # Leonardo Silvatti Silva
 **Senior Frontend Engineer | Tech Lead**  
-Location: Bauru, SP, Brazil (GMT-3) • Open to Remote • Email: leonardo@silvatti.com.br  
+Location: Bauru, SP, Brazil (GMT-3) • Open to Remote • Email: leosilvatti0@gmail.com  
 LinkedIn: [linkedin.com/in/lsilvatti](https://linkedin.com/in/lsilvatti) • GitHub: [github.com/lsilvatti](https://github.com/lsilvatti) • Portfolio: [leonardo.silvatti.com.br](https://leonardo.silvatti.com.br)
 
 ## PROFESSIONAL SUMMARY
