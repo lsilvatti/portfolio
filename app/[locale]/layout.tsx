@@ -34,37 +34,32 @@ export async function generateMetadata({
   const { locale } = await params;
   const isEn = locale === "en";
 
+  const role = isEn
+    ? "Senior Full Stack Engineer & Tech Lead"
+    : "Engenheiro Full Stack Sênior e Tech Lead";
+  const siteTitle = `Leonardo Silvatti Silva | ${role}`;
+  const description = isEn
+    ? "Senior Full Stack Engineer and Tech Lead with 7 years building high-traffic web platforms with React, Next.js, TypeScript, Node.js, AWS and GCP."
+    : "Engenheiro Full Stack Sênior e Tech Lead com 7 anos construindo plataformas web de alto tráfego com React, Next.js, TypeScript, Node.js, AWS e GCP.";
+
   return {
     metadataBase: new URL(siteUrl),
     title: {
-      default: isEn
-        ? "Leonardo Silvatti Silva | Full Stack Engineer"
-        : "Leonardo Silvatti Silva | Engenheiro Full Stack",
+      default: siteTitle,
       template: "%s | Leonardo Silvatti Silva",
     },
-    description: isEn
-      ? "Full Stack Engineer specializing in React, Next.js, TypeScript, Node.js, Python, and FastAPI. Passionate about crafting robust and scalable web applications."
-      : "Engenheiro Full Stack especializado em React, Next.js, TypeScript, Node.js, Python e FastAPI. Apaixonado por criar aplicações web robustas e escaláveis.",
-    keywords: isEn
-      ? [
-          "Full Stack Engineer",
-          "React",
-          "Next.js",
-          "TypeScript",
-          "Portfolio",
-          "Web Development",
-          "JavaScript",
-          "UI/UX",
-        ]
-      : [
-          "Engenheiro Full Stack",
-          "React",
-          "Next.js",
-          "TypeScript",
-          "Portfólio",
-          "Desenvolvimento Web",
-          "JavaScript",
-        ],
+    description,
+    keywords: [
+      isEn ? "Senior Full Stack Engineer" : "Engenheiro Full Stack Sênior",
+      "Tech Lead",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "AWS",
+      "GCP",
+      isEn ? "Portfolio" : "Portfólio",
+    ],
     authors: [{ name: "Leonardo Silvatti Silva" }],
     creator: "Leonardo Silvatti Silva",
     openGraph: {
@@ -73,31 +68,21 @@ export async function generateMetadata({
       alternateLocale: isEn ? "pt_BR" : "en_US",
       url: siteUrl,
       siteName: "Leonardo Silvatti Silva",
-      title: isEn
-        ? "Leonardo Silvatti Silva | Full Stack Engineer"
-        : "Leonardo Silvatti Silva | Engenheiro Full Stack",
-      description: isEn
-        ? "Full Stack Engineer specializing in React, Next.js, TypeScript, Node.js, Python, and FastAPI."
-        : "Engenheiro Full Stack especializado em React, Next.js, TypeScript, Node.js, Python e FastAPI.",
+      title: siteTitle,
+      description,
       images: [
         {
           url: "/opengraph-image.png",
           width: 1200,
           height: 630,
-          alt: isEn
-            ? "Leonardo Silvatti Silva - Full Stack Engineer"
-            : "Leonardo Silvatti Silva - Engenheiro Full Stack",
+          alt: `Leonardo Silvatti Silva - ${role}`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: isEn
-        ? "Leonardo Silvatti Silva | Full Stack Engineer"
-        : "Leonardo Silvatti Silva | Engenheiro Full Stack",
-      description: isEn
-        ? "Full Stack Engineer specializing in React, Next.js, TypeScript, Node.js, Python, and FastAPI."
-        : "Engenheiro Full Stack especializado em React, Next.js, TypeScript, Node.js, Python e FastAPI.",
+      title: siteTitle,
+      description,
       images: ["/opengraph-image.png"],
     },
     robots: {
@@ -166,7 +151,7 @@ return (
               "@type": "Person",
               name: "Leonardo Silvatti Silva",
               url: siteUrl,
-              jobTitle: locale === "en" ? "Full Stack Engineer" : "Engenheiro Full Stack",
+              jobTitle: locale === "en" ? "Senior Full Stack Engineer" : "Engenheiro Full Stack Sênior",
               sameAs: [
                 "https://linkedin.com/in/lsilvatti",
                 "https://github.com/lsilvatti",
